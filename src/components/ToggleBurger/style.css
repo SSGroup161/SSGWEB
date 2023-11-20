@@ -1,0 +1,34 @@
+.burger-container {
+    position: relative;
+}
+
+.burger-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.burger-container.open .burger-btn {
+    transform: rotate(90deg);
+}
+
+.menu {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: white;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: top 0.5s ease;
+}
+
+.burger-container.open .menu {
+    top: 5.5rem; /* Munculkan menu ke tengah layar */
+}
