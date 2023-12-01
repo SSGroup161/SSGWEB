@@ -1,10 +1,71 @@
-import React from "react";
-import ToggleBurger from "../ToggleBurger";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import "./style.css";
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [activeMenuItem, setActiveMenuItem] = useState("Home");
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleToggle = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        setIsScrolled(scrollPosition > 0);
+    };
+
+    const handleMenuItemClick = (menuItem) => {
+        if (menuItem !== activeMenuItem) {
+            setActiveMenuItem(menuItem);
+
+            if (menuItem === "Contact") {
+                window.location.hash = "#contact";
+            } else {
+                navigate(`/${menuItem.toLowerCase()}`);
+            }
+        }
+    };
+
+    const handleMenuItemClickMobile = (menuItem) => {
+        if (menuItem !== activeMenuItem) {
+            setActiveMenuItem(menuItem);
+            setIsOpen(!isOpen);
+
+            if (menuItem === "Contact") {
+                window.location.hash = "#contact";
+            } else {
+                navigate(`/${menuItem.toLowerCase()}`);
+            }
+        }
+    };
+
+    useEffect(() => {
+        const pathname = location.pathname;
+        const menuItem = pathname === "/" ? "Home" : pathname.replace("/", "");
+        setActiveMenuItem(menuItem);
+    }, [location.pathname]);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <div className="w-full h-20 flex justify-between items-center px-10 md:px-20 lg:px-36 sticky top-0 bg-white z-20">
+            <div
+                className={`w-full h-20 flex justify-between items-center px-10 md:px-20 lg:px-36 fixed top-0 z-20 transition-bg ${
+                    !isScrolled ? "bg-transparent" : "bg-white"
+                } transition-all duration-300`}
+            >
                 <div>
                     <svg
                         width="25"
@@ -13,6 +74,10 @@ const Navbar = () => {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                         className="cursor-pointer"
+                        onClick={() => {
+                            setActiveMenuItem("Home");
+                            navigate("/");
+                        }}
                     >
                         <path
                             d="M35.4601 427.49C53.9671 427.49 68.9701 412.487 68.9701 393.98C68.9701 375.473 53.9671 360.47 35.4601 360.47C16.953 360.47 1.95007 375.473 1.95007 393.98C1.95007 412.487 16.953 427.49 35.4601 427.49Z"
@@ -39,23 +104,138 @@ const Navbar = () => {
                 <div className="hidden lg:flex gap-20">
                     <div>
                         <ul className="flex gap-12 font-roboto font-light">
-                            <li className="cursor-pointer text-[#D2AC47]">
+                            <li
+                                className={`cursor-pointer ${
+                                    activeMenuItem === "Home"
+                                        ? "text-[#D2AC47]"
+                                        : "text-[#444341]"
+                                } hover:text-[#D2AC47]`}
+                                onClick={() => {
+                                    setActiveMenuItem("Home");
+                                    navigate("/");
+                                }}
+                            >
                                 Home
                             </li>
-                            <li className="cursor-pointer text-[#444341] hover:text-[#D2AC47]">
+                            <li
+                                className={`cursor-pointer ${
+                                    activeMenuItem === "About"
+                                        ? "text-[#D2AC47]"
+                                        : "text-[#444341]"
+                                } hover:text-[#D2AC47]`}
+                                onClick={() => handleMenuItemClick("About")}
+                            >
                                 About Us
                             </li>
-                            <li className="cursor-pointer text-[#444341] hover:text-[#D2AC47]">
+                            <li
+                                className={`cursor-pointer ${
+                                    activeMenuItem === "Product"
+                                        ? "text-[#D2AC47]"
+                                        : "text-[#444341]"
+                                } hover:text-[#D2AC47]`}
+                                onClick={() => handleMenuItemClick("Product")}
+                            >
                                 Product
                             </li>
-                            <li className="cursor-pointer text-[#444341] hover:text-[#D2AC47]">
-                                Contact
+                            <li
+                                className={`cursor-pointer ${
+                                    activeMenuItem === "Contact"
+                                        ? "text-[#D2AC47]"
+                                        : "text-[#444341]"
+                                } hover:text-[#D2AC47]`}
+                                onClick={() => handleMenuItemClick("Contact")}
+                            >
+                                <Link to="/#contact">Contact</Link>
+                            </li>
+                            <li
+                                className={`cursor-pointer ${
+                                    activeMenuItem === "News"
+                                        ? "text-[#D2AC47]"
+                                        : "text-[#444341]"
+                                } hover:text-[#D2AC47]`}
+                                onClick={() => handleMenuItemClick("News")}
+                            >
+                                News
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className="lg:hidden">
-                    <ToggleBurger />
+                    <div className={`burger-container ${isOpen ? "open" : ""}`}>
+                        <button onClick={handleToggle} className="burger-btn">
+                            <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
+                        </button>
+                        <div
+                            className={`menu -z-10 pt-20 ${
+                                isOpen ? "bg-white" : "bg-transparent "
+                            } transition-all duration-300`}
+                            style={{ maxHeight: isOpen ? "1000px" : "0" }}
+                        >
+                            <ul className="flex flex-col gap-12 font-roboto font-light transition-all duration-300">
+                                <li
+                                    onClick={() => {
+                                        setActiveMenuItem("Home");
+                                        navigate("/");
+                                    }}
+                                    className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center mt-4 ${
+                                        activeMenuItem === "Contact"
+                                            ? "text-[#D2AC47]"
+                                            : "text-[#444341]"
+                                    }`}
+                                >
+                                    Home
+                                </li>
+                                <li
+                                    onClick={() =>
+                                        handleMenuItemClickMobile("About")
+                                    }
+                                    className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
+                                        activeMenuItem === "Contact"
+                                            ? "text-[#D2AC47]"
+                                            : "text-[#444341]"
+                                    }`}
+                                >
+                                    About Us
+                                </li>
+                                <li
+                                    onClick={() =>
+                                        handleMenuItemClickMobile("Product")
+                                    }
+                                    className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
+                                        activeMenuItem === "Contact"
+                                            ? "text-[#D2AC47]"
+                                            : "text-[#444341]"
+                                    }`}
+                                >
+                                    Product
+                                </li>
+                                <li
+                                    onClick={() =>
+                                        handleMenuItemClickMobile("Contact")
+                                    }
+                                    className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
+                                        activeMenuItem === "Contact"
+                                            ? "text-[#D2AC47]"
+                                            : "text-[#444341]"
+                                    }`}
+                                >
+                                    Contact
+                                </li>
+                                <li
+                                    onClick={() =>
+                                        handleMenuItemClickMobile("News")
+                                    }
+                                    className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
+                                        activeMenuItem === "News"
+                                            ? "text-[#D2AC47]"
+                                            : "text-[#444341]"
+                                    }`}
+                                >
+                                    News
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

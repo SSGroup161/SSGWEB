@@ -17,7 +17,7 @@ const ToggleBurger = () => {
             </button>
             {isOpen && (
                 <div className="menu">
-                    <ul className="flex flex-col gap-12 font-roboto font-light">
+                    <ul className="flex flex-col gap-12 font-roboto font-light transition-all duration-300">
                         <li
                             onClick={handleToggle}
                             className="cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center"

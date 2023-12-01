@@ -16,19 +16,19 @@
 
 .menu {
     position: fixed;
-    top: -100%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
-    background-color: white;
     color: white;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: top 0.5s ease;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
 .burger-container.open .menu {
-    top: 4rem; /* Munculkan menu ke tengah layar */
+    max-height: 20rem;
 }
