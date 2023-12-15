@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-const imagekakshell =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700116316/SSG/FotoKakShell_1_qzbrwx.png";
+const imagekakshell = "/Asset1.png";
 const imagekakshell2 =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700195072/SSG/kakshell2_jdgaik.png";
 const imagessskin =
@@ -28,6 +27,9 @@ const asset2 =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700708227/SSG/Desain_tanpa_judul_1_y5wpum.svg";
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />

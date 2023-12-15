@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+    const navigate = useNavigate();
+
+    const handleFaq = () => {
+        navigate("/faq");
+    };
+
     return (
         <>
             <div className="w-full bg-transparent flex flex-col">
@@ -46,7 +53,7 @@ const Footer = () => {
                             </div>
                             <div>
                                 <h1 className="font-roboto text-white ">
-                                    Shella Saukia Group
+                                    PT Abil Mannaf Perkasa
                                 </h1>
                             </div>
                             <div className="w-72">
@@ -77,11 +84,11 @@ const Footer = () => {
                             <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
                                 News
                             </li>
-                            <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
+                            <li
+                                className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4"
+                                onClick={handleFaq}
+                            >
                                 Faq
-                            </li>
-                            <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
-                                Career
                             </li>
                             <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
                                 Partner

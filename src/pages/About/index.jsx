@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-const aboutkakshell =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700464203/SSG/ka_shell_png_4_ycnryx.svg";
+const aboutkakshell = "/Asset2.svg";
 const aboutkakshell1 =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700460579/SSG/ka_shell_png_3_gg3okw.svg";
 const imagessskin =
@@ -22,15 +21,18 @@ const imageoffice =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700534909/SSG/fotokantor_uwlvp3.png";
 
 const About = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
-            <div className="h-auto flex items-center md:items-start relative flex-col mt-28">
+            <div className="h-auto flex items-center md:items-start relative flex-col mt-28 gap-28 md:gap-0">
                 <div className="lg:ms-32 md:ms-20 md:mb-48 me-10 md:mt-12 lg:mt-40">
-                    <h1 className="font-playfair text-[#D2AC47] lg:text-7xl md:text-5xl text-4xl font-semibold tracking-widest mt-6">
+                    <h1 className="font-aref text-[#D2AC47] lg:text-7xl md:text-5xl text-4xl font-semibold tracking-widest mt-6">
                         Shella Saukia
                     </h1>
-                    <h1 className="font-playfair text-[#D2AC47] lg:text-5xl md:text-4xl text-2xl font-semibold tracking-widest mt-2 md:mt-4">
+                    <h1 className="font-aref text-[#D2AC47] lg:text-5xl md:text-4xl text-2xl font-semibold tracking-widest mt-2 md:mt-4">
                         Group
                     </h1>
                     <p className="font-roboto text-[#A18E64] mt-4 lg:mt-6 text-sm md:text-xl md:w-80 w-48 lg:w-[32rem]">
@@ -49,10 +51,25 @@ const About = () => {
                     alt="aboutkakshell1"
                     width={800}
                     height="auto"
-                    className="mt-6 md:hidden w-[50rem]"
+                    className="md:hidden w-[50rem]"
                 />
             </div>
-            <div className="flex justify-center items-center flex-col mt-32 lg:mt-64 gap-10">
+            <div>
+                <video
+                    width={200}
+                    height={200}
+                    className="w-96 md:w-[40rem] lg:w-full h-auto max-w-screen-lg mt-28 lg:mt-64 m-auto rounded-lg"
+                    poster="https://res.cloudinary.com/dixxtnquz/image/upload/v1701915715/SSG/imgtv_ch8qot.png"
+                    controls
+                >
+                    <source
+                        src="https://res.cloudinary.com/dixxtnquz/video/upload/v1701677188/SSG/bank_bjb___Company_Profile_2023_b2c39c.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div className="flex justify-center items-center flex-col mt-32 lg:mt-52 gap-10">
                 <svg
                     width="100"
                     height="100"
