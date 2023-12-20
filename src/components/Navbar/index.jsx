@@ -44,7 +44,10 @@ const Navbar = () => {
             setActiveAbout(false);
             setActiveProduct(true);
             setActiveNews(false);
-        } else if (location.pathname === "/news") {
+        } else if (
+            location.pathname === "/news" ||
+            location.pathname === "/news/detail"
+        ) {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(false);

@@ -10,13 +10,17 @@ const imagessskin =
 const imagessshop =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136421/SSG/SSSHOP_w8okrk.svg";
 const imagelevelup =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136420/SSG/LEVELUP_ymv49h.svg";
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703038769/SSG/LEVELUPstyle_qthn1c.svg";
 const imagessskingold =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137959/SSG/SSSKINGOLD_kseonm.png";
 const imagessshopgold =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137959/SSG/SSSHOPGOLD_zuncts.png";
 const imagelevelupblack =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137656/SSG/LEVELUPBLACK_qmwklj.svg";
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703038889/SSG/LEVELUPstyleblack_y8xvvt.svg";
+const imagelevelupbeaute =
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040124/SSG/LEVELUPbeaute_dtcal7.svg";
+const imagelevelupbeauteblack =
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040140/SSG/LEVELUPbeauteblack_txkvty.svg";
 const imagebeauty =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700207915/SSG/Acne_series_1_lwltcw.png";
 const imagefashion =
@@ -134,12 +138,6 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <img
-                        src={asset1}
-                        alt="asset1"
-                        width={100}
-                        className="absolute top-0 right-0 lg:mt-16 lg:me-44 w-12 me-20 md:me-28 md:w-14 lg:w-24"
-                    />
                 </div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -155,18 +153,12 @@ const Home = () => {
                         fill="white"
                     />
                 </svg>
-                <img
-                    src={asset2}
-                    alt="asset2"
-                    width={100}
-                    className="absolute right-0 -me-12 -mb-8 lg:-me-16 lg:-mb-10 w-28 md:w-32 lg:w-52 bottom-0"
-                />
             </section>
             <section className="flex flex-col justify-center items-center">
                 <h1 className="text-[#D2AC47] font-roboto text-2xl md:text-3xl mb-8 md:mb-14">
                     Our Brand
                 </h1>
-                <div className="flex items-center gap-10 md:gap-32 lg:gap-44">
+                <div className="flex items-center gap-4 md:gap-24 lg:gap-36">
                     <img
                         src={imagessskin}
                         alt="imagesskin"
@@ -196,6 +188,18 @@ const Home = () => {
                             (e.currentTarget.src = imagelevelupblack)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
+                    />
+                    <img
+                        src={imagelevelupbeaute}
+                        alt="imagelevelup"
+                        width={150}
+                        className="cursor-pointer hidden lg:block"
+                        onMouseOver={(e) =>
+                            (e.currentTarget.src = imagelevelupbeauteblack)
+                        }
+                        onMouseOut={(e) =>
+                            (e.currentTarget.src = imagelevelupbeaute)
+                        }
                     />
                     <img
                         src={imagessskin}
@@ -228,35 +232,72 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                     />
                     <img
-                        src={imagessskin}
+                        src={imagelevelupbeaute}
                         alt="imagesskin"
-                        width={70}
-                        className="cursor-pointer block md:hidden"
+                        width={110}
+                        className="cursor-pointer hidden md:block lg:hidden"
                         onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessskingold)
+                            (e.currentTarget.src = imagelevelupbeauteblack)
                         }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
-                    />
-                    <img
-                        src={imagessshop}
-                        alt="imagesskin"
-                        width={70}
-                        className="cursor-pointer block md:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessshopgold)
+                        onMouseOut={(e) =>
+                            (e.currentTarget.src = imagelevelupbeaute)
                         }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                     />
-                    <img
-                        src={imagelevelup}
-                        alt="imagesskin"
-                        width={80}
-                        className="cursor-pointer block md:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagelevelupblack)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
-                    />
+                    <div className="md:hidden flex flex-col gap-20">
+                        <div className="flex gap-20">
+                            <img
+                                src={imagessskin}
+                                alt="imagesskin"
+                                width={80}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagessskingold)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagessskin)
+                                }
+                            />
+                            <img
+                                src={imagessshop}
+                                alt="imagesskin"
+                                width={80}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagessshopgold)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagessshop)
+                                }
+                            />
+                        </div>
+                        <div className="flex gap-16">
+                            <img
+                                src={imagelevelup}
+                                alt="imagesskin"
+                                width={90}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagelevelupblack)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagelevelup)
+                                }
+                            />
+                            <img
+                                src={imagelevelupbeaute}
+                                alt="imagesskin"
+                                width={90}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src =
+                                        imagelevelupbeauteblack)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagelevelupbeaute)
+                                }
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className="flex flex-col-reverse md:flex-row justify-between items-center mt-48 lg:px-56 gap-10 md:px-12">
