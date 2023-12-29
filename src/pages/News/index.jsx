@@ -36,7 +36,7 @@ const News = () => {
                                     Debit...
                                 </p>
                                 <div
-                                    className="w-28 md:w-48 h-8 md:h-14 bg-[#D2AC47] flex justify-center items-center text-white font-roboto text-xs md:text-base rounded-md md:rounded-md cursor-pointer hover:text-[#D2AC47] hover:bg-white"
+                                    className="w-28 md:w-48 h-8 md:h-14 border-white border-2 flex justify-center items-center text-white font-roboto text-xs md:text-base rounded-md md:rounded-md cursor-pointer hover:text-[#D2AC47] hover:bg-white"
                                     onClick={handleDetail}
                                 >
                                     <h1>Read more</h1>

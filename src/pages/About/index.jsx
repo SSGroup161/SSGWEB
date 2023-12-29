@@ -10,13 +10,17 @@ const imagessskin =
 const imagessshop =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136421/SSG/SSSHOP_w8okrk.svg";
 const imagelevelup =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136420/SSG/LEVELUP_ymv49h.svg";
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703038769/SSG/LEVELUPstyle_qthn1c.svg";
 const imagessskingold =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137959/SSG/SSSKINGOLD_kseonm.png";
 const imagessshopgold =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137959/SSG/SSSHOPGOLD_zuncts.png";
 const imagelevelupblack =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137656/SSG/LEVELUPBLACK_qmwklj.svg";
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703038889/SSG/LEVELUPstyleblack_y8xvvt.svg";
+const imagelevelupbeaute =
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040124/SSG/LEVELUPbeaute_dtcal7.svg";
+const imagelevelupbeauteblack =
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040140/SSG/LEVELUPbeauteblack_txkvty.svg";
 const imageoffice =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700534909/SSG/fotokantor_uwlvp3.png";
 
@@ -25,10 +29,14 @@ const About = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div className="max-w-screen-3xl m-auto">
+        <div className="max-w-screen-2xl m-auto">
             <Navbar />
             <div className="h-auto flex items-center md:items-start relative flex-col mt-28 gap-28 md:gap-0">
-                <div className="lg:ms-32 md:ms-20 md:mb-48 me-10 md:mt-12 lg:mt-40">
+                <div
+                    className="lg:ms-32 md:ms-20 md:mb-48 me-10 md:mt-12 lg:mt-40"
+                    data-aos="fade-up-right"
+                    data-aos-duration="1500"
+                >
                     <h1 className="font-aref text-[#D2AC47] lg:text-7xl md:text-5xl text-4xl font-semibold tracking-widest mt-6">
                         Shella Saukia
                     </h1>
@@ -44,7 +52,9 @@ const About = () => {
                     alt="aboutkakshell"
                     width={1500}
                     height="auto"
-                    className="absolute top-0 right-0 mt-6 hidden md:block"
+                    className="absolute top-0 right-0 mt-12 hidden md:block"
+                    data-aos="fade-up-left"
+                    data-aos-duration="1500"
                 />
                 <img
                     src={aboutkakshell1}
@@ -52,9 +62,11 @@ const About = () => {
                     width={800}
                     height="auto"
                     className="md:hidden w-[50rem]"
+                    data-aos="fade-up-left"
+                    data-aos-duration="1500"
                 />
             </div>
-            <div>
+            <div data-aos="flip-up" data-aos-duration="1500">
                 <video
                     width={200}
                     height={200}
@@ -69,7 +81,11 @@ const About = () => {
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div className="flex justify-center items-center flex-col mt-32 lg:mt-52 gap-10">
+            <div
+                className="flex justify-center items-center flex-col mt-32 lg:mt-52 gap-10"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+            >
                 <svg
                     width="100"
                     height="100"
@@ -116,7 +132,11 @@ const About = () => {
                     where the magic of beauty happened!
                 </p>
             </div>
-            <div className="flex justify-center items-center flex-col mt-32 lg:mt-48 gap-8">
+            <div
+                className="flex justify-center items-center flex-col mt-32 lg:mt-48 gap-8"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+            >
                 <h1 className="font-roboto text-[#D2AC47] text-3xl">Vision</h1>
                 <p className="font-roboto text-[#A18E64] lg:w-[60rem] w-80 md:w-[40rem] text-center">
                     To be at the forefront of the fashion and beauty care
@@ -124,7 +144,11 @@ const About = () => {
                     locally and globally.
                 </p>
             </div>
-            <div className="flex justify-center items-center flex-col mt-12 lg:mt-20 gap-8">
+            <div
+                className="flex justify-center items-center flex-col mt-12 lg:mt-20 gap-8"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+            >
                 <h1 className="font-roboto text-[#D2AC47] text-3xl">Mission</h1>
                 <p className="font-roboto text-[#A18E64] lg:w-[60rem] w-80 md:w-[40rem] text-center">
                     1. Always committed to creating high quality products with
@@ -137,11 +161,15 @@ const About = () => {
                     industry.
                 </p>
             </div>
-            <div className="flex flex-col justify-center items-center mt-32 md:mt-48">
-                <h1 className="text-[#D2AC47] font-roboto text-2xl md:text-3xl mb-8 md:mb-14">
+            <section className="flex flex-col justify-center items-center mt-32 lg:mt-48">
+                <h1
+                    className="text-[#D2AC47] font-roboto mt-28 text-2xl md:text-3xl mb-8 md:mb-14"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
                     Our Brand
                 </h1>
-                <div className="flex items-center gap-10 md:gap-32 lg:gap-44">
+                <div className="flex items-center gap-4 md:gap-24 lg:gap-36">
                     <img
                         src={imagessskin}
                         alt="imagesskin"
@@ -151,6 +179,8 @@ const About = () => {
                             (e.currentTarget.src = imagessskingold)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
+                        data-aos="fade-up"
+                        data-aos-duration="800"
                     />
                     <img
                         src={imagessshop}
@@ -161,6 +191,8 @@ const About = () => {
                             (e.currentTarget.src = imagessshopgold)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
                     />
                     <img
                         src={imagelevelup}
@@ -171,6 +203,22 @@ const About = () => {
                             (e.currentTarget.src = imagelevelupblack)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
+                    />
+                    <img
+                        src={imagelevelupbeaute}
+                        alt="imagelevelup"
+                        width={150}
+                        className="cursor-pointer hidden lg:block"
+                        onMouseOver={(e) =>
+                            (e.currentTarget.src = imagelevelupbeauteblack)
+                        }
+                        onMouseOut={(e) =>
+                            (e.currentTarget.src = imagelevelupbeaute)
+                        }
+                        data-aos="fade-up"
+                        data-aos-duration="1400"
                     />
                     <img
                         src={imagessskin}
@@ -181,6 +229,8 @@ const About = () => {
                             (e.currentTarget.src = imagessskingold)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
+                        data-aos="fade-up"
+                        data-aos-duration="800"
                     />
                     <img
                         src={imagessshop}
@@ -191,6 +241,8 @@ const About = () => {
                             (e.currentTarget.src = imagessshopgold)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
                     />
                     <img
                         src={imagelevelup}
@@ -201,41 +253,94 @@ const About = () => {
                             (e.currentTarget.src = imagelevelupblack)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
                     />
                     <img
-                        src={imagessskin}
+                        src={imagelevelupbeaute}
                         alt="imagesskin"
-                        width={70}
-                        className="cursor-pointer block md:hidden"
+                        width={110}
+                        className="cursor-pointer hidden md:block lg:hidden"
                         onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessskingold)
+                            (e.currentTarget.src = imagelevelupbeauteblack)
                         }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
-                    />
-                    <img
-                        src={imagessshop}
-                        alt="imagesskin"
-                        width={70}
-                        className="cursor-pointer block md:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessshopgold)
+                        onMouseOut={(e) =>
+                            (e.currentTarget.src = imagelevelupbeaute)
                         }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
+                        data-aos="fade-up"
+                        data-aos-duration="1400"
                     />
-                    <img
-                        src={imagelevelup}
-                        alt="imagesskin"
-                        width={80}
-                        className="cursor-pointer block md:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagelevelupblack)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
-                    />
+                    <div className="md:hidden flex flex-col gap-20">
+                        <div className="flex gap-20">
+                            <img
+                                src={imagessskin}
+                                alt="imagesskin"
+                                width={80}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagessskingold)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagessskin)
+                                }
+                                data-aos="fade-up"
+                                data-aos-duration="800"
+                            />
+                            <img
+                                src={imagessshop}
+                                alt="imagesskin"
+                                width={80}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagessshopgold)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagessshop)
+                                }
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                            />
+                        </div>
+                        <div className="flex gap-16">
+                            <img
+                                src={imagelevelup}
+                                alt="imagesskin"
+                                width={90}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagelevelupblack)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagelevelup)
+                                }
+                                data-aos="fade-up"
+                                data-aos-duration="1200"
+                            />
+                            <img
+                                src={imagelevelupbeaute}
+                                alt="imagesskin"
+                                width={90}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src =
+                                        imagelevelupbeauteblack)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagelevelupbeaute)
+                                }
+                                data-aos="fade-up"
+                                data-aos-duration="1400"
+                            />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="flex flex-col justify-center items-center mt-32 md:mt-48">
-                <h1 className="text-[#D2AC47] font-roboto text-2xl md:text-3xl mb-8 md:mb-14">
+            </section>
+            <div className="flex flex-col justify-center items-center mt-32 lg:mt-48">
+                <h1
+                    className="text-[#D2AC47] font-roboto text-2xl md:text-3xl mb-8 md:mb-14"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
                     Our Office
                 </h1>
                 <div className="flex flex-col md:flex-row justify-center items-center gap-10 lg:gap-32">
@@ -245,6 +350,8 @@ const About = () => {
                         width={350}
                         height="auto"
                         className="hidden lg:block"
+                        data-aos="fade-right"
+                        data-aos-duration="1500"
                     />
                     <img
                         src={imageoffice}
@@ -252,16 +359,21 @@ const About = () => {
                         width={300}
                         height="auto"
                         className="lg:hidden"
+                        data-aos="fade-right"
+                        data-aos-duration="1500"
                     />
-                    <div className="flex flex-col gap-6 md:gap-7 lg:gap-8 w-72 md:w-auto">
+                    <div
+                        className="flex flex-col gap-6 md:gap-7 lg:gap-8 w-72 md:w-auto"
+                        data-aos="fade-left"
+                        data-aos-duration="1500"
+                    >
                         <h1 className="font-roboto text-[#A18E64] font-normal text-2xl">
                             Shella Saukia Skin Office
                         </h1>
                         <p className="text-[#A18E64] font-roboto font-light w-72 md:w-[24rem] md:text-lg">
                             Jl. K.H. Wahid Hasyim No.161, RT.1/RW.5, Kb. Kacang,
                             Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah
-                            Khusus Ibukota Jakarta 10240 (Sebrang Kantor Pusat
-                            PSI)
+                            Khusus Ibukota Jakarta 10240
                         </p>
                         <div className="flex flex-col gap-2">
                             <div className="flex items-center gap-4">

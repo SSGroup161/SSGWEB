@@ -201,7 +201,8 @@ const Search = () => {
                             height="96"
                             src="https://res.cloudinary.com/dixxtnquz/image/upload/v1702286717/SSG/asset_catalog_1_zvrbmr.svg"
                             width="96"
-                            className="mb-3 w-48"
+                            className="mb-3 w-48 cursor-pointer hover:scale-110"
+                            onClick={() => navigate("/product/search/catalog")}
                         />
                         <h5 className="mb-1 text-xl font-medium font-roboto text-gray-900 dark:text-white">
                             Acne Serum

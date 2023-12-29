@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Dropdown } from "flowbite-react";
 import "./style.css";
 
 const Navbar = () => {
@@ -12,6 +13,11 @@ const Navbar = () => {
     const [activeAbout, setActiveAbout] = useState(false);
     const [activeProduct, setActiveProduct] = useState(false);
     const [activeNews, setActiveNews] = useState(false);
+    const [activeBrand, setActiveBrand] = useState(false);
+    const [activeSSSkin, setActiveSSSkin] = useState(false);
+    const [activeSSShop, setActiveSSShop] = useState(false);
+    const [activeLevelupBeaute, setActiveLevelupBeaute] = useState(false);
+    const [activeLevelupStyle, setActiveLevelupStyle] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [colorSearch, setColorSearch] = useState(false);
 
@@ -31,19 +37,35 @@ const Navbar = () => {
             setActiveAbout(false);
             setActiveProduct(false);
             setActiveNews(false);
+            setActiveBrand(false);
+            setActiveSSShop(false);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(false);
         } else if (location.pathname === "/about") {
             setActiveHome(false);
             setActiveAbout(true);
             setActiveProduct(false);
             setActiveNews(false);
+            setActiveBrand(false);
+            setActiveSSShop(false);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(false);
         } else if (
             location.pathname === "/product" ||
-            location.pathname === "/product/search"
+            location.pathname === "/product/search" ||
+            location.pathname === "/product/search/catalog"
         ) {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(true);
             setActiveNews(false);
+            setActiveBrand(false);
+            setActiveSSShop(false);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(false);
         } else if (
             location.pathname === "/news" ||
             location.pathname === "/news/detail"
@@ -52,11 +74,79 @@ const Navbar = () => {
             setActiveAbout(false);
             setActiveProduct(false);
             setActiveNews(true);
+            setActiveBrand(false);
+            setActiveSSShop(false);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(false);
         } else if (location.pathname === "/search") {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(true);
             setActiveNews(false);
+            setActiveBrand(false);
+            setActiveSSShop(false);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(false);
+        } else if (location.pathname === "/brand") {
+            setActiveHome(false);
+            setActiveAbout(false);
+            setActiveProduct(false);
+            setActiveNews(false);
+            setActiveBrand(true);
+            setActiveSSShop(false);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(false);
+        } else if (
+            location.pathname === "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+        ) {
+            setActiveHome(false);
+            setActiveAbout(false);
+            setActiveProduct(false);
+            setActiveNews(false);
+            setActiveBrand(true);
+            setActiveSSShop(true);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(false);
+        } else if (
+            location.pathname === "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+        ) {
+            setActiveHome(false);
+            setActiveAbout(false);
+            setActiveProduct(false);
+            setActiveNews(false);
+            setActiveBrand(true);
+            setActiveSSShop(false);
+            setActiveSSSkin(true);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(false);
+        } else if (
+            location.pathname === "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+        ) {
+            setActiveHome(false);
+            setActiveAbout(false);
+            setActiveProduct(false);
+            setActiveNews(false);
+            setActiveBrand(true);
+            setActiveSSShop(false);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(false);
+            setActiveLevelupStyle(true);
+        } else if (
+            location.pathname === "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+        ) {
+            setActiveHome(false);
+            setActiveAbout(false);
+            setActiveProduct(false);
+            setActiveNews(false);
+            setActiveBrand(true);
+            setActiveSSShop(false);
+            setActiveSSSkin(false);
+            setActiveLevelupBeaute(true);
+            setActiveLevelupStyle(false);
         }
     }, []);
 
@@ -87,7 +177,7 @@ const Navbar = () => {
             <div
                 className={`w-full h-20 flex justify-between items-center px-10 md:px-20 lg:px-36 fixed top-0 z-20 transition-bg ${
                     !isScrolled ? "bg-transparent" : "bg-white"
-                } transition-all duration-300`}
+                } transition-all duration-300 font-roboto`}
             >
                 <div>
                     <svg
@@ -106,7 +196,8 @@ const Navbar = () => {
                             fill={`${
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
-                                    location.pathname === "/news")
+                                    location.pathname === "/news" ||
+                                    location.pathname === "/brand")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -116,7 +207,8 @@ const Navbar = () => {
                             fill={`${
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
-                                    location.pathname === "/news")
+                                    location.pathname === "/news" ||
+                                    location.pathname === "/brand")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -126,7 +218,8 @@ const Navbar = () => {
                             fill={`${
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
-                                    location.pathname === "/news")
+                                    location.pathname === "/news" ||
+                                    location.pathname === "/brand")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -136,7 +229,8 @@ const Navbar = () => {
                             fill={`${
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
-                                    location.pathname === "/news")
+                                    location.pathname === "/news" ||
+                                    location.pathname === "/brand")
                                     ? "#FFFFFF"
                                     : "black"
                             }`}
@@ -146,7 +240,8 @@ const Navbar = () => {
                             fill={`${
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
-                                    location.pathname === "/news")
+                                    location.pathname === "/news" ||
+                                    location.pathname === "/brand")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -160,8 +255,8 @@ const Navbar = () => {
                                 className={`cursor-pointer 
                                 ${
                                     activeHome
-                                        ? "text-[#D2AC47]"
-                                        : "text-[#444341]"
+                                        ? "text-[#D2AC47] font-normal"
+                                        : "text-[#444341] font-light"
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
@@ -184,8 +279,8 @@ const Navbar = () => {
                             <li
                                 className={`cursor-pointer ${
                                     activeAbout
-                                        ? "text-[#D2AC47]"
-                                        : "text-[#444341]"
+                                        ? "text-[#D2AC47] font-normal"
+                                        : "text-[#444341] font-light"
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
@@ -206,8 +301,8 @@ const Navbar = () => {
                             <li
                                 className={`cursor-pointer ${
                                     activeProduct
-                                        ? "text-[#D2AC47]"
-                                        : "text-[#444341]"
+                                        ? "text-[#D2AC47] font-normal"
+                                        : "text-[#444341] font-light"
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
@@ -228,8 +323,8 @@ const Navbar = () => {
                             <li
                                 className={`cursor-pointer ${
                                     activeNews
-                                        ? "text-[#D2AC47]"
-                                        : "text-[#444341]"
+                                        ? "text-[#D2AC47] font-normal"
+                                        : "text-[#444341] font-light"
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
@@ -246,6 +341,84 @@ const Navbar = () => {
                                 onClick={() => navigate("/news")}
                             >
                                 News
+                            </li>
+                            <li
+                                className={`cursor-pointer ${
+                                    activeBrand
+                                        ? "text-[#D2AC47] font-normal"
+                                        : "text-[#444341] font-light"
+                                } ${
+                                    !colorSearch &&
+                                    (location.pathname === "/product/search" ||
+                                        location.pathname === "/news")
+                                        ? "text-white"
+                                        : "text-[#444341]"
+                                } ${
+                                    (location.pathname === "/product/search" ||
+                                        location.pathname === "/news") &&
+                                    !isScrolled
+                                        ? "hover:text-[#444341]"
+                                        : "hover:text-[#D2AC47]"
+                                }`}
+                            >
+                                <Dropdown label="Brand" inline>
+                                    <Dropdown.Item
+                                        onClick={() =>
+                                            navigate(
+                                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                                            )
+                                        }
+                                        className={`hover:text-[#D2AC47] ${
+                                            activeSSShop
+                                                ? "text-[#D2AC47] font-normal"
+                                                : "text-[#444341] font-light"
+                                        }`}
+                                    >
+                                        SS Shop
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() =>
+                                            navigate(
+                                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                                            )
+                                        }
+                                        className={`hover:text-[#D2AC47] ${
+                                            activeSSSkin
+                                                ? "text-[#D2AC47] font-normal"
+                                                : "text-[#444341] font-light"
+                                        }`}
+                                    >
+                                        SS Skin
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() =>
+                                            navigate(
+                                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                            )
+                                        }
+                                        className={`hover:text-[#D2AC47] ${
+                                            activeLevelupStyle
+                                                ? "text-[#D2AC47] font-normal"
+                                                : "text-[#444341] font-light"
+                                        }`}
+                                    >
+                                        LevelUp Style
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() =>
+                                            navigate(
+                                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                            )
+                                        }
+                                        className={`hover:text-[#D2AC47] ${
+                                            activeLevelupBeaute
+                                                ? "text-[#D2AC47] font-normal"
+                                                : "text-[#444341] font-light"
+                                        }`}
+                                    >
+                                        LevelUp Beaute
+                                    </Dropdown.Item>
+                                </Dropdown>
                             </li>
                         </ul>
                     </div>
@@ -281,8 +454,8 @@ const Navbar = () => {
                                     }}
                                     className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center mt-4 ${
                                         activeHome
-                                            ? "text-[#D2AC47]"
-                                            : "text-[#444341]"
+                                            ? "text-[#D2AC47] font-normal"
+                                            : "text-[#444341] font-light"
                                     }`}
                                 >
                                     Home
@@ -291,8 +464,8 @@ const Navbar = () => {
                                     onClick={() => navigate("/about")}
                                     className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
                                         activeAbout
-                                            ? "text-[#D2AC47]"
-                                            : "text-[#444341]"
+                                            ? "text-[#D2AC47] font-normal"
+                                            : "text-[#444341] font-light"
                                     }`}
                                 >
                                     About Us
@@ -301,8 +474,8 @@ const Navbar = () => {
                                     onClick={() => navigate("/product")}
                                     className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
                                         activeProduct
-                                            ? "text-[#D2AC47]"
-                                            : "text-[#444341]"
+                                            ? "text-[#D2AC47] font-normal"
+                                            : "text-[#444341] font-light"
                                     }`}
                                 >
                                     Product
@@ -311,11 +484,57 @@ const Navbar = () => {
                                     onClick={() => navigate("/news")}
                                     className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
                                         activeNews
-                                            ? "text-[#D2AC47]"
-                                            : "text-[#444341]"
+                                            ? "text-[#D2AC47] font-normal"
+                                            : "text-[#444341] font-light"
                                     }`}
                                 >
                                     News
+                                </li>
+                                <li
+                                    className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] ${
+                                        activeBrand
+                                            ? "text-[#D2AC47] font-normal"
+                                            : "text-[#444341] font-light"
+                                    }`}
+                                >
+                                    <Dropdown label="Brand" inline>
+                                        <Dropdown.Item
+                                            onClick={() =>
+                                                navigate(
+                                                    "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                                                )
+                                            }
+                                        >
+                                            SS Shop
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                            onClick={() =>
+                                                navigate(
+                                                    "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                                                )
+                                            }
+                                        >
+                                            SS Skin
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                            onClick={() =>
+                                                navigate(
+                                                    "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                                )
+                                            }
+                                        >
+                                            LevelUp Style
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                            onClick={() =>
+                                                navigate(
+                                                    "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                                )
+                                            }
+                                        >
+                                            LevelUp Beaute
+                                        </Dropdown.Item>
+                                    </Dropdown>
                                 </li>
                             </ul>
                         </div>

@@ -16,13 +16,17 @@ const imagessskin =
 const imagessshop =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136421/SSG/SSSHOP_w8okrk.svg";
 const imagelevelup =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136420/SSG/LEVELUP_ymv49h.svg";
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703038769/SSG/LEVELUPstyle_qthn1c.svg";
 const imagessskingold =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137959/SSG/SSSKINGOLD_kseonm.png";
 const imagessshopgold =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137959/SSG/SSSHOPGOLD_zuncts.png";
 const imagelevelupblack =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137656/SSG/LEVELUPBLACK_qmwklj.svg";
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703038889/SSG/LEVELUPstyleblack_y8xvvt.svg";
+const imagelevelupbeaute =
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040124/SSG/LEVELUPbeaute_dtcal7.svg";
+const imagelevelupbeauteblack =
+    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040140/SSG/LEVELUPbeauteblack_txkvty.svg";
 
 const Product = () => {
     const navigate = useNavigate();
@@ -33,7 +37,7 @@ const Product = () => {
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
-            <section className="h-64 md:h-[36rem] lg:h-[40rem] xl:h-[49rem] 2xl:h-[55rem] mt-20 lg:mt-0 top-0 ">
+            <section className="h-64 m-auto md:h-[36rem] lg:h-[40rem] xl:h-[49rem] 2xl:h-[55rem] mt-20 lg:mt-0 top-0 ">
                 <Carousel pauseOnHover className="carousel-custom">
                     <img src={banner} alt="banner" width="full" height="full" />
                     <img
@@ -56,11 +60,12 @@ const Product = () => {
                         Key For Your Beauty
                     </h1>
                     <p className="font-roboto font-light text-[#A18E64] md:mt-10 mt-6">
-                        SS Group is a company that not only operates in the
-                        cosmetics and beauty industry but also expands its reach
-                        into the contemporary and trendy world of fashion. With
-                        the same innovative spirit, SS Group creates a
-                        harmonious blend of beauty and style in its products.
+                        Key for Your Beauty: Revealing the Secrets of True
+                        Beauty. Discover the secrets of true beauty with our
+                        best cosmetic products. Every woman can feel beautiful
+                        from within and express herself with confidence. Find
+                        the secret key to your beauty today and let your true
+                        beauty shine.
                     </p>
                 </div>
                 <div>
@@ -70,14 +75,19 @@ const Product = () => {
             <section className="flex flex-col md:flex-row-reverse justify-between items-center mt-14 lg:mt-48 md:px-10 lg:px-56">
                 <div className="w-80 md:w-[24rem] lg:w-[30rem]">
                     <h1 className="text-[#D2AC47] font-roboto text-3xl">
-                        Looks Young
+                        Trusted and Certified
                     </h1>
                     <p className="font-roboto font-light text-[#A18E64] md:mt-10 mt-6">
-                        SS Group is a company that not only operates in the
-                        cosmetics and beauty industry but also expands its reach
-                        into the contemporary and trendy world of fashion. With
-                        the same innovative spirit, SS Group creates a
-                        harmonious blend of beauty and style in its products.
+                        In our latest cosmetic product lineup, we proudly ensure
+                        the highest safety and quality. Each of our products has
+                        received official certification from Badan Pengawas Obat
+                        dan Makanan (BPOM) and is Halal certified, reaffirming
+                        our commitment to providing reliable products that
+                        adhere to the highest safety standards. We understand
+                        the importance of safety and trust when choosing beauty
+                        products. Therefore, every product in the collection has
+                        undergone clinical tests and a rigorous certification
+                        process.
                     </p>
                 </div>
                 <div>
@@ -87,14 +97,18 @@ const Product = () => {
             <section className="flex flex-col md:flex-row justify-between items-center mt-14 lg:mt-48 md:px-10 lg:px-56">
                 <div className="w-80 md:w-[24rem] lg:w-[30rem]">
                     <h1 className="text-[#D2AC47] font-roboto text-3xl">
-                        Trusted and certified
+                        Fashionable has never been this accessible!
                     </h1>
                     <p className="font-roboto font-light text-[#A18E64] md:mt-10 mt-6">
-                        SS Group is a company that not only operates in the
-                        cosmetics and beauty industry but also expands its reach
-                        into the contemporary and trendy world of fashion. With
-                        the same innovative spirit, SS Group creates a
-                        harmonious blend of beauty and style in its products.
+                        Explore the world of fashion with our latest collection,
+                        presenting a fashionable style with international
+                        quality yet remains affordable. With high-quality
+                        materials and designs that always follow the global
+                        fashion trends, we ensure that each item in our
+                        collection not only meets international quality
+                        standards but also provides added value for every user.
+                        We believe that fashionable style doesn't have to be
+                        expensive, and that's the essence of our collection.
                     </p>
                 </div>
                 <div>
@@ -156,11 +170,11 @@ const Product = () => {
                     </div>
                 </div>
             </section>
-            <section className="flex flex-col justify-center items-center mt-32 md:mt-48">
+            <section className="flex flex-col justify-center items-center mt-32 lg:mt-48">
                 <h1 className="text-[#D2AC47] font-roboto text-2xl md:text-3xl mb-8 md:mb-14">
                     Our Brand
                 </h1>
-                <div className="flex items-center gap-10 md:gap-32 lg:gap-44">
+                <div className="flex items-center gap-4 md:gap-24 lg:gap-36">
                     <img
                         src={imagessskin}
                         alt="imagesskin"
@@ -190,6 +204,18 @@ const Product = () => {
                             (e.currentTarget.src = imagelevelupblack)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
+                    />
+                    <img
+                        src={imagelevelupbeaute}
+                        alt="imagelevelup"
+                        width={150}
+                        className="cursor-pointer hidden lg:block"
+                        onMouseOver={(e) =>
+                            (e.currentTarget.src = imagelevelupbeauteblack)
+                        }
+                        onMouseOut={(e) =>
+                            (e.currentTarget.src = imagelevelupbeaute)
+                        }
                     />
                     <img
                         src={imagessskin}
@@ -222,35 +248,72 @@ const Product = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                     />
                     <img
-                        src={imagessskin}
+                        src={imagelevelupbeaute}
                         alt="imagesskin"
-                        width={70}
-                        className="cursor-pointer block md:hidden"
+                        width={110}
+                        className="cursor-pointer hidden md:block lg:hidden"
                         onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessskingold)
+                            (e.currentTarget.src = imagelevelupbeauteblack)
                         }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
-                    />
-                    <img
-                        src={imagessshop}
-                        alt="imagesskin"
-                        width={70}
-                        className="cursor-pointer block md:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessshopgold)
+                        onMouseOut={(e) =>
+                            (e.currentTarget.src = imagelevelupbeaute)
                         }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                     />
-                    <img
-                        src={imagelevelup}
-                        alt="imagesskin"
-                        width={80}
-                        className="cursor-pointer block md:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagelevelupblack)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
-                    />
+                    <div className="md:hidden flex flex-col gap-20">
+                        <div className="flex gap-20">
+                            <img
+                                src={imagessskin}
+                                alt="imagesskin"
+                                width={80}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagessskingold)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagessskin)
+                                }
+                            />
+                            <img
+                                src={imagessshop}
+                                alt="imagesskin"
+                                width={80}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagessshopgold)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagessshop)
+                                }
+                            />
+                        </div>
+                        <div className="flex gap-16">
+                            <img
+                                src={imagelevelup}
+                                alt="imagesskin"
+                                width={90}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src = imagelevelupblack)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagelevelup)
+                                }
+                            />
+                            <img
+                                src={imagelevelupbeaute}
+                                alt="imagesskin"
+                                width={90}
+                                className="cursor-pointer block md:hidden"
+                                onMouseOver={(e) =>
+                                    (e.currentTarget.src =
+                                        imagelevelupbeauteblack)
+                                }
+                                onMouseOut={(e) =>
+                                    (e.currentTarget.src = imagelevelupbeaute)
+                                }
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className="flex justify-center items-center mt-32 md:mt-48">
