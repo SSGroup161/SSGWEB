@@ -363,11 +363,12 @@ const Navbar = () => {
                             >
                                 <Dropdown label="Brand" inline>
                                     <Dropdown.Item
-                                        onClick={() =>
+                                        onClick={() => {
                                             navigate(
                                                 "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                                            )
-                                        }
+                                            );
+                                            window.location.reload();
+                                        }}
                                         className={`hover:text-[#D2AC47] ${
                                             activeSSShop
                                                 ? "text-[#D2AC47] font-normal"
@@ -377,11 +378,12 @@ const Navbar = () => {
                                         SS Shop
                                     </Dropdown.Item>
                                     <Dropdown.Item
-                                        onClick={() =>
+                                        onClick={() => {
                                             navigate(
                                                 "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                                            )
-                                        }
+                                            );
+                                            window.location.reload();
+                                        }}
                                         className={`hover:text-[#D2AC47] ${
                                             activeSSSkin
                                                 ? "text-[#D2AC47] font-normal"
@@ -391,11 +393,12 @@ const Navbar = () => {
                                         SS Skin
                                     </Dropdown.Item>
                                     <Dropdown.Item
-                                        onClick={() =>
+                                        onClick={() => {
                                             navigate(
                                                 "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                                            )
-                                        }
+                                            );
+                                            window.location.reload();
+                                        }}
                                         className={`hover:text-[#D2AC47] ${
                                             activeLevelupStyle
                                                 ? "text-[#D2AC47] font-normal"
@@ -405,11 +408,12 @@ const Navbar = () => {
                                         LevelUp Style
                                     </Dropdown.Item>
                                     <Dropdown.Item
-                                        onClick={() =>
+                                        onClick={() => {
                                             navigate(
                                                 "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                                            )
-                                        }
+                                            );
+                                            window.location.reload();
+                                        }}
                                         className={`hover:text-[#D2AC47] ${
                                             activeLevelupBeaute
                                                 ? "text-[#D2AC47] font-normal"
@@ -499,38 +503,42 @@ const Navbar = () => {
                                 >
                                     <Dropdown label="Brand" inline>
                                         <Dropdown.Item
-                                            onClick={() =>
+                                            onClick={() => {
                                                 navigate(
                                                     "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                                                )
-                                            }
+                                                );
+                                                window.location.reload();
+                                            }}
                                         >
                                             SS Shop
                                         </Dropdown.Item>
                                         <Dropdown.Item
-                                            onClick={() =>
+                                            onClick={() => {
                                                 navigate(
                                                     "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                                                )
-                                            }
+                                                );
+                                                window.location.reload();
+                                            }}
                                         >
                                             SS Skin
                                         </Dropdown.Item>
                                         <Dropdown.Item
-                                            onClick={() =>
+                                            onClick={() => {
                                                 navigate(
                                                     "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                                                )
-                                            }
+                                                );
+                                                window.location.reload();
+                                            }}
                                         >
                                             LevelUp Style
                                         </Dropdown.Item>
                                         <Dropdown.Item
-                                            onClick={() =>
+                                            onClick={() => {
                                                 navigate(
                                                     "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                                                )
-                                            }
+                                                );
+                                                window.location.reload();
+                                            }}
                                         >
                                             LevelUp Beaute
                                         </Dropdown.Item>
