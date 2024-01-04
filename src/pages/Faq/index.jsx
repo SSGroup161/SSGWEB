@@ -8,7 +8,7 @@ const Faq = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <>
+        <div className="max-w-screen-3xl m-auto">
             <Navbar />
             <section className="h-auto w-screen flex items-center flex-col">
                 <h1 className="text-3xl font-roboto mb-14 font-medium text-[#444341] mt-32 uppercase">
@@ -200,7 +200,7 @@ const Faq = () => {
                 </div>
             </section>
             <Footer />
-        </>
+        </div>
     );
 };
 

@@ -32,7 +32,7 @@ const Brand = () => {
     }, []);
 
     return (
-        <>
+        <div className="max-w-screen-3xl m-auto">
             <Navbar />
             <section className="h-full relative flex-col">
                 <div className="absolute w-full h-full flex items-center justify-start">
@@ -382,7 +382,7 @@ const Brand = () => {
             </section>
             <ToastContainer />
             <Footer />
-        </>
+        </div>
     );
 };
 

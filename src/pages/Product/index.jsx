@@ -35,7 +35,7 @@ const Product = () => {
     }, []);
 
     return (
-        <div className="max-w-screen-2xl m-auto">
+        <div className="max-w-screen-3xl m-auto">
             <Navbar />
             <section
                 className="h-40 md:h-96 lg:h-[32rem]"

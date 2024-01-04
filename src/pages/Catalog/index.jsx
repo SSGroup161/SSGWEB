@@ -7,7 +7,7 @@ const Catalog = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <>
+        <div className="max-w-screen-3xl m-auto">
             <Navbar />
             <section className="h-auto px-12 gap-8 w-full flex flex-col md:flex-row pt-40">
                 <div className="flex-1 flex justify-center items-start">
@@ -63,7 +63,7 @@ const Catalog = () => {
                 </div>
             </section>
             <Footer />
-        </>
+        </div>
     );
 };
 

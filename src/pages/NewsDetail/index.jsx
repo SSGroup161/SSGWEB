@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 
 const NewsDetail = () => {
     return (
-        <>
+        <div className="max-w-screen-3xl m-auto">
             <Navbar />
             <section className="w-80 md:w-[40rem] lg:w-[60rem] h-auto m-auto mt-20">
                 <div className="mt-16 md:mt-32">
@@ -51,7 +51,7 @@ const NewsDetail = () => {
                 </div>
             </section>
             <Footer />
-        </>
+        </div>
     );
 };
 

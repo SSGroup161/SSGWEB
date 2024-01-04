@@ -29,7 +29,7 @@ const About = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div className="max-w-screen-2xl m-auto">
+        <div className="max-w-screen-3xl m-auto">
             <Navbar />
             <div className="h-auto flex items-center md:items-start relative flex-col mt-28 gap-28 md:gap-0">
                 <div
