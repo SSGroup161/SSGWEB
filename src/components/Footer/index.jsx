@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
     const navigate = useNavigate();
-
-    const handleFaq = () => {
-        navigate("/faq");
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     };
 
     return (
@@ -75,23 +77,32 @@ const Footer = () => {
                             Support
                         </h1>
                         <ul className="">
-                            <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
+                            <li
+                                className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4"
+                                onClick={() => {
+                                    navigate("/");
+                                    scrollToTop();
+                                }}
+                            >
                                 Home
                             </li>
-                            <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
+                            <li
+                                className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4"
+                                onClick={() => navigate("/about")}
+                            >
                                 About Us
                             </li>
-                            <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
+                            <li
+                                className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4"
+                                onClick={() => navigate("/news")}
+                            >
                                 News
                             </li>
                             <li
                                 className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4"
-                                onClick={handleFaq}
+                                onClick={() => navigate("/faq")}
                             >
-                                Faq
-                            </li>
-                            <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
-                                Partner
+                                FAQs
                             </li>
                             <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#444341] mt-4">
                                 Terms & Conditions

@@ -160,7 +160,14 @@ const Navbar = () => {
     useEffect(() => {
         if (
             location.pathname === "/product/search" ||
-            location.pathname === "/news"
+            location.pathname === "/news" ||
+            location.pathname ===
+                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+            location.pathname ===
+                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+            location.pathname ===
+                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+            location.pathname === "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
         ) {
             if (isScrolled) {
                 setColorSearch(true);
@@ -197,7 +204,14 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand")
+                                    location.pathname ===
+                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                    location.pathname ===
+                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                    location.pathname ===
+                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                    location.pathname ===
+                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -208,7 +222,14 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand")
+                                    location.pathname ===
+                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                    location.pathname ===
+                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                    location.pathname ===
+                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                    location.pathname ===
+                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -219,7 +240,14 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand")
+                                    location.pathname ===
+                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                    location.pathname ===
+                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                    location.pathname ===
+                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                    location.pathname ===
+                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -230,7 +258,14 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand")
+                                    location.pathname ===
+                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                    location.pathname ===
+                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                    location.pathname ===
+                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                    location.pathname ===
+                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                     ? "#FFFFFF"
                                     : "black"
                             }`}
@@ -241,7 +276,14 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand")
+                                    location.pathname ===
+                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                    location.pathname ===
+                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                    location.pathname ===
+                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                    location.pathname ===
+                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -260,12 +302,28 @@ const Navbar = () => {
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news")
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news") &&
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -284,12 +342,28 @@ const Navbar = () => {
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news")
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news") &&
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -306,12 +380,28 @@ const Navbar = () => {
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news")
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news") &&
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -328,12 +418,28 @@ const Navbar = () => {
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news")
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news") &&
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -350,12 +456,28 @@ const Navbar = () => {
                                 } ${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news")
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news") &&
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -439,7 +561,15 @@ const Navbar = () => {
                                 color={`${
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
-                                        location.pathname === "/news")
+                                        location.pathname === "/news" ||
+                                        location.pathname ===
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        location.pathname ===
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                        location.pathname ===
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                        location.pathname ===
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
                                         ? "#FFFFFF"
                                         : "#D2AC47"
                                 }`}

@@ -4,9 +4,9 @@ import Footer from "../../components/Footer";
 import { Carousel } from "flowbite-react";
 import { useNavigate } from "react-router-dom";
 
-const banner = "/BannerProduct1.svg";
-const banner2 = "/BannerProduct2.svg";
-const banner3 = "/Bannerproduct3.svg";
+const banner = "/slide1.png";
+const banner2 = "/slide2.png";
+const banner3 = "/slide3.png";
 const louminus =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700639629/SSG/Luminous_GLow_2_rqfrnn.svg";
 const imagebeauty =
@@ -35,9 +35,13 @@ const Product = () => {
     }, []);
 
     return (
-        <div className="max-w-screen-3xl m-auto">
+        <div className="max-w-screen-2xl m-auto">
             <Navbar />
-            <section className="h-64 m-auto md:h-[36rem] lg:h-[40rem] xl:h-[49rem] 2xl:h-[55rem] mt-20 lg:mt-0 top-0 ">
+            <section
+                className="h-40 md:h-96 lg:h-[32rem]"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+            >
                 <Carousel pauseOnHover className="carousel-custom">
                     <img src={banner} alt="banner" width="full" height="full" />
                     <img
@@ -54,82 +58,64 @@ const Product = () => {
                     />
                 </Carousel>
             </section>
-            <section className="flex flex-col md:flex-row justify-between items-center mt-14 lg:mt-48 md:px-10 lg:px-56">
-                <div className="w-80 md:w-[24rem] lg:w-[30rem]">
-                    <h1 className="text-[#D2AC47] font-roboto text-3xl">
-                        Key For Your Beauty
-                    </h1>
-                    <p className="font-roboto font-light text-[#A18E64] md:mt-10 mt-6">
-                        Key for Your Beauty: Revealing the Secrets of True
-                        Beauty. Discover the secrets of true beauty with our
-                        best cosmetic products. Every woman can feel beautiful
-                        from within and express herself with confidence. Find
-                        the secret key to your beauty today and let your true
-                        beauty shine.
-                    </p>
-                </div>
-                <div>
-                    <img src={louminus} alt="imagebeauty" width={400} />
-                </div>
-            </section>
-            <section className="flex flex-col md:flex-row-reverse justify-between items-center mt-14 lg:mt-48 md:px-10 lg:px-56">
-                <div className="w-80 md:w-[24rem] lg:w-[30rem]">
-                    <h1 className="text-[#D2AC47] font-roboto text-3xl">
-                        Trusted and Certified
-                    </h1>
-                    <p className="font-roboto font-light text-[#A18E64] md:mt-10 mt-6">
-                        In our latest cosmetic product lineup, we proudly ensure
-                        the highest safety and quality. Each of our products has
-                        received official certification from Badan Pengawas Obat
-                        dan Makanan (BPOM) and is Halal certified, reaffirming
-                        our commitment to providing reliable products that
-                        adhere to the highest safety standards. We understand
-                        the importance of safety and trust when choosing beauty
-                        products. Therefore, every product in the collection has
-                        undergone clinical tests and a rigorous certification
-                        process.
-                    </p>
-                </div>
-                <div>
-                    <img src={imagebeauty} alt="imagebeauty" width={400} />
-                </div>
-            </section>
-            <section className="flex flex-col md:flex-row justify-between items-center mt-14 lg:mt-48 md:px-10 lg:px-56">
-                <div className="w-80 md:w-[24rem] lg:w-[30rem]">
-                    <h1 className="text-[#D2AC47] font-roboto text-3xl">
-                        Fashionable has never been this accessible!
-                    </h1>
-                    <p className="font-roboto font-light text-[#A18E64] md:mt-10 mt-6">
-                        Explore the world of fashion with our latest collection,
-                        presenting a fashionable style with international
-                        quality yet remains affordable. With high-quality
-                        materials and designs that always follow the global
-                        fashion trends, we ensure that each item in our
-                        collection not only meets international quality
-                        standards but also provides added value for every user.
-                        We believe that fashionable style doesn't have to be
-                        expensive, and that's the essence of our collection.
-                    </p>
-                </div>
-                <div>
-                    <img src={louminus} alt="imagebeauty" width={400} />
+            <section className="mt-20 md:mt-10">
+                <div className="flex items-center justify-center gap-10">
+                    <div className="text-start font-roboto w-72 flex flex-col gap-4">
+                        <h1 className="text-lg font-medium text-[#D2AC47]">
+                            Overseas Expansion
+                        </h1>
+                        <h1 className="text-7xl font-medium text-[#D2AC47]">
+                            5
+                        </h1>
+                        <p className="text-[#A18E64] font-light">
+                            Lorem ipsum dolor sit amet consectetur. Eget cursus
+                            mauris faucibus quis leo. Eget cursus mauris
+                            faucibus quis leo.
+                        </p>
+                    </div>
+                    <div className="text-start font-roboto w-72 flex flex-col gap-4">
+                        <h1 className="text-lg font-medium text-[#D2AC47]">
+                            Happy Customer
+                        </h1>
+                        <h1 className="text-7xl font-medium text-[#D2AC47]">
+                            2M+
+                        </h1>
+                        <p className="text-[#A18E64] font-light">
+                            Lorem ipsum dolor sit amet consectetur. Eget cursus
+                            mauris faucibus quis leo. Eget cursus mauris
+                            faucibus quis leo.
+                        </p>
+                    </div>
+                    <div className="text-start font-roboto w-72 flex flex-col gap-4">
+                        <h1 className="text-lg font-medium text-[#D2AC47]">
+                            Total Product
+                        </h1>
+                        <h1 className="text-7xl font-medium text-[#D2AC47]">
+                            5M+
+                        </h1>
+                        <p className="text-[#A18E64] font-light">
+                            Lorem ipsum dolor sit amet consectetur. Eget cursus
+                            mauris faucibus quis leo. Eget cursus mauris
+                            faucibus quis leo.
+                        </p>
+                    </div>
                 </div>
             </section>
-            <section className="flex flex-col items-center justify-center mt-14 lg:mt-48 md:px-10 lg:px-56">
+            <section className="flex flex-col items-center justify-center mt-48 md:px-10 lg:px-56">
                 <h1 className="text-[#D2AC47] font-roboto text-3xl mb-12">
-                    Any Problem, One Solution
+                    All About Beauty Style
                 </h1>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24">
                     <div className="flex flex-col w-52 lg:w-64 items-center">
                         <img
-                            src="https://res.cloudinary.com/dixxtnquz/image/upload/v1701916640/SSG/assetproduct1_hw1leg.svg"
+                            src="/levelstylemodel.png"
                             alt="assset1"
                             width={200}
                             height={200}
                             className="w-full h-auto"
                         />
                         <h1 className="text-[#D2AC47] font-roboto text-2xl mt-8 mb-4 text-center">
-                            Dull Skin
+                            Level Up Style
                         </h1>
                         <p className="text-center font-roboto">
                             Lorem ipsum dolor sit amet consectetur. Eget cursus
@@ -138,14 +124,14 @@ const Product = () => {
                     </div>
                     <div className="flex flex-col w-52 lg:w-64 items-center">
                         <img
-                            src="https://res.cloudinary.com/dixxtnquz/image/upload/v1701916644/SSG/assetproduct2_czzofl.svg"
+                            src="/ssmodel.png"
                             alt="assset2"
                             width={200}
                             height={200}
                             className="w-full h-auto"
                         />
                         <h1 className="text-[#D2AC47] font-roboto text-2xl mt-8 mb-4 text-center">
-                            Wrinkled Skin
+                            SS Skin & SS Shop
                         </h1>
                         <p className="text-center font-roboto">
                             Lorem ipsum dolor sit amet consectetur. Eget cursus
@@ -154,14 +140,14 @@ const Product = () => {
                     </div>
                     <div className="flex flex-col w-52 lg:w-64 items-center">
                         <img
-                            src="https://res.cloudinary.com/dixxtnquz/image/upload/v1701916641/SSG/assetproduct3_kbkhze.svg"
+                            src="/levelbeautemodel.png"
                             alt="assset3"
                             width={200}
                             height={200}
                             className="w-full h-auto"
                         />
                         <h1 className="text-[#D2AC47] font-roboto text-2xl mt-8 mb-4 text-center">
-                            Dry Skin
+                            Level Up Beaute
                         </h1>
                         <p className="text-center font-roboto">
                             Lorem ipsum dolor sit amet consectetur. Eget cursus
@@ -170,10 +156,7 @@ const Product = () => {
                     </div>
                 </div>
             </section>
-            <section className="flex flex-col justify-center items-center mt-32 lg:mt-48">
-                <h1 className="text-[#D2AC47] font-roboto text-2xl md:text-3xl mb-8 md:mb-14">
-                    Our Brand
-                </h1>
+            <section className="flex flex-col justify-center items-center mt-16">
                 <div className="flex items-center gap-4 md:gap-24 lg:gap-36">
                     <img
                         src={imagessskin}
@@ -184,6 +167,13 @@ const Product = () => {
                             (e.currentTarget.src = imagessskingold)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        onClick={() =>
+                            navigate(
+                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                            )
+                        }
                     />
                     <img
                         src={imagessshop}
@@ -194,6 +184,13 @@ const Product = () => {
                             (e.currentTarget.src = imagessshopgold)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
+                        onClick={() =>
+                            navigate(
+                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelup}
@@ -204,6 +201,13 @@ const Product = () => {
                             (e.currentTarget.src = imagelevelupblack)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
+                        data-aos="fade-up"
+                        data-aos-duration="1400"
+                        onClick={() =>
+                            navigate(
+                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -216,6 +220,13 @@ const Product = () => {
                         onMouseOut={(e) =>
                             (e.currentTarget.src = imagelevelupbeaute)
                         }
+                        data-aos="fade-up"
+                        data-aos-duration="1600"
+                        onClick={() =>
+                            navigate(
+                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                            )
+                        }
                     />
                     <img
                         src={imagessskin}
@@ -226,6 +237,13 @@ const Product = () => {
                             (e.currentTarget.src = imagessskingold)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        onClick={() =>
+                            navigate(
+                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                            )
+                        }
                     />
                     <img
                         src={imagessshop}
@@ -236,6 +254,13 @@ const Product = () => {
                             (e.currentTarget.src = imagessshopgold)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
+                        onClick={() =>
+                            navigate(
+                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelup}
@@ -246,6 +271,13 @@ const Product = () => {
                             (e.currentTarget.src = imagelevelupblack)
                         }
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
+                        data-aos="fade-up"
+                        data-aos-duration="1400"
+                        onClick={() =>
+                            navigate(
+                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -257,6 +289,13 @@ const Product = () => {
                         }
                         onMouseOut={(e) =>
                             (e.currentTarget.src = imagelevelupbeaute)
+                        }
+                        data-aos="fade-up"
+                        data-aos-duration="1600"
+                        onClick={() =>
+                            navigate(
+                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                            )
                         }
                     />
                     <div className="md:hidden flex flex-col gap-20">
@@ -272,6 +311,13 @@ const Product = () => {
                                 onMouseOut={(e) =>
                                     (e.currentTarget.src = imagessskin)
                                 }
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                                    )
+                                }
                             />
                             <img
                                 src={imagessshop}
@@ -283,6 +329,13 @@ const Product = () => {
                                 }
                                 onMouseOut={(e) =>
                                     (e.currentTarget.src = imagessshop)
+                                }
+                                data-aos="fade-up"
+                                data-aos-duration="1200"
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                                    )
                                 }
                             />
                         </div>
@@ -298,6 +351,13 @@ const Product = () => {
                                 onMouseOut={(e) =>
                                     (e.currentTarget.src = imagelevelup)
                                 }
+                                data-aos="fade-up"
+                                data-aos-duration="1400"
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                    )
+                                }
                             />
                             <img
                                 src={imagelevelupbeaute}
@@ -310,6 +370,13 @@ const Product = () => {
                                 }
                                 onMouseOut={(e) =>
                                     (e.currentTarget.src = imagelevelupbeaute)
+                                }
+                                data-aos="fade-up"
+                                data-aos-duration="1600"
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                    )
                                 }
                             />
                         </div>

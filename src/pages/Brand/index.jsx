@@ -162,7 +162,7 @@ const Brand = () => {
                                 href="#"
                                 className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                             >
-                                Buy
+                                See Details Product
                             </a>
                         </div>
                     </div>
@@ -215,7 +215,7 @@ const Brand = () => {
                                 href="#"
                                 className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                             >
-                                Buy
+                                See Details Product
                             </a>
                         </div>
                     </div>
@@ -268,7 +268,7 @@ const Brand = () => {
                                 href="#"
                                 className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                             >
-                                Buy
+                                See Details Product
                             </a>
                         </div>
                     </div>
@@ -321,7 +321,7 @@ const Brand = () => {
                                 href="#"
                                 className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                             >
-                                Buy
+                                See Details Product
                             </a>
                         </div>
                     </div>
@@ -374,7 +374,7 @@ const Brand = () => {
                                 href="#"
                                 className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
                             >
-                                Buy
+                                See Details Product
                             </a>
                         </div>
                     </div>

@@ -43,7 +43,7 @@ const About = () => {
                     <h1 className="font-aref text-[#D2AC47] lg:text-5xl md:text-4xl text-2xl font-semibold tracking-widest mt-2 md:mt-4">
                         Group
                     </h1>
-                    <p className="font-roboto text-[#A18E64] mt-4 lg:mt-6 text-sm md:text-xl md:w-80 w-48 lg:w-[32rem]">
+                    <p className="font-roboto text-[#A18E64] mt-4 lg:mt-6 text-sm md:text-xl md:w-80 w-48 lg:w-[32rem] italic">
                         “ The only place where the magic of beauty happened ”
                     </p>
                 </div>
@@ -66,7 +66,7 @@ const About = () => {
                     data-aos-duration="1500"
                 />
             </div>
-            <div data-aos="flip-up" data-aos-duration="1500">
+            <div data-aos="zoom-in-up" data-aos-duration="1500">
                 <video
                     width={200}
                     height={200}

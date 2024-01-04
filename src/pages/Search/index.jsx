@@ -9,7 +9,8 @@ const Search = () => {
     const [all, setAll] = useState(true);
     const [ssskin, setSsskin] = useState(false);
     const [ssshop, setSsshop] = useState(false);
-    const [levelup, setLevelup] = useState(false);
+    const [levelupStyle, setLevelupStyle] = useState(false);
+    const [levelupBeaute, setLevelupBeaute] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
 
     const onPageChange = (page) => setCurrentPage(page);
@@ -22,25 +23,36 @@ const Search = () => {
         setAll(true);
         setSsskin(false);
         setSsshop(false);
-        setLevelup(false);
+        setLevelupStyle(false);
+        setLevelupBeaute(false);
     };
     const handleSkin = () => {
         setAll(false);
         setSsskin(true);
         setSsshop(false);
-        setLevelup(false);
+        setLevelupStyle(false);
+        setLevelupBeaute(false);
     };
     const handleShop = () => {
         setAll(false);
         setSsskin(false);
         setSsshop(true);
-        setLevelup(false);
+        setLevelupStyle(false);
+        setLevelupBeaute(false);
     };
-    const handlelevelup = () => {
+    const handlelevelupStyle = () => {
         setAll(false);
         setSsskin(false);
         setSsshop(false);
-        setLevelup(true);
+        setLevelupStyle(true);
+        setLevelupBeaute(false);
+    };
+    const handlelevelupBeaute = () => {
+        setAll(false);
+        setSsskin(false);
+        setSsshop(false);
+        setLevelupStyle(false);
+        setLevelupBeaute(true);
     };
 
     return (
@@ -114,39 +126,49 @@ const Search = () => {
                             </svg>
                         </div>
                     </div>
-                    <div className="flex md:justify-between flex-wrap gap-1 md:gap-2 lg:gap-4 items-center justify-center">
+                    <div className="flex md:w-96 lg:w-full flex-wrap gap-1 md:gap-2 lg:gap-5 items-center justify-center">
                         <div
-                            className={`w-20 md:w-[5.6rem] lg:w-36 h-8 border-2 border-white flex justify-center items-center ${
+                            className={`w-auto px-6 text-xs h-8 border-2 border-white flex justify-center items-center ${
                                 ssskin ? "bg-white" : "bg-[#D2AC47]"
                             } ${
                                 ssskin ? "text-[#D2AC47]" : "text-white"
                             } font-roboto rounded-full cursor-pointer text-sm hover:bg-white hover:text-[#D2AC47]`}
                             onClick={handleSkin}
                         >
-                            <h1>SSSKIN</h1>
+                            <h1>SS SKIN</h1>
                         </div>
                         <div
-                            className={`w-20 md:w-[5.6rem] lg:w-36 h-8 border-2 border-white flex justify-center items-center ${
+                            className={`w-auto px-6 text-xs h-8 border-2 border-white flex justify-center items-center ${
                                 ssshop ? "bg-white" : "bg-[#D2AC47]"
                             } ${
                                 ssshop ? "text-[#D2AC47]" : "text-white"
                             } font-roboto rounded-full cursor-pointer text-sm hover:bg-white hover:text-[#D2AC47]`}
                             onClick={handleShop}
                         >
-                            <h1>SSSHOP</h1>
+                            <h1>SS SHOP</h1>
                         </div>
                         <div
-                            className={`w-20 md:w-[5.6rem] lg:w-36 h-8 border-2 border-white flex justify-center items-center ${
-                                levelup ? "bg-white" : "bg-[#D2AC47]"
+                            className={`w-auto px-6 text-xs h-8 border-2 border-white flex justify-center items-center ${
+                                levelupStyle ? "bg-white" : "bg-[#D2AC47]"
                             } ${
-                                levelup ? "text-[#D2AC47]" : "text-white"
+                                levelupStyle ? "text-[#D2AC47]" : "text-white"
                             } font-roboto rounded-full cursor-pointer text-sm hover:bg-white hover:text-[#D2AC47]`}
-                            onClick={handlelevelup}
+                            onClick={handlelevelupStyle}
                         >
-                            <h1>LEVELUP</h1>
+                            <h1>LEVEL UP STYLE</h1>
                         </div>
                         <div
-                            className={`w-20 md:w-[5.6rem] lg:w-36 h-8 border-2 border-white flex justify-center items-center ${
+                            className={`w-auto px-6 text-xs h-8 border-2 border-white flex justify-center items-center ${
+                                levelupBeaute ? "bg-white" : "bg-[#D2AC47]"
+                            } ${
+                                levelupBeaute ? "text-[#D2AC47]" : "text-white"
+                            } font-roboto rounded-full cursor-pointer text-sm hover:bg-white hover:text-[#D2AC47]`}
+                            onClick={handlelevelupBeaute}
+                        >
+                            <h1>LEVEL UP BEAUTE</h1>
+                        </div>
+                        <div
+                            className={`w-auto px-6 text-xs h-8 border-2 border-white flex justify-center items-center ${
                                 all ? "bg-white" : "bg-[#D2AC47]"
                             } ${
                                 all ? "text-[#D2AC47]" : "text-white"

@@ -140,10 +140,16 @@ const Home = () => {
                             </p>
                         </div>
                         <div className="flex mt-8 gap-6 md:gap-10 mb-28">
-                            <div className="w-[10rem] lg:w-[12rem] h-14 bg-[#D2AC47] text-white cursor-pointer rounded-md flex justify-center items-center transition-all duration-300 hover:bg-[#d2ad47b0]">
+                            <div
+                                className="w-[10rem] lg:w-[12rem] h-14 bg-[#D2AC47] text-white cursor-pointer rounded-md flex justify-center items-center transition-all duration-300 hover:bg-[#d2ad47b0]"
+                                onClick={() => navigate("/product")}
+                            >
                                 <h1 className="font-roboto">Get Started</h1>
                             </div>
-                            <div className="w-[10rem] lg:w-[12rem] h-14 bg-white border-2 border-[#D2AC47] text-[#D2AC47] cursor-pointer rounded-md flex justify-center items-center transition-all duration-300 hover:bg-[#fff8ea]">
+                            <div
+                                className="w-[10rem] lg:w-[12rem] h-14 bg-white border-2 border-[#D2AC47] text-[#D2AC47] cursor-pointer rounded-md flex justify-center items-center transition-all duration-300 hover:bg-[#fff8ea]"
+                                onClick={() => navigate("/about")}
+                            >
                                 <h1 className="font-roboto">More</h1>
                             </div>
                         </div>
@@ -422,7 +428,10 @@ const Home = () => {
                             streaming selling in September 2023.
                         </p>
                     </div>
-                    <div className="bg-[#D2AC47] w-48 flex justify-center items-center h-12 rounded-md mt-8 hover:bg-[#d2ad47b0] cursor-pointer">
+                    <div
+                        className="bg-[#D2AC47] w-48 flex justify-center items-center h-12 rounded-md mt-8 hover:bg-[#d2ad47b0] cursor-pointer"
+                        onClick={() => navigate("/about")}
+                    >
                         <h1 className="font-roboto font-light text-white">
                             More About SS Group
                         </h1>
@@ -501,31 +510,41 @@ const Home = () => {
                 </div>
             </section>
             <section
-                className="flex justify-center items-center mt-48"
+                className="contactHome flex justify-center items-center mt-48"
                 id="contact"
             >
-                <form className="bg-[#D2AC47] w-full h-screen flex justify-center items-start flex-col pb-12 relative overflow-hidden px-20">
-                    <h1 className="text-white font-roboto text-3xl my-8">
-                        Contact Us
+                <form className="w-full h-auto flex justify-center items-center flex-col pb-12 relative overflow-hidden px-20">
+                    <h1
+                        className="text-[#D2AC47] font-roboto text-3xl my-16"
+                        data-aos="flip-up"
+                        data-aos-duration="1500"
+                    >
+                        Get In Touch
                     </h1>
                     <div className="flex flex-col items-center">
                         <input
-                            className="w-64 md:w-[27rem] h-10 rounded-md px-4 active:border-[#D2AC47] border-none"
+                            className="w-64 md:w-[30rem] lg:w-[50rem] bg-[#FFF8EB] h-10 focus:border-2 focus:border-[#D2AC47] focus:shadow-md rounded-md px-4 border-none"
                             placeholder="Email"
                             required
+                            data-aos="flip-up"
+                            data-aos-duration="2000"
                         />
                         <textarea
                             name="desc"
                             id="desc"
                             cols="30"
                             rows="8"
-                            className="rounded-md p-4 active:border-[#D2AC47] border-none mt-4 w-64 md:w-[27rem] z-10"
+                            className="rounded-md p-4 border-none bg-[#FFF8EB] focus:outline-none focus:shadow-lg focus:border-2 mt-4 w-64 md:w-[30rem] lg:w-[50rem] z-10"
                             placeholder="Message"
                             required="required"
+                            data-aos="flip-up"
+                            data-aos-duration="2400"
                         ></textarea>
                         <button
                             type="submit"
-                            className="border-white bg-[#D2AC47] z-10 border-2 w-64 md:w-[27rem] rounded-md h-10 mt-4 flex justify-center items-center cursor-pointer hover:bg-white text-white hover:text-[#D2AC47]"
+                            className="border-white bg-[#D2AC47] z-10 border-2 w-64 md:w-[30rem] lg:w-[50rem] rounded-md h-10 mt-4 flex justify-center items-center cursor-pointer hover:bg-white text-white hover:border-2 hover:border-[#D2AC47] hover:text-[#D2AC47]"
+                            data-aos="flip-up"
+                            data-aos-duration="2800"
                         >
                             <h1 className="font-roboto">Send</h1>
                         </button>
