@@ -187,8 +187,8 @@ const Search = () => {
                     className="hidden md:block w-80 lg:w-[26rem] h-auto absolute bottom-0 lg:right-0 lg:me-20 right-4"
                 />
             </section>
-            <section className="mt-20 flex flex-wrap gap-8 justify-center" onch>
-                <Card className="w-96">
+            <section className="mt-20 flex flex-wrap gap-8 justify-center px-10">
+                <Card className="w-64 h-96">
                     <div className="flex justify-end px-4 pt-4">
                         <Dropdown inline label="">
                             <Dropdown.Item>
@@ -223,26 +223,28 @@ const Search = () => {
                             height="96"
                             src="https://res.cloudinary.com/dixxtnquz/image/upload/v1702286717/SSG/asset_catalog_1_zvrbmr.svg"
                             width="96"
-                            className="mb-3 w-48 cursor-pointer hover:scale-110"
-                            onClick={() => navigate("/product/search/catalog")}
+                            className="mb-3 w-36 cursor-pointer hover:scale-110"
                         />
                         <h5 className="mb-1 text-xl font-medium font-roboto text-gray-900 dark:text-white">
                             Acne Serum
                         </h5>
                         <span className="text-sm font-roboto text-gray-500 dark:text-gray-400">
-                            Rp. 20.000
+                            Level Up Beaute
                         </span>
-                        <div className="mt-4 flex space-x-3 lg:mt-6">
+                        <div
+                            className="mt-4 flex space-x-3 lg:mt-6"
+                            onClick={() => navigate("/product/search/catalog")}
+                        >
                             <a
                                 href="#"
-                                className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+                                className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-[#A2812B] focus:outline-none focus:ring-4"
                             >
-                                Buy
+                                See Details Product
                             </a>
                         </div>
                     </div>
                 </Card>
-                <Card className="w-96">
+                <Card className="w-64 h-96">
                     <div className="flex justify-end px-4 pt-4">
                         <Dropdown inline label="">
                             <Dropdown.Item>
@@ -277,20 +279,191 @@ const Search = () => {
                             height="96"
                             src="https://res.cloudinary.com/dixxtnquz/image/upload/v1702286717/SSG/asset_catalog_1_zvrbmr.svg"
                             width="96"
-                            className="mb-3 w-48"
+                            className="mb-3 w-36 cursor-pointer hover:scale-110"
                         />
                         <h5 className="mb-1 text-xl font-medium font-roboto text-gray-900 dark:text-white">
                             Acne Serum
                         </h5>
                         <span className="text-sm font-roboto text-gray-500 dark:text-gray-400">
-                            Rp. 20.000
+                            SS Shop
                         </span>
-                        <div className="mt-4 flex space-x-3 lg:mt-6">
+                        <div
+                            className="mt-4 flex space-x-3 lg:mt-6"
+                            onClick={() => navigate("/product/search/catalog")}
+                        >
                             <a
                                 href="#"
-                                className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+                                className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-[#A2812B] focus:outline-none focus:ring-4"
                             >
-                                Buy
+                                See Details Product
+                            </a>
+                        </div>
+                    </div>
+                </Card>
+                <Card className="w-64 h-96">
+                    <div className="flex justify-end px-4 pt-4">
+                        <Dropdown inline label="">
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Edit
+                                </a>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Export Data
+                                </a>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Delete
+                                </a>
+                            </Dropdown.Item>
+                        </Dropdown>
+                    </div>
+                    <div className="flex flex-col items-center pb-10">
+                        <img
+                            alt="Bonnie image"
+                            height="96"
+                            src="https://res.cloudinary.com/dixxtnquz/image/upload/v1702286717/SSG/asset_catalog_1_zvrbmr.svg"
+                            width="96"
+                            className="mb-3 w-36 cursor-pointer hover:scale-110"
+                        />
+                        <h5 className="mb-1 text-xl font-medium font-roboto text-gray-900 dark:text-white">
+                            Acne Serum
+                        </h5>
+                        <span className="text-sm font-roboto text-gray-500 dark:text-gray-400">
+                            SS Skin
+                        </span>
+                        <div
+                            className="mt-4 flex space-x-3 lg:mt-6"
+                            onClick={() => navigate("/product/search/catalog")}
+                        >
+                            <a
+                                href="#"
+                                className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-[#A2812B] focus:outline-none focus:ring-4"
+                            >
+                                See Details Product
+                            </a>
+                        </div>
+                    </div>
+                </Card>
+                <Card className="w-64 h-96">
+                    <div className="flex justify-end px-4 pt-4">
+                        <Dropdown inline label="">
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Edit
+                                </a>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Export Data
+                                </a>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Delete
+                                </a>
+                            </Dropdown.Item>
+                        </Dropdown>
+                    </div>
+                    <div className="flex flex-col items-center pb-10">
+                        <img
+                            alt="Bonnie image"
+                            height="96"
+                            src="https://res.cloudinary.com/dixxtnquz/image/upload/v1702286717/SSG/asset_catalog_1_zvrbmr.svg"
+                            width="96"
+                            className="mb-3 w-36 cursor-pointer hover:scale-110"
+                        />
+                        <h5 className="mb-1 text-xl font-medium font-roboto text-gray-900 dark:text-white">
+                            Acne Serum
+                        </h5>
+                        <span className="text-sm font-roboto text-gray-500 dark:text-gray-400">
+                            Level Up Beaute
+                        </span>
+                        <div
+                            className="mt-4 flex space-x-3 lg:mt-6"
+                            onClick={() => navigate("/product/search/catalog")}
+                        >
+                            <a
+                                href="#"
+                                className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-[#A2812B] focus:outline-none focus:ring-4"
+                            >
+                                See Details Product
+                            </a>
+                        </div>
+                    </div>
+                </Card>
+                <Card className="w-64 h-96">
+                    <div className="flex justify-end px-4 pt-4">
+                        <Dropdown inline label="">
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Edit
+                                </a>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Export Data
+                                </a>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Delete
+                                </a>
+                            </Dropdown.Item>
+                        </Dropdown>
+                    </div>
+                    <div className="flex flex-col items-center pb-10">
+                        <img
+                            alt="Bonnie image"
+                            height="96"
+                            src="https://res.cloudinary.com/dixxtnquz/image/upload/v1702286717/SSG/asset_catalog_1_zvrbmr.svg"
+                            width="96"
+                            className="mb-3 w-36 cursor-pointer hover:scale-110"
+                        />
+                        <h5 className="mb-1 text-xl font-medium font-roboto text-gray-900 dark:text-white">
+                            Acne Serum
+                        </h5>
+                        <span className="text-sm font-roboto text-gray-500 dark:text-gray-400">
+                            Level Up Style
+                        </span>
+                        <div
+                            className="mt-4 flex space-x-3 lg:mt-6"
+                            onClick={() => navigate("/product/search/catalog")}
+                        >
+                            <a
+                                href="#"
+                                className="inline-flex items-center rounded-lg bg-[#D2AC47] px-4 py-2 text-center text-sm font-medium text-white hover:bg-[#A2812B] focus:outline-none focus:ring-4"
+                            >
+                                See Details Product
                             </a>
                         </div>
                     </div>

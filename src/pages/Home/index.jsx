@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { Input } from "antd";
 
 const imagekakshell = "/Asset1.png";
 const imagekakshell2 =
@@ -32,6 +33,7 @@ const Home = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
@@ -407,11 +409,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="flex flex-col-reverse md:flex-row justify-between items-center mt-48 lg:px-56 gap-10 md:px-12">
-                <div
-                    className=""
-                    data-aos="fade-right"
-                    data-aos-duration="1500"
-                >
+                <div className="" data-aos="fade-up" data-aos-duration="1500">
                     <h1 className="text-[#D2AC47] font-roboto text-3xl">
                         About Us
                     </h1>
@@ -439,7 +437,7 @@ const Home = () => {
                 </div>
                 <div
                     className="flex flex-col justify-center items-center"
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                 >
                     <img
@@ -456,13 +454,13 @@ const Home = () => {
                     </h1>
                 </div>
             </section>
-            <section className="flex flex-col-reverse md:flex-row justify-between items-center mt-48 md:px-10 lg:px-56">
-                <div data-aos="fade-right" data-aos-duration="1500">
+            <section className="flex flex-col-reverse md:flex-row justify-between items-center mt-40 md:px-10 lg:px-56">
+                <div data-aos="fade-up" data-aos-duration="1500">
                     <img src={imagebeauty} alt="imagebeauty" width={400} />
                 </div>
                 <div
                     className="w-80 md:w-[24rem] lg:w-[30rem]"
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                 >
                     <h1 className="text-[#D2AC47] font-roboto text-3xl">
@@ -477,24 +475,24 @@ const Home = () => {
                     </p>
                 </div>
             </section>
-            <section className="flex flex-col-reverse md:flex-row-reverse justify-between items-center mt-48 md:px-10 lg:px-56 gap-10">
+            <section className="flex flex-col-reverse md:flex-row-reverse justify-between items-center mt-32 md:px-10 lg:px-56 gap-10">
                 <div
                     className="hidden lg:block"
-                    data-aos="fade-right"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                 >
                     <img src={imagefashion} alt="imagebeauty" width={350} />
                 </div>
                 <div
                     className="lg:hidden"
-                    data-aos="fade-right"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                 >
                     <img src={imagefashion} alt="imagebeauty" width={300} />
                 </div>
                 <div
                     className="w-80 md:w-[26rem] lg:w-[30rem]"
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                 >
                     <h1 className="text-[#D2AC47] font-roboto text-3xl">
@@ -510,47 +508,144 @@ const Home = () => {
                 </div>
             </section>
             <section
-                className="contactHome flex justify-center items-center mt-48"
+                className="contactHome flex flex-col md:flex-row justify-between gap-6 md:gap-16 items-center mt-28 py-12 md:py-32 px-8 md:px-10 lg:px-56 bg-[#D2AC47]"
                 id="contact"
             >
-                <form className="w-full h-auto flex justify-center items-center flex-col pb-12 relative overflow-hidden px-20">
-                    <h1
-                        className="text-[#D2AC47] font-roboto text-3xl my-16"
-                        data-aos="flip-up"
-                        data-aos-duration="1500"
-                    >
-                        Get In Touch
-                    </h1>
-                    <div className="flex flex-col items-center">
-                        <input
-                            className="w-64 md:w-[30rem] lg:w-[50rem] bg-[#FFF8EB] h-10 focus:border-2 focus:border-[#D2AC47] focus:shadow-md rounded-md px-4 border-none"
-                            placeholder="Email"
-                            required
-                            data-aos="flip-up"
-                            data-aos-duration="2000"
-                        />
-                        <textarea
-                            name="desc"
-                            id="desc"
-                            cols="30"
-                            rows="8"
-                            className="rounded-md p-4 border-none bg-[#FFF8EB] focus:outline-none focus:shadow-lg focus:border-2 mt-4 w-64 md:w-[30rem] lg:w-[50rem] z-10"
-                            placeholder="Message"
-                            required="required"
-                            data-aos="flip-up"
-                            data-aos-duration="2400"
-                        ></textarea>
+                <div
+                    className="flex flex-col gap-2 mb-8"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
+                    <div className="flex flex-col">
+                        <div className="flex items-center">
+                            <h1 className="font-roboto text-white text-base font-light">
+                                Get In Touch
+                            </h1>
+                            <div className="w-14 h-0.5 bg-white ms-16"></div>
+                        </div>
+                        <h1 className="text-white text-4xl font-medium mt-2">
+                            Have Question ?
+                        </h1>
+                        <h1 className="text-white text-4xl font-medium">
+                            Contact Us
+                        </h1>
+                        <h1 className="font-roboto text-white text-base font-light mt-2">
+                            Thank you, we will contact you soon!
+                        </h1>
+                    </div>
+                    <div className="flex gap-4 mt-6">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                        >
+                            <path
+                                d="M13.7917 22.4792C16.7917 28.375 21.625 33.2083 27.5208 36.2083L32.1042 31.625C32.6875 31.0417 33.5 30.875 34.2292 31.1042C36.5625 31.875 39.0625 32.2917 41.6667 32.2917C42.2192 32.2917 42.7491 32.5112 43.1398 32.9019C43.5305 33.2926 43.75 33.8225 43.75 34.375V41.6667C43.75 42.2192 43.5305 42.7491 43.1398 43.1398C42.7491 43.5305 42.2192 43.75 41.6667 43.75C32.2736 43.75 23.2652 40.0186 16.6233 33.3767C9.98139 26.7348 6.25 17.7264 6.25 8.33333C6.25 7.7808 6.46949 7.25089 6.86019 6.86019C7.25089 6.46949 7.7808 6.25 8.33333 6.25H15.625C16.1775 6.25 16.7074 6.46949 17.0981 6.86019C17.4888 7.25089 17.7083 7.7808 17.7083 8.33333C17.7083 10.9375 18.125 13.4375 18.8958 15.7708C19.125 16.5 18.9583 17.3125 18.375 17.8958L13.7917 22.4792Z"
+                                fill="white"
+                            />
+                        </svg>
+                        <h1 className="font-roboto text-white text-base font-light">
+                            +62 812 345 678
+                        </h1>
+                    </div>
+                    <div className="flex gap-4">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                        >
+                            <path
+                                d="M9.67461 10H42.7996C45.9246 10 47.4996 11.475 47.4996 14.475V35.525C47.4996 38.5 45.9246 40 42.7996 40H9.67461C6.54961 40 4.97461 38.5 4.97461 35.525V14.475C4.97461 11.475 6.54961 10 9.67461 10ZM26.2246 31.5L43.0746 17.675C43.6746 17.175 44.1496 16.025 43.3996 15C42.6746 13.975 41.3496 13.95 40.4746 14.575L26.2246 24.225L11.9996 14.575C11.1246 13.95 9.79961 13.975 9.07461 15C8.32461 16.025 8.79961 17.175 9.39961 17.675L26.2246 31.5Z"
+                                fill="white"
+                            />
+                        </svg>
+                        <h1 className="font-roboto text-white text-base font-light">
+                            info@ssgroup.id
+                        </h1>
+                    </div>
+                    <div className="flex gap-4">
+                        <div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="17.5"
+                                height="20"
+                                viewBox="0 0 44 50"
+                                fill="none"
+                            >
+                                <path
+                                    d="M41.9531 8.99422C42.4317 7.83211 42.1582 6.49422 41.2696 5.60555C40.3809 4.71688 39.043 4.44344 37.8809 4.92195L3.50588 18.9845C2.11916 19.5509 1.33791 21.0157 1.62112 22.4805C1.90432 23.9454 3.19338 25.0001 4.68752 25.0001H21.875V42.1876C21.875 43.6817 22.9297 44.961 24.3946 45.254C25.8594 45.547 27.3242 44.7559 27.8906 43.3692L41.9531 8.99422Z"
+                                    fill="white"
+                                />
+                            </svg>
+                        </div>
+                        <h1 className="font-roboto text-white text-base font-light W-full md:w-80 lg:w-96">
+                            Jl. K.H. Wahid Hasyim No.161, RT.1/RW.5, Kb. Kacang,
+                            Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah
+                            Khusus Ibukota Jakarta 10240
+                        </h1>
+                    </div>
+                </div>
+                <form
+                    className="h-auto flex justify-center w-full items-center flex-col relative overflow-hidden font-roboto"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
+                    <div className="w-full">
+                        <div className="flex flex-col lg:flex-row gap-4">
+                            <div className="border-b-2 border-b-white w-full">
+                                <label
+                                    htmlFor="name"
+                                    className="font-light text-white"
+                                >
+                                    Name
+                                </label>
+                                <input
+                                    id="name"
+                                    className="border-none focus:border-none outline-none focus:outline-none w-full bg-transparent mb-2 font-light text-white placeholder:text-white placeholder:font-light px-2"
+                                    required
+                                />
+                            </div>
+                            <div className="border-b-2 border-b-white w-full">
+                                <label
+                                    htmlFor="email"
+                                    className="font-light text-white"
+                                >
+                                    Email
+                                </label>
+                                <input
+                                    id="email"
+                                    className="border-none focus:border-none outline-none focus:outline-none w-full bg-transparent mb-2 font-light text-white placeholder:text-white placeholder:font-light px-2"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div className="border-b-2 border-b-white w-full mt-8">
+                            <label
+                                htmlFor="multilineInput"
+                                className="font-light text-white"
+                            >
+                                Message
+                            </label>
+                            <textarea
+                                id="multilineInput"
+                                name="multilineInput"
+                                rows="3"
+                                className="border-none focus:border-none outline-none focus:outline-none w-full bg-transparent mb-2 font-light text-white placeholder:text-white placeholder:font-light"
+                                required="required"
+                            ></textarea>
+                        </div>
                         <button
                             type="submit"
-                            className="border-white bg-[#D2AC47] z-10 border-2 w-64 md:w-[30rem] lg:w-[50rem] rounded-md h-10 mt-4 flex justify-center items-center cursor-pointer hover:bg-white text-white hover:border-2 hover:border-[#D2AC47] hover:text-[#D2AC47]"
-                            data-aos="flip-up"
-                            data-aos-duration="2800"
+                            className="w-full md:w-40 bg-white h-10 mt-8 text-[#D2AC47] rounded-sm hover:border-2 hover:border-white hover:bg-transparent hover:text-white"
                         >
-                            <h1 className="font-roboto">Send</h1>
+                            Send
                         </button>
                     </div>
                 </form>
-                <div></div>
             </section>
             <Footer />
         </div>

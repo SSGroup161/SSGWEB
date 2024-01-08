@@ -34,7 +34,7 @@ const About = () => {
             <div className="h-auto flex items-center md:items-start relative flex-col mt-28 gap-28 md:gap-0">
                 <div
                     className="lg:ms-32 md:ms-20 md:mb-48 me-10 md:mt-12 lg:mt-40"
-                    data-aos="fade-up-right"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                 >
                     <h1 className="font-aref text-[#D2AC47] lg:text-7xl md:text-5xl text-4xl font-semibold tracking-widest mt-6">
@@ -53,7 +53,7 @@ const About = () => {
                     width={1500}
                     height="auto"
                     className="absolute top-0 right-0 mt-12 hidden md:block"
-                    data-aos="fade-up-left"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                 />
                 <img
@@ -62,7 +62,7 @@ const About = () => {
                     width={800}
                     height="auto"
                     className="md:hidden w-[50rem]"
-                    data-aos="fade-up-left"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                 />
             </div>
@@ -161,9 +161,9 @@ const About = () => {
                     industry.
                 </p>
             </div>
-            <section className="flex flex-col justify-center items-center mt-32 lg:mt-48">
+            <section className="flex flex-col justify-center items-center">
                 <h1
-                    className="text-[#D2AC47] font-roboto mt-28 text-2xl md:text-3xl mb-8 md:mb-14"
+                    className="text-[#D2AC47] font-roboto mt-48 text-2xl md:text-3xl mb-8 md:mb-14"
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 >
@@ -181,6 +181,11 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
+                        onClick={() =>
+                            navigate(
+                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                            )
+                        }
                     />
                     <img
                         src={imagessshop}
@@ -193,6 +198,11 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
+                        onClick={() =>
+                            navigate(
+                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelup}
@@ -205,6 +215,11 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
+                        onClick={() =>
+                            navigate(
+                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -219,6 +234,11 @@ const About = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
+                        onClick={() =>
+                            navigate(
+                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                            )
+                        }
                     />
                     <img
                         src={imagessskin}
@@ -231,6 +251,11 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
+                        onClick={() =>
+                            navigate(
+                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                            )
+                        }
                     />
                     <img
                         src={imagessshop}
@@ -243,6 +268,11 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
+                        onClick={() =>
+                            navigate(
+                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelup}
@@ -255,6 +285,11 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
+                        onClick={() =>
+                            navigate(
+                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -269,6 +304,11 @@ const About = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
+                        onClick={() =>
+                            navigate(
+                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                            )
+                        }
                     />
                     <div className="md:hidden flex flex-col gap-20">
                         <div className="flex gap-20">
@@ -285,6 +325,11 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="800"
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                                    )
+                                }
                             />
                             <img
                                 src={imagessshop}
@@ -299,6 +344,11 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                                    )
+                                }
                             />
                         </div>
                         <div className="flex gap-16">
@@ -315,6 +365,11 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1200"
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                    )
+                                }
                             />
                             <img
                                 src={imagelevelupbeaute}
@@ -330,6 +385,11 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1400"
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                    )
+                                }
                             />
                         </div>
                     </div>
@@ -350,7 +410,7 @@ const About = () => {
                         width={350}
                         height="auto"
                         className="hidden lg:block"
-                        data-aos="fade-right"
+                        data-aos="fade-up"
                         data-aos-duration="1500"
                     />
                     <img
@@ -359,12 +419,12 @@ const About = () => {
                         width={300}
                         height="auto"
                         className="lg:hidden"
-                        data-aos="fade-right"
+                        data-aos="fade-up"
                         data-aos-duration="1500"
                     />
                     <div
                         className="flex flex-col gap-6 md:gap-7 lg:gap-8 w-72 md:w-auto"
-                        data-aos="fade-left"
+                        data-aos="fade-up"
                         data-aos-duration="1500"
                     >
                         <h1 className="font-roboto text-[#A18E64] font-normal text-2xl">
