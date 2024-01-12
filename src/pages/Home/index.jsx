@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
-import { Input } from "antd";
+import { Toaster, toast } from "sonner";
+import { Spinner } from "flowbite-react";
 
 const imagekakshell = "/Asset1.png";
-const imagekakshell2 =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700195072/SSG/kakshell2_jdgaik.png";
+const imagekakshell2 = "/Asset6.png";
 const imagessskin =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136421/SSG/SSSKIN_nnzc1p.svg";
 const imagessshop =
@@ -25,18 +25,73 @@ const imagelevelupbeauteblack =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040140/SSG/LEVELUPbeauteblack_txkvty.svg";
 const imagebeauty =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700207915/SSG/Acne_series_1_lwltcw.png";
-const imagefashion =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700209264/SSG/kakshell3_dfmlx3.png";
+const imagefashion = "/Asset3.png";
 
 const Home = () => {
     const navigate = useNavigate();
+    const [isloading, setIsloading] = useState(false);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+    const formRef = useRef(null);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsloading(true);
+
+        try {
+            const scriptURL =
+                "https://script.google.com/macros/s/AKfycbzqiXJdplQTWGbCjI1uigYVkIzvFn4ZZifY58CRSKCY7kuLgtLv9Vd25m2lalEngtZO/exec";
+            const formDataObj = new URLSearchParams();
+            formDataObj.append("name", formData.name);
+            formDataObj.append("email", formData.email);
+            formDataObj.append("message", formData.message);
+
+            const response = await fetch(scriptURL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: formDataObj,
+            });
+
+            if (response.ok) {
+                console.log("Berhasil!", response);
+                toast.success("Message has been sent!");
+                console.log(formDataObj);
+                setFormData({
+                    name: "",
+                    email: "",
+                    message: "",
+                });
+                setIsloading(false);
+            } else {
+                console.error("Error!", response.statusText);
+                toast.error("Gagal mengirim formulir.");
+            }
+        } catch (error) {
+            toast.error("Gagal mengirim formulir.");
+            console.error("Error!", error);
+        }
+    };
+
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
+            <Toaster richColors />
             <section className="flex flex-col md:flex-row relative mt-28">
                 <div
                     className="hidden flex-1 md:flex justify-end relative"
@@ -135,10 +190,11 @@ const Home = () => {
                         </div>
                         <div className="mt-8 font-roboto text-[#A18E64] font-light">
                             <p>
-                                SS Group, a company owned by well-known
-                                influencer Shella Saukia, is a company operating
-                                in the Health and Beauty industry. Find the
-                                beauty and health you are looking for with us!
+                                SS Group is a company consist of Indonesian
+                                brands (SS Shop, SS Skin, Level Up Beaute, and
+                                Level Up Style) engaged in beauty, fashion, and
+                                personal care products. Find the beauty and
+                                fashion you are looking for with us!
                             </p>
                         </div>
                         <div className="flex mt-8 gap-6 md:gap-10 mb-28">
@@ -444,7 +500,8 @@ const Home = () => {
                         src={imagekakshell2}
                         alt="imagekakshell2"
                         width={270}
-                        className=""
+                        height={270}
+                        className="rounded-full"
                     />
                     <h1 className="font-roboto text-[#D2AC47] mt-4">
                         Shella Saukia
@@ -481,7 +538,7 @@ const Home = () => {
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 >
-                    <img src={imagefashion} alt="imagebeauty" width={350} />
+                    <img src={imagefashion} alt="imagebeauty" width={300} />
                 </div>
                 <div
                     className="lg:hidden"
@@ -590,6 +647,8 @@ const Home = () => {
                     </div>
                 </div>
                 <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
                     className="h-auto flex justify-center w-full items-center flex-col relative overflow-hidden font-roboto"
                     data-aos="fade-up"
                     data-aos-duration="1500"
@@ -605,6 +664,9 @@ const Home = () => {
                                 </label>
                                 <input
                                     id="name"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     className="border-none focus:border-none outline-none focus:outline-none w-full bg-transparent mb-2 font-light text-white placeholder:text-white placeholder:font-light px-2"
                                     required
                                 />
@@ -618,6 +680,9 @@ const Home = () => {
                                 </label>
                                 <input
                                     id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     className="border-none focus:border-none outline-none focus:outline-none w-full bg-transparent mb-2 font-light text-white placeholder:text-white placeholder:font-light px-2"
                                     required
                                 />
@@ -632,18 +697,42 @@ const Home = () => {
                             </label>
                             <textarea
                                 id="multilineInput"
-                                name="multilineInput"
+                                name="message"
                                 rows="3"
+                                value={formData.message}
+                                onChange={handleChange}
                                 className="border-none focus:border-none outline-none focus:outline-none w-full bg-transparent mb-2 font-light text-white placeholder:text-white placeholder:font-light"
                                 required="required"
                             ></textarea>
                         </div>
-                        <button
-                            type="submit"
-                            className="w-full md:w-40 bg-white h-10 mt-8 text-[#D2AC47] rounded-sm hover:border-2 hover:border-white hover:bg-transparent hover:text-white"
-                        >
-                            Send
-                        </button>
+                        {isloading ? (
+                            <button
+                                type="submit"
+                                className={`w-full md:w-40 bg-white h-10 mt-8 rounded-md hover:border-2 ${
+                                    isloading
+                                        ? "bg-gray-300 hover:border-gray-300 hover:bg-gray-300 hover:text-white text-white"
+                                        : "hover:border-white hover:bg-transparent hover:text-white text-[#D2AC47]"
+                                }`}
+                                disabled={true}
+                            >
+                                <Spinner
+                                    aria-label="Spinner button example"
+                                    size="sm"
+                                />
+                                <span className="pl-3">Sending...</span>
+                            </button>
+                        ) : (
+                            <button
+                                type="submit"
+                                className={`w-full md:w-40 bg-white h-10 mt-8 rounded-md hover:border-2 ${
+                                    isloading
+                                        ? "bg-gray-300 hover:border-gray-300 hover:bg-gray-300 hover:text-white text-white"
+                                        : "hover:border-white hover:bg-transparent hover:text-white text-[#D2AC47]"
+                                }`}
+                            >
+                                Send
+                            </button>
+                        )}
                     </div>
                 </form>
             </section>

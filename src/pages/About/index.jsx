@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-const aboutkakshell = "/Asset2.svg";
+const aboutkakshell = "/Asset2.png";
 const aboutkakshell1 =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700460579/SSG/ka_shell_png_3_gg3okw.svg";
 const imagessskin =
@@ -31,9 +31,9 @@ const About = () => {
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
-            <div className="h-auto flex items-center md:items-start relative flex-col mt-28 gap-28 md:gap-0">
+            <div className="h-auto flex items-center md:items-start relative flex-col mt-20 md:mt-6 gap-28 md:gap-0">
                 <div
-                    className="lg:ms-32 md:ms-20 md:mb-48 me-10 md:mt-12 lg:mt-40"
+                    className="lg:ms-32 md:ms-20 md:mb-48 me-10 md:mt-12 lg:mt-48"
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 >
@@ -50,9 +50,9 @@ const About = () => {
                 <img
                     src={aboutkakshell}
                     alt="aboutkakshell"
-                    width={1500}
+                    width={950}
                     height="auto"
-                    className="absolute top-0 right-0 mt-12 hidden md:block"
+                    className="absolute top-0 right-0 hidden md:block"
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 />
@@ -116,20 +116,20 @@ const About = () => {
                     />
                 </svg>
                 <p className="font-roboto text-[#A18E64] lg:w-[60rem] w-80 md:w-[40rem] text-center">
-                    SS Group stands for Shella Saukia Group is an Indonesia
-                    company engaged in beauty, fashion, and personal care
-                    products. SS Group is established in 2019 and already have
-                    massive success in products- selling at various platforms
-                    through the act of their well-known social media influencer
-                    owner, Shella Saukia. One of their most sensational success
-                    is gaining 16 billion IDR from one time live streaming
-                    selling in September 2023. SS Group is aiming to be the
-                    leading brand providing fashion, beauty, and personal care
-                    for all Indonesian people. SS Group will continuously
-                    discover the best high quality products in all of our
-                    business unit to bring the highest satisfactory level for
-                    our loyal customer around the country. This is the place
-                    where the magic of beauty happened!
+                    SS Group is a company consisting of Indonesian brands (SS
+                    Shop, SS Skin, Level Up Beaute, and Level Up Style) engaged
+                    in beauty, fashion, and personal care products. Our company
+                    was established in 2019, and two of our most sensational
+                    successes were in 2023, when we received two recognitions
+                    from Tiktok Shop for Gross Merchandise Value: $1,000,000+
+                    Achievement and Record-breaking Brand Collaboration for Best
+                    Selling Spotless Whitening Package Achievement across all
+                    FMCG. We are aiming to be the leading brand providing
+                    fashion, beauty, and personal care for all Indonesians. We
+                    will continuously discover the best high-quality products in
+                    all of our business units to bring the highest satisfaction
+                    to our loyal customers around the country. <br /> This is
+                    the only place where the magic of beauty happens.
                 </p>
             </div>
             <div
