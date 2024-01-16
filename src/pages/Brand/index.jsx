@@ -104,13 +104,27 @@ const Brand = () => {
                     </div>
                     <div className="bg-[#D2AC47] absolute opacity-60 w-full h-full"></div>
                 </div>
-                <img
-                    src={data && data[0] && data[0].bg_img}
-                    alt="jxb"
-                    width="full"
-                    height="full"
-                    className="h-96 md:h-full w-full object-cover z-10"
-                />
+                {data && data[0] && data[0].video_bg ? (
+                    <video
+                        src={data && data[0] && data[0].video_bg}
+                        width="100%"
+                        height="100%"
+                        alt="videobg"
+                        loop
+                        autoPlay
+                        muted
+                    >
+                        Your browser does not support the video tag.
+                    </video>
+                ) : (
+                    <img
+                        src={data && data[0] && data[0].bg_img}
+                        alt="jxb"
+                        width="full"
+                        height="full"
+                        className="h-96 md:h-full w-full object-cover z-10"
+                    />
+                )}
             </section>
             <section className="mt-20 flex flex-wrap gap-8 justify-center px-10">
                 <Card className="w-64 h-96">
