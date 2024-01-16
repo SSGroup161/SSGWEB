@@ -7,10 +7,6 @@ import { useNavigate } from "react-router-dom";
 const banner = "/slide1.png";
 const banner2 = "/slide2.png";
 const banner3 = "/slide3.png";
-const louminus =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700639629/SSG/Luminous_GLow_2_rqfrnn.svg";
-const imagebeauty =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700207915/SSG/Acne_series_1_lwltcw.png";
 const imagessskin =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136421/SSG/SSSKIN_nnzc1p.svg";
 const imagessshop =

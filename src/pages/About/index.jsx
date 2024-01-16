@@ -50,9 +50,18 @@ const About = () => {
                 <img
                     src={aboutkakshell}
                     alt="aboutkakshell"
-                    width={950}
+                    width={900}
                     height="auto"
-                    className="absolute top-0 right-0 hidden md:block"
+                    className="absolute top-0 right-0 w-[55rem] mt-20 hidden lg:block"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                />
+                <img
+                    src={aboutkakshell}
+                    alt="aboutkakshell"
+                    width={900}
+                    height="auto"
+                    className="absolute top-0 right-0 w-[45rem] mt-20 hidden md:block lg:hidden"
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 />
@@ -70,7 +79,7 @@ const About = () => {
                 <video
                     width={200}
                     height={200}
-                    className="w-96 md:w-[40rem] lg:w-full h-auto max-w-screen-lg mt-28 lg:mt-64 m-auto rounded-lg"
+                    className="w-96 md:w-[40rem] lg:w-full h-auto max-w-screen-lg mt-28 md:mt-64 m-auto rounded-lg"
                     poster="https://res.cloudinary.com/dixxtnquz/image/upload/v1701915715/SSG/imgtv_ch8qot.png"
                     controls
                 >

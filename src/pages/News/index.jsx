@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { Carousel, Card, Pagination } from "flowbite-react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const News = () => {
     const navigate = useNavigate();
@@ -19,7 +19,11 @@ const News = () => {
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
-            <section className="h-64 md:h-[36rem] lg:h-[40rem] xl:h-[49rem] 2xl:h-[55rem] lg:mt-0 top-0">
+            <section
+                className="h-64 md:h-[36rem] lg:h-[40rem] xl:h-[49rem] 2xl:h-[55rem] lg:mt-0 top-0"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+            >
                 <Carousel pauseOnHover className="carousel-custom">
                     <div className="h-full relative">
                         <div className="absolute w-full h-full flex items-center justify-start">
@@ -68,7 +72,11 @@ const News = () => {
                 </Carousel>
             </section>
             <section className="mt-12 md:mt-20 px-8 md:px-0">
-                <h1 className="text-center text-[#D2AC47] font-roboto font-medium text-3xl md:text-5xl">
+                <h1
+                    className="text-center text-[#D2AC47] font-roboto font-medium text-3xl md:text-5xl"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
                     News & Event
                 </h1>
                 <div className="mt-8 md:mt-20 flex flex-wrap gap-8 justify-center">
@@ -76,6 +84,8 @@ const News = () => {
                         className="max-w-sm"
                         imgSrc="https://res.cloudinary.com/dixxtnquz/image/upload/v1702362234/SSG/dukung-palestina-ss-group-donasikan-rp1-miliar-rtt_bqvvuu.jpg"
                         horizontal
+                        data-aos="fade-up"
+                        data-aos-duration="1100"
                     >
                         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             Noteworthy technology acquisitions 2021
@@ -93,6 +103,8 @@ const News = () => {
                         className="max-w-sm"
                         imgSrc="https://res.cloudinary.com/dixxtnquz/image/upload/v1702362234/SSG/dukung-palestina-ss-group-donasikan-rp1-miliar-rtt_bqvvuu.jpg"
                         horizontal
+                        data-aos="fade-up"
+                        data-aos-duration="1100"
                     >
                         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             Noteworthy technology acquisitions 2021
@@ -110,6 +122,8 @@ const News = () => {
                         className="max-w-sm"
                         imgSrc="https://res.cloudinary.com/dixxtnquz/image/upload/v1702362234/SSG/dukung-palestina-ss-group-donasikan-rp1-miliar-rtt_bqvvuu.jpg"
                         horizontal
+                        data-aos="fade-up"
+                        data-aos-duration="1100"
                     >
                         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             Noteworthy technology acquisitions 2021
@@ -127,6 +141,8 @@ const News = () => {
                         className="max-w-sm"
                         imgSrc="https://res.cloudinary.com/dixxtnquz/image/upload/v1702362234/SSG/dukung-palestina-ss-group-donasikan-rp1-miliar-rtt_bqvvuu.jpg"
                         horizontal
+                        data-aos="fade-up"
+                        data-aos-duration="1100"
                     >
                         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             Noteworthy technology acquisitions 2021

@@ -4,6 +4,8 @@ import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
 import { Spinner } from "flowbite-react";
+import { postContact } from "../../store/action/contact";
+import { useDispatch, useSelector } from "react-redux";
 
 const imagekakshell = "/Asset1.png";
 const imagekakshell2 = "/Asset6.png";
@@ -23,9 +25,8 @@ const imagelevelupbeaute =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040124/SSG/LEVELUPbeaute_dtcal7.svg";
 const imagelevelupbeauteblack =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040140/SSG/LEVELUPbeauteblack_txkvty.svg";
-const imagebeauty =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700207915/SSG/Acne_series_1_lwltcw.png";
-const imagefashion = "/Asset3.png";
+const imagebeauty = "/Asset3.svg";
+const imagefashion = "/Asset4.png";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Home = () => {
         message: "",
     });
     const formRef = useRef(null);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -68,7 +70,11 @@ const Home = () => {
                 body: formDataObj,
             });
 
-            if (response.ok) {
+            const result = dispatch(postContact(formDataObj));
+
+            await result;
+
+            if (response.ok && result) {
                 console.log("Berhasil!", response);
                 toast.success("Message has been sent!");
                 console.log(formDataObj);
@@ -80,11 +86,14 @@ const Home = () => {
                 setIsloading(false);
             } else {
                 console.error("Error!", response.statusText);
-                toast.error("Gagal mengirim formulir.");
+                toast.error("Failed to send message, try again");
+                setIsloading(false);
             }
         } catch (error) {
-            toast.error("Gagal mengirim formulir.");
+            toast.error("Failed to send message, try again");
             console.error("Error!", error);
+            setIsloading(false);
+            console.log("this is data", result);
         }
     };
 
@@ -98,7 +107,7 @@ const Home = () => {
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 >
-                    <img src={imagekakshell} alt="Imagekakshell" width={600} />
+                    <img src={imagekakshell} alt="Imagekakshell" width={550} />
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink"

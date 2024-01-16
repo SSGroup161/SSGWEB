@@ -59,7 +59,11 @@ const Search = () => {
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
             <section className="w-full bg-[#D2AC47] h-[40rem] rounded-b-[3rem] lg:rounded-b-[7rem] relative flex flex-col justify-between py-20 lg:py-28 items-center">
-                <h1 className="font-roboto text-white text-5xl text-center md:text-[6.5rem] font-bold tracking-widest absolute md:relative">
+                <h1
+                    className="font-roboto text-white text-5xl text-center md:text-[6.5rem] font-bold tracking-widest absolute md:relative"
+                    data-aos="fade-up"
+                    data-aos-duration="1100"
+                >
                     FIND YOUR BEAUTY
                 </h1>
                 <img
@@ -68,8 +72,14 @@ const Search = () => {
                     width={100}
                     height={100}
                     className="md:hidden w-64 lg:w-[26rem] h-auto ms-2 z-10"
+                    data-aos="fade-up"
+                    data-aos-duration="1100"
                 />
-                <div className="flex flex-col gap-4 items-center md:items-start md:-ms-52 lg:-ms-[28rem]">
+                <div
+                    className="flex flex-col gap-4 items-center md:items-start md:-ms-52 lg:-ms-[28rem]"
+                    data-aos="fade-up"
+                    data-aos-duration="1100"
+                >
                     <div className="bg-white w-80 md:w-[24rem] lg:w-[40rem] h-14 flex justify-between items-center gap-4 rounded-full px-2 overflow-visible">
                         <svg
                             width="50"
@@ -185,6 +195,8 @@ const Search = () => {
                     width={100}
                     height={100}
                     className="hidden md:block w-80 lg:w-[26rem] h-auto absolute bottom-0 lg:right-0 lg:me-20 right-4"
+                    data-aos="fade-up"
+                    data-aos-duration="1100"
                 />
             </section>
             <section className="mt-20 flex flex-wrap gap-8 justify-center px-10">

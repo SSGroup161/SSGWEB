@@ -7,7 +7,6 @@ export const getBrand = async (dispatch, id) => {
         dispatch({ type: "GET_BRAND_PENDING" });
         const result = await axios.get(url + `/brand/${id}`);
         dispatch({ payload: result.data.data, type: "GET_BRAND_SUCCESS" });
-        console.log("id", id);
     } catch (err) {
         console.error("error", err);
         dispatch({ payload: err.response, type: "GET_BRAND_FAILED" });
