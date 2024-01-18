@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const UnderConstraction = () => {
+    const navigate = useNavigate();
+
     return (
         <>
             <div className="w-full h-screen flex flex-col items-center relative">
@@ -77,16 +80,17 @@ const UnderConstraction = () => {
                         fill="#FFEFCB"
                     />
                 </svg>
+
                 <div className="absolute bottom-0 flex flex-col items-center mb-2 md:mb-6 lg:mb-4 z-20">
                     <h1 className="font-roboto text-white text-center font-light tracking-wider text-xs md:text-base">
-                        For more, contact us at:
+                        Sorry, we'll be right back
                     </h1>
-                    <a
-                        href="mailto:info@ssgroup.id"
-                        className="font-roboto text-white text-center font-light tracking-wider cursor-pointer text-xs md:text-base hover:text-[#A18E64]"
+                    <h1
+                        onClick={() => navigate("/")}
+                        className="font-roboto text-white text-center font-medium tracking-wider cursor-pointer text-xs md:text-base hover:text-[#A18E64]"
                     >
-                        info@ssgroup.id
-                    </a>
+                        Back to home
+                    </h1>
                 </div>
             </div>
         </>
