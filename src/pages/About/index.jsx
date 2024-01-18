@@ -75,7 +75,11 @@ const About = () => {
                     data-aos-duration="1500"
                 />
             </div>
-            <div data-aos="zoom-in-up" data-aos-duration="1500">
+            <div
+                data-aos="zoom-in-up"
+                data-aos-duration="1500"
+                className="hidden"
+            >
                 <video
                     width={200}
                     height={200}
@@ -190,11 +194,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
-                        onClick={() =>
-                            navigate(
-                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagessshop}
@@ -207,11 +207,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        onClick={() =>
-                            navigate(
-                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagelevelup}
@@ -224,11 +220,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
-                        onClick={() =>
-                            navigate(
-                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -243,11 +235,7 @@ const About = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
-                        onClick={() =>
-                            navigate(
-                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagessskin}
@@ -260,11 +248,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
-                        onClick={() =>
-                            navigate(
-                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagessshop}
@@ -277,11 +261,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        onClick={() =>
-                            navigate(
-                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagelevelup}
@@ -294,11 +274,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
-                        onClick={() =>
-                            navigate(
-                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -313,11 +289,7 @@ const About = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
-                        onClick={() =>
-                            navigate(
-                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <div className="md:hidden flex flex-col gap-20">
                         <div className="flex gap-20">
@@ -334,11 +306,7 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="800"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                                    )
-                                }
+                                onClick={() => navigate("/underconstruction")}
                             />
                             <img
                                 src={imagessshop}
@@ -353,11 +321,7 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                                    )
-                                }
+                                onClick={() => navigate("/underconstruction")}
                             />
                         </div>
                         <div className="flex gap-16">
@@ -374,11 +338,7 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1200"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                                    )
-                                }
+                                onClick={() => navigate("/underconstruction")}
                             />
                             <img
                                 src={imagelevelupbeaute}
@@ -394,11 +354,7 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1400"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                                    )
-                                }
+                                onClick={() => navigate("/underconstruction")}
                             />
                         </div>
                     </div>
@@ -459,7 +415,7 @@ const About = () => {
                                     />
                                 </svg>
                                 <h1 className="font-roboto text-[#A18E64] md:text-lg">
-                                    (+62)853-5102-3811
+                                    (+62)851-5600-5881
                                 </h1>
                             </div>
                             <div className="flex items-center gap-4">

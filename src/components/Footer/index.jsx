@@ -33,10 +33,20 @@ const Footer = () => {
                                 >
                                     FAQs
                                 </li>
-                                <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4">
+                                <li
+                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                    onClick={() =>
+                                        navigate("/underconstruction")
+                                    }
+                                >
                                     Terms & Conditions
                                 </li>
-                                <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4">
+                                <li
+                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                    onClick={() =>
+                                        navigate("/underconstruction")
+                                    }
+                                >
                                     Privacy Policy
                                 </li>
                             </ul>
@@ -67,7 +77,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() => {
-                                        navigate("/news");
+                                        navigate("/underconstruction");
                                         scrollToTop();
                                     }}
                                 >
@@ -76,7 +86,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() => {
-                                        navigate("/product/search");
+                                        navigate("/underconstruction");
                                         scrollToTop();
                                     }}
                                 >
@@ -94,13 +104,28 @@ const Footer = () => {
                                         Shella Saukia Skin
                                     </a>
                                 </li>
-                                <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4">
+                                <li
+                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                    onClick={() =>
+                                        navigate("/underconstruction")
+                                    }
+                                >
                                     Shella Saukia Shop
                                 </li>
-                                <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4">
+                                <li
+                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                    onClick={() =>
+                                        navigate("/underconstruction")
+                                    }
+                                >
                                     Level Up Beaute
                                 </li>
-                                <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4">
+                                <li
+                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                    onClick={() =>
+                                        navigate("/underconstruction")
+                                    }
+                                >
                                     Level Up Style
                                 </li>
                             </ul>
@@ -114,14 +139,11 @@ const Footer = () => {
                                     Customer Service
                                 </h1>
                                 <ul className="">
-                                    <li
-                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64]"
-                                        onClick={() => navigate("/faq")}
-                                    >
-                                        +62 8123 4567 8910
-                                    </li>
                                     <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64]">
-                                        cs@ssgroup.id
+                                        c
+                                        <a href="mailto:cs@ssgroup.id">
+                                            cs@ssgroup.id
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -131,7 +153,9 @@ const Footer = () => {
                                 </h1>
                                 <ul className="">
                                     <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64]">
-                                        partner@ssgroup.id
+                                        <a href="mailto:partner@ssgroup.id">
+                                            partner@ssgroup.id
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -176,33 +200,6 @@ const Footer = () => {
                                 fill="none"
                             >
                                 <path
-                                    d="M15 20C16.3261 20 17.5979 19.4732 18.5355 18.5355C19.4732 17.5979 20 16.3261 20 15C20 13.6739 19.4732 12.4021 18.5355 11.4645C17.5979 10.5268 16.3261 10 15 10C13.6739 10 12.4021 10.5268 11.4645 11.4645C10.5268 12.4021 10 13.6739 10 15C10 16.3261 10.5268 17.5979 11.4645 18.5355C12.4021 19.4732 13.6739 20 15 20Z"
-                                    stroke="white"
-                                    strokeWidth="1.5"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                                <path
-                                    d="M3.75 20V10C3.75 8.3424 4.40848 6.75269 5.58058 5.58058C6.75269 4.40848 8.3424 3.75 10 3.75H20C21.6576 3.75 23.2473 4.40848 24.4194 5.58058C25.5915 6.75269 26.25 8.3424 26.25 10V20C26.25 21.6576 25.5915 23.2473 24.4194 24.4194C23.2473 25.5915 21.6576 26.25 20 26.25H10C8.3424 26.25 6.75269 25.5915 5.58058 24.4194C4.40848 23.2473 3.75 21.6576 3.75 20Z"
-                                    stroke="white"
-                                    strokeWidth="1.5"
-                                />
-                                <path
-                                    d="M21.875 8.13753L21.8875 8.12378"
-                                    stroke="white"
-                                    strokeWidth="1.5"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="30"
-                                height="30"
-                                viewBox="0 0 30 30"
-                                fill="none"
-                            >
-                                <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
                                     d="M12.9825 10.4463C12.8402 10.3609 12.6779 10.3148 12.512 10.3126C12.3461 10.3105 12.1826 10.3525 12.0382 10.4342C11.8938 10.5159 11.7737 10.6345 11.6901 10.7778C11.6065 10.9212 11.5625 11.0841 11.5625 11.25V18.75C11.5625 18.9159 11.6065 19.0789 11.6901 19.2222C11.7737 19.3655 11.8938 19.4841 12.0382 19.5658C12.1826 19.6476 12.3461 19.6895 12.512 19.6874C12.6779 19.6853 12.8402 19.6391 12.9825 19.5538L19.2325 15.8038C19.3713 15.7204 19.4861 15.6026 19.5658 15.4618C19.6455 15.3209 19.6874 15.1619 19.6874 15C19.6874 14.8382 19.6455 14.6791 19.5658 14.5382C19.4861 14.3974 19.3713 14.2796 19.2325 14.1963L12.9825 10.4463ZM16.9275 15L13.4375 17.0938V12.9063L16.9275 15Z"
@@ -224,18 +221,6 @@ const Footer = () => {
                             >
                                 <path
                                     d="M24.3125 6.13751C23.1665 4.97992 21.8015 4.0621 20.297 3.43758C18.7926 2.81306 17.1789 2.49434 15.55 2.50001C8.725 2.50001 3.1625 8.06251 3.1625 14.8875C3.1625 17.075 3.7375 19.2 4.8125 21.075L3.0625 27.5L9.625 25.775C11.4375 26.7625 13.475 27.2875 15.55 27.2875C22.375 27.2875 27.9375 21.725 27.9375 14.9C27.9375 11.5875 26.65 8.47501 24.3125 6.13751ZM15.55 25.1875C13.7 25.1875 11.8875 24.6875 10.3 23.75L9.925 23.525L6.025 24.55L7.0625 20.75L6.8125 20.3625C5.78468 18.7212 5.23893 16.8241 5.2375 14.8875C5.2375 9.21251 9.8625 4.58751 15.5375 4.58751C18.2875 4.58751 20.875 5.66251 22.8125 7.61251C23.7719 8.56747 24.5321 9.70334 25.0492 10.9543C25.5664 12.2052 25.83 13.5464 25.825 14.9C25.85 20.575 21.225 25.1875 15.55 25.1875ZM21.2 17.4875C20.8875 17.3375 19.3625 16.5875 19.0875 16.475C18.8 16.375 18.6 16.325 18.3875 16.625C18.175 16.9375 17.5875 17.6375 17.4125 17.8375C17.2375 18.05 17.05 18.075 16.7375 17.9125C16.425 17.7625 15.425 17.425 14.25 16.375C13.325 15.55 12.7125 14.5375 12.525 14.225C12.35 13.9125 12.5 13.75 12.6625 13.5875C12.8 13.45 12.975 13.225 13.125 13.05C13.275 12.875 13.3375 12.7375 13.4375 12.5375C13.5375 12.325 13.4875 12.15 13.4125 12C13.3375 11.85 12.7125 10.325 12.4625 9.70001C12.2125 9.10001 11.95 9.17501 11.7625 9.16251H11.1625C10.95 9.16251 10.625 9.23751 10.3375 9.55001C10.0625 9.86251 9.2625 10.6125 9.2625 12.1375C9.2625 13.6625 10.375 15.1375 10.525 15.3375C10.675 15.55 12.7125 18.675 15.8125 20.0125C16.55 20.3375 17.125 20.525 17.575 20.6625C18.3125 20.9 18.9875 20.8625 19.525 20.7875C20.125 20.7 21.3625 20.0375 21.6125 19.3125C21.875 18.5875 21.875 17.975 21.7875 17.8375C21.7 17.7 21.5125 17.6375 21.2 17.4875Z"
-                                    fill="white"
-                                />
-                            </svg>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="30"
-                                height="30"
-                                viewBox="0 0 30 30"
-                                fill="none"
-                            >
-                                <path
-                                    d="M20.7502 7.275C19.8957 6.29953 19.4248 5.04679 19.4252 3.75H15.5627V19.25C15.5329 20.0888 15.1788 20.8833 14.5749 21.4662C13.971 22.0491 13.1645 22.3749 12.3252 22.375C10.5502 22.375 9.0752 20.925 9.0752 19.125C9.0752 16.975 11.1502 15.3625 13.2877 16.025V12.075C8.9752 11.5 5.2002 14.85 5.2002 19.125C5.2002 23.2875 8.6502 26.25 12.3127 26.25C16.2377 26.25 19.4252 23.0625 19.4252 19.125V11.2625C20.9914 12.3873 22.8719 12.9908 24.8002 12.9875V9.125C24.8002 9.125 22.4502 9.2375 20.7502 7.275Z"
                                     fill="white"
                                 />
                             </svg>

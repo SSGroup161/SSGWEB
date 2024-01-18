@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import FAB from "../../components/FAB";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "sonner";
 import { Spinner } from "flowbite-react";
@@ -100,6 +101,7 @@ const Home = () => {
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
+            <FAB />
             <Toaster richColors />
             <section className="flex flex-col md:flex-row relative mt-28">
                 <div
@@ -208,8 +210,8 @@ const Home = () => {
                         </div>
                         <div className="flex mt-8 gap-6 md:gap-10 mb-28">
                             <div
-                                className="w-[10rem] lg:w-[12rem] h-14 bg-[#D2AC47] text-white cursor-pointer rounded-md flex justify-center items-center transition-all duration-300 hover:bg-[#d2ad47b0]"
-                                onClick={() => navigate("/product")}
+                                className="w-[10rem] lg:w-[12rem] h-14 bg-[#D2AC47] text-white cursor-pointer rounded-md flex justify-center items-center transition-all duration-300 hover:bg-[#BA9021]"
+                                onClick={() => navigate("/underconstruction")}
                             >
                                 <h1 className="font-roboto">Get Started</h1>
                             </div>
@@ -259,11 +261,7 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
-                        onClick={() =>
-                            navigate(
-                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagessshop}
@@ -276,11 +274,7 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        onClick={() =>
-                            navigate(
-                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagelevelup}
@@ -293,11 +287,7 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
-                        onClick={() =>
-                            navigate(
-                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -312,11 +302,7 @@ const Home = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
-                        onClick={() =>
-                            navigate(
-                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagessskin}
@@ -329,11 +315,7 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
-                        onClick={() =>
-                            navigate(
-                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagessshop}
@@ -346,11 +328,7 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        onClick={() =>
-                            navigate(
-                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagelevelup}
@@ -363,11 +341,7 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
-                        onClick={() =>
-                            navigate(
-                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -382,11 +356,7 @@ const Home = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
-                        onClick={() =>
-                            navigate(
-                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                            )
-                        }
+                        onClick={() => navigate("/underconstruction")}
                     />
                     <div className="md:hidden flex flex-col gap-20">
                         <div className="flex gap-20">
@@ -403,11 +373,7 @@ const Home = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="800"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                                    )
-                                }
+                                onClick={() => navigate("/underconstruction")}
                             />
                             <img
                                 src={imagessshop}
@@ -422,11 +388,7 @@ const Home = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                                    )
-                                }
+                                onClick={() => navigate("/underconstruction")}
                             />
                         </div>
                         <div className="flex gap-16">
@@ -443,11 +405,7 @@ const Home = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1200"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                                    )
-                                }
+                                onClick={() => navigate("/underconstruction")}
                             />
                             <img
                                 src={imagelevelupbeaute}
@@ -463,11 +421,7 @@ const Home = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1400"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                                    )
-                                }
+                                onClick={() => navigate("/underconstruction")}
                             />
                         </div>
                     </div>
@@ -613,7 +567,7 @@ const Home = () => {
                             />
                         </svg>
                         <h1 className="font-roboto text-white text-base font-light">
-                            +62 812 345 678
+                            +62-851-5600-5881
                         </h1>
                     </div>
                     <div className="flex gap-4">
@@ -719,7 +673,7 @@ const Home = () => {
                                 type="submit"
                                 className={`w-full md:w-40 bg-white h-10 mt-8 rounded-md hover:border-2 ${
                                     isloading
-                                        ? "bg-gray-300 hover:border-gray-300 hover:bg-gray-300 hover:text-white text-white"
+                                        ? "bg-gray-300 hover:border-gray-300 hover:cursor-wait hover:bg-gray-300 hover:text-white text-white"
                                         : "hover:border-white hover:bg-transparent hover:text-white text-[#D2AC47]"
                                 }`}
                                 disabled={true}
@@ -728,7 +682,9 @@ const Home = () => {
                                     aria-label="Spinner button example"
                                     size="sm"
                                 />
-                                <span className="pl-3">Sending...</span>
+                                <span className="pl-3 text-[#D2AC47]">
+                                    Sending...
+                                </span>
                             </button>
                         ) : (
                             <button

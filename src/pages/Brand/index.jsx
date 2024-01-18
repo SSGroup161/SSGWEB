@@ -110,6 +110,7 @@ const Brand = () => {
                         width="100%"
                         height="100%"
                         alt="videobg"
+                        className="h-96 md:h-full w-full object-cover z-10"
                         loop
                         autoPlay
                         muted
@@ -119,7 +120,7 @@ const Brand = () => {
                 ) : (
                     <img
                         src={data && data[0] && data[0].bg_img}
-                        alt="jxb"
+                        alt="wait..."
                         width="full"
                         height="full"
                         className="h-96 md:h-full w-full object-cover z-10"
