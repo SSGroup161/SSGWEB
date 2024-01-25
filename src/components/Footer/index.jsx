@@ -29,7 +29,10 @@ const Footer = () => {
                             <ul className="">
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                    onClick={() => navigate("/faq")}
+                                    onClick={() => {
+                                        navigate("/faq");
+                                        scrollToTop();
+                                    }}
                                 >
                                     FAQs
                                 </li>
@@ -77,7 +80,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() => {
-                                        navigate("/underconstruction");
+                                        navigate("/news");
                                         scrollToTop();
                                     }}
                                 >
@@ -86,7 +89,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() => {
-                                        navigate("/underconstruction");
+                                        navigate("/product/search");
                                         scrollToTop();
                                     }}
                                 >
@@ -99,32 +102,51 @@ const Footer = () => {
                                 Brand
                             </h1>
                             <ul className="">
-                                <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4">
-                                    <a href="https://shellasaukiaskin.com/">
-                                        Shella Saukia Skin
-                                    </a>
-                                </li>
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                    onClick={() =>
-                                        navigate("/underconstruction")
-                                    }
+                                    onClick={() => {
+                                        navigate(
+                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                                        );
+                                        window.location.reload();
+                                        scrollToTop();
+                                    }}
                                 >
                                     Shella Saukia Shop
                                 </li>
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                    onClick={() =>
-                                        navigate("/underconstruction")
-                                    }
+                                    onClick={() => {
+                                        navigate(
+                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                                        );
+                                        window.location.reload();
+                                        scrollToTop();
+                                    }}
+                                >
+                                    Shella Saukia Skin
+                                </li>
+                                <li
+                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                    onClick={() => {
+                                        navigate(
+                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                        );
+                                        window.location.reload();
+                                        scrollToTop();
+                                    }}
                                 >
                                     Level Up Beaute
                                 </li>
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                    onClick={() =>
-                                        navigate("/underconstruction")
-                                    }
+                                    onClick={() => {
+                                        navigate(
+                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                        );
+                                        window.location.reload();
+                                        scrollToTop();
+                                    }}
                                 >
                                     Level Up Style
                                 </li>
@@ -140,7 +162,6 @@ const Footer = () => {
                                 </h1>
                                 <ul className="">
                                     <li className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64]">
-                                        c
                                         <a href="mailto:cs@ssgroup.id">
                                             cs@ssgroup.id
                                         </a>

@@ -406,7 +406,7 @@ const Navbar = () => {
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
                                 }`}
-                                onClick={() => navigate("/underconstruction")}
+                                onClick={() => navigate("/product")}
                             >
                                 Product
                             </li>
@@ -444,7 +444,7 @@ const Navbar = () => {
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
                                 }`}
-                                onClick={() => navigate("/underconstruction")}
+                                onClick={() => navigate("/news")}
                             >
                                 News
                             </li>
@@ -486,7 +486,9 @@ const Navbar = () => {
                                 <Dropdown label="Brand" inline>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate("/underconstruction");
+                                            navigate(
+                                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                                            );
                                             window.location.reload();
                                         }}
                                         className={`hover:text-[#D2AC47] ${
@@ -499,7 +501,9 @@ const Navbar = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate("/underconstruction");
+                                            navigate(
+                                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                                            );
                                             window.location.reload();
                                         }}
                                         className={`hover:text-[#D2AC47] ${
@@ -512,7 +516,9 @@ const Navbar = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate("/underconstruction");
+                                            navigate(
+                                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                            );
                                             window.location.reload();
                                         }}
                                         className={`hover:text-[#D2AC47] ${
@@ -525,7 +531,9 @@ const Navbar = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate("/underconstruction");
+                                            navigate(
+                                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                            );
                                             window.location.reload();
                                         }}
                                         className={`hover:text-[#D2AC47] ${
@@ -597,9 +605,7 @@ const Navbar = () => {
                                     About Us
                                 </li>
                                 <li
-                                    onClick={() =>
-                                        navigate("/underconstruction")
-                                    }
+                                    onClick={() => navigate("/product")}
                                     className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
                                         activeProduct
                                             ? "text-[#D2AC47] font-normal"
@@ -609,9 +615,7 @@ const Navbar = () => {
                                     Product
                                 </li>
                                 <li
-                                    onClick={() =>
-                                        navigate("/underconstruction")
-                                    }
+                                    onClick={() => navigate("/news")}
                                     className={`cursor-pointer text-[#444341] hover:text-[#D2AC47] text-center ${
                                         activeNews
                                             ? "text-[#D2AC47] font-normal"
@@ -630,7 +634,9 @@ const Navbar = () => {
                                     <Dropdown label="Brand" inline>
                                         <Dropdown.Item
                                             onClick={() => {
-                                                navigate("/underconstruction");
+                                                navigate(
+                                                    "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                                                );
                                                 window.location.reload();
                                             }}
                                         >
@@ -638,7 +644,9 @@ const Navbar = () => {
                                         </Dropdown.Item>
                                         <Dropdown.Item
                                             onClick={() => {
-                                                navigate("/underconstruction");
+                                                navigate(
+                                                    "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                                                );
                                                 window.location.reload();
                                             }}
                                         >
@@ -646,7 +654,9 @@ const Navbar = () => {
                                         </Dropdown.Item>
                                         <Dropdown.Item
                                             onClick={() => {
-                                                navigate("/underconstruction");
+                                                navigate(
+                                                    "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                                );
                                                 window.location.reload();
                                             }}
                                         >
@@ -654,7 +664,9 @@ const Navbar = () => {
                                         </Dropdown.Item>
                                         <Dropdown.Item
                                             onClick={() => {
-                                                navigate("/underconstruction");
+                                                navigate(
+                                                    "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                                );
                                                 window.location.reload();
                                             }}
                                         >

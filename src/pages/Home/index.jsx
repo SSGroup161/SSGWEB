@@ -196,7 +196,7 @@ const Home = () => {
                                 the magic of beauty
                             </h1>
                             <h1 className="font-aref uppercase text-[#D2AC47] text-xl lg:text-3xl mt-4">
-                                happened
+                                happens
                             </h1>
                         </div>
                         <div className="mt-8 font-roboto text-[#A18E64] font-light">
@@ -434,15 +434,16 @@ const Home = () => {
                     </h1>
                     <div className="w-80 md:w-[26rem] lg:w-[30rem]">
                         <p className="font-roboto font-light text-[#A18E64] md:mt-10 mt-6">
-                            SS Group stands for Shella Saukia Group is an
-                            Indonesia company engaged in beauty, fashion, and
-                            personal care products. SS Group is established in
-                            2019 and already have massive success in products-
-                            selling at various platforms through the act of
-                            their well-known social media influencer owner,
-                            Shella Saukia. One of their most sensational success
-                            is gaining 16 billion IDR from one time live
-                            streaming selling in September 2023.
+                            SS Group is a company consisting of Indonesian
+                            brands (SS Shop, SS Skin, Level Up Beaute, and Level
+                            Up Style) engaged in beauty, fashion, and personal
+                            care products. Our company was established in 2019,
+                            and two of our most sensational successes were in
+                            2023, when we received two recognitions from Tiktok
+                            Shop for Gross Merchandise Value: $1,000,000+
+                            Achievement and Record-breaking Brand Collaboration
+                            for Best Selling Spotless Whitening Package
+                            Achievement across all FMCG.
                         </p>
                     </div>
                     <div
