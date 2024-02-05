@@ -51,6 +51,13 @@ const Home = () => {
         });
     };
 
+    const scrollToDown = () => {
+        window.scrollTo({
+            top: 890,
+            behavior: "smooth",
+        });
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsloading(true);
@@ -72,9 +79,7 @@ const Home = () => {
             });
 
             const result = dispatch(postContact(formDataObj));
-
             await result;
-
             if (response.ok && result) {
                 console.log("Berhasil!", response);
                 toast.success("Message has been sent!");
@@ -211,7 +216,7 @@ const Home = () => {
                         <div className="flex mt-8 gap-6 md:gap-10 mb-28">
                             <div
                                 className="w-[10rem] lg:w-[12rem] h-14 bg-[#D2AC47] text-white cursor-pointer rounded-md flex justify-center items-center transition-all duration-300 hover:bg-[#BA9021]"
-                                onClick={() => navigate("/underconstruction")}
+                                onClick={() => scrollToDown()}
                             >
                                 <h1 className="font-roboto">Get Started</h1>
                             </div>
@@ -254,6 +259,7 @@ const Home = () => {
                         src={imagessskin}
                         alt="imagesskin"
                         width={130}
+                        height={130}
                         className="cursor-pointer hidden lg:block"
                         onMouseOver={(e) =>
                             (e.currentTarget.src = imagessskingold)
@@ -261,12 +267,17 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
-                        onClick={() => navigate("/underconstruction")}
+                        onClick={() =>
+                            navigate(
+                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                            )
+                        }
                     />
                     <img
                         src={imagessshop}
                         alt="imagesskin"
                         width={130}
+                        height={130}
                         className="cursor-pointer hidden lg:block"
                         onMouseOver={(e) =>
                             (e.currentTarget.src = imagessshopgold)
@@ -274,12 +285,17 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        onClick={() => navigate("/underconstruction")}
+                        onClick={() =>
+                            navigate(
+                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelup}
                         alt="imagesskin"
                         width={150}
+                        height={150}
                         className="cursor-pointer hidden lg:block"
                         onMouseOver={(e) =>
                             (e.currentTarget.src = imagelevelupblack)
@@ -287,12 +303,17 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
-                        onClick={() => navigate("/underconstruction")}
+                        onClick={() =>
+                            navigate(
+                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelupbeaute}
                         alt="imagelevelup"
                         width={150}
+                        height={150}
                         className="cursor-pointer hidden lg:block"
                         onMouseOver={(e) =>
                             (e.currentTarget.src = imagelevelupbeauteblack)
@@ -302,12 +323,17 @@ const Home = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
-                        onClick={() => navigate("/underconstruction")}
+                        onClick={() =>
+                            navigate(
+                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                            )
+                        }
                     />
                     <img
                         src={imagessskin}
                         alt="imagesskin"
                         width={100}
+                        height={100}
                         className="cursor-pointer hidden md:block lg:hidden"
                         onMouseOver={(e) =>
                             (e.currentTarget.src = imagessskingold)
@@ -315,12 +341,17 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
-                        onClick={() => navigate("/underconstruction")}
+                        onClick={() =>
+                            navigate(
+                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                            )
+                        }
                     />
                     <img
                         src={imagessshop}
                         alt="imagesskin"
                         width={100}
+                        height={100}
                         className="cursor-pointer hidden md:block lg:hidden"
                         onMouseOver={(e) =>
                             (e.currentTarget.src = imagessshopgold)
@@ -328,12 +359,17 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        onClick={() => navigate("/underconstruction")}
+                        onClick={() =>
+                            navigate(
+                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelup}
                         alt="imagesskin"
                         width={110}
+                        height={110}
                         className="cursor-pointer hidden md:block lg:hidden"
                         onMouseOver={(e) =>
                             (e.currentTarget.src = imagelevelupblack)
@@ -341,12 +377,17 @@ const Home = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
-                        onClick={() => navigate("/underconstruction")}
+                        onClick={() =>
+                            navigate(
+                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                            )
+                        }
                     />
                     <img
                         src={imagelevelupbeaute}
                         alt="imagesskin"
                         width={110}
+                        height={110}
                         className="cursor-pointer hidden md:block lg:hidden"
                         onMouseOver={(e) =>
                             (e.currentTarget.src = imagelevelupbeauteblack)
@@ -356,7 +397,11 @@ const Home = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
-                        onClick={() => navigate("/underconstruction")}
+                        onClick={() =>
+                            navigate(
+                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                            )
+                        }
                     />
                     <div className="md:hidden flex flex-col gap-20">
                         <div className="flex gap-20">
@@ -364,6 +409,7 @@ const Home = () => {
                                 src={imagessskin}
                                 alt="imagesskin"
                                 width={80}
+                                height={80}
                                 className="cursor-pointer block md:hidden"
                                 onMouseOver={(e) =>
                                     (e.currentTarget.src = imagessskingold)
@@ -373,12 +419,17 @@ const Home = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="800"
-                                onClick={() => navigate("/underconstruction")}
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
+                                    )
+                                }
                             />
                             <img
                                 src={imagessshop}
                                 alt="imagesskin"
                                 width={80}
+                                height={80}
                                 className="cursor-pointer block md:hidden"
                                 onMouseOver={(e) =>
                                     (e.currentTarget.src = imagessshopgold)
@@ -388,7 +439,11 @@ const Home = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
-                                onClick={() => navigate("/underconstruction")}
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
+                                    )
+                                }
                             />
                         </div>
                         <div className="flex gap-16">
@@ -396,6 +451,7 @@ const Home = () => {
                                 src={imagelevelup}
                                 alt="imagesskin"
                                 width={90}
+                                height={90}
                                 className="cursor-pointer block md:hidden"
                                 onMouseOver={(e) =>
                                     (e.currentTarget.src = imagelevelupblack)
@@ -405,12 +461,17 @@ const Home = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1200"
-                                onClick={() => navigate("/underconstruction")}
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                    )
+                                }
                             />
                             <img
                                 src={imagelevelupbeaute}
                                 alt="imagesskin"
                                 width={90}
+                                height={90}
                                 className="cursor-pointer block md:hidden"
                                 onMouseOver={(e) =>
                                     (e.currentTarget.src =
@@ -421,7 +482,11 @@ const Home = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1400"
-                                onClick={() => navigate("/underconstruction")}
+                                onClick={() =>
+                                    navigate(
+                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                    )
+                                }
                             />
                         </div>
                     </div>
