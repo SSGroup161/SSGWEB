@@ -13,7 +13,7 @@ const NewsDetail = () => {
         (state) => state.articleid
     );
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         dispatch(getArticleId(id));
     }, [id, dispatch]);
 

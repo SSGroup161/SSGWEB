@@ -8,7 +8,7 @@ import { Spinner } from "flowbite-react";
 import { postContact } from "../../store/action/contact";
 import { useDispatch, useSelector } from "react-redux";
 
-const imagekakshell = "/Asset1.png";
+const imagekakshell = "/Asset1.webp";
 const imagekakshell2 = "/Asset6.png";
 const imagessskin =
     "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136421/SSG/SSSKIN_nnzc1p.svg";
@@ -114,7 +114,12 @@ const Home = () => {
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 >
-                    <img src={imagekakshell} alt="Imagekakshell" width={550} />
+                    <img
+                        src={imagekakshell}
+                        alt="Imagekakshell"
+                        width={550}
+                        height={680.8}
+                    />
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -205,13 +210,13 @@ const Home = () => {
                             </h1>
                         </div>
                         <div className="mt-8 font-roboto text-[#A18E64] font-light">
-                            <p>
+                            <h1>
                                 SS Group is a company consist of Indonesian
                                 brands (SS Shop, SS Skin, Level Up Beaute, and
                                 Level Up Style) engaged in beauty, fashion, and
                                 personal care products. Find the beauty and
                                 fashion you are looking for with us!
-                            </p>
+                            </h1>
                         </div>
                         <div className="flex mt-8 gap-6 md:gap-10 mb-28">
                             <div

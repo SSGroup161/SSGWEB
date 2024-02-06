@@ -15,17 +15,6 @@ const Brand = () => {
     );
 
     useEffect(() => {
-        if (isError && errorMessage) {
-            toast.warn(errorMessage, {
-                hideProgressBar: true,
-                autoClose: 2000,
-            });
-        } else if (isError && !errorMessage) {
-            toast.error("Something wrong");
-        }
-    }, [isError, errorMessage]);
-
-    useEffect(() => {
         getBrand(dispatch, id);
     }, []);
 

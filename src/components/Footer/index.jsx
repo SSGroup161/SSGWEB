@@ -217,6 +217,7 @@ const Footer = () => {
                                 href="https://www.youtube.com/@shellasaukia2979"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Youtube"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -243,6 +244,7 @@ const Footer = () => {
                                 href="https://wa.me/+6285156005881"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Whatsapp"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -261,6 +263,7 @@ const Footer = () => {
                                 href="https://www.linkedin.com/company/ssgroup1/mycompany/"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Linkedin"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

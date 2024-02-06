@@ -1,8 +1,0 @@
-input[type="text"]:focus ~ .input-text,
-input[type="text"]:not(:placeholder-shown) ~ .input-text {
-    @apply text-[#D2AC47] transform -translate-y-6 -translate-x-2 scale-75;
-}
-input[type="password"]:focus ~ .input-password,
-input[type="password"]:not(:placeholder-shown) ~ .input-password {
-    @apply text-[#D2AC47] transform -translate-y-6 -translate-x-2 scale-75;
-}
