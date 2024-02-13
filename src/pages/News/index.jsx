@@ -10,8 +10,8 @@ import { Spinner } from "flowbite-react";
 const News = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const [currentPage, setCurrentPage] = useState(1);
-    const onPageChange = (page) => setCurrentPage(page);
+    // const [currentPage, setCurrentPage] = useState(1);
+    // const onPageChange = (page) => setCurrentPage(page);
     const { isError, errorMessage, data, isLoading } = useSelector(
         (state) => state.article
     );

@@ -23,3 +23,22 @@ export const getArticleId = (id) => async (dispatch) => {
         dispatch({ payload: err.response, type: "GET_ARTICLE_ID_FAILED" });
     }
 };
+
+export const postArticle = (data) => async (dispatch) => {
+    try {
+        const headers = {
+            "Content-Type": "multipart/form-data",
+        };
+        dispatch({ type: "POST_ARTICLE_PENDING" });
+        const result = await axios.post(`${url}article`, data, { headers });
+        console.log(result);
+        dispatch({ type: "POST_ARTICLE_SUCCESS", payload: result.data.data });
+    } catch (err) {
+        console.error("error", err);
+
+        dispatch({
+            type: "POST_ARTICLE_FAILED",
+            payload: err.response ? err.response : { message: err.message },
+        });
+    }
+};
