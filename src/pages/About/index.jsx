@@ -46,7 +46,7 @@ const About = () => {
                         Group
                     </h1>
                     <p className="font-roboto text-[#A18E64] mt-4 lg:mt-6 text-sm md:text-xl md:w-80 w-48 lg:w-[32rem] italic">
-                        “ The only place where the magic of beauty happened ”
+                        “ The only place where the magic of beauty happens ”
                     </p>
                 </div>
                 <img
