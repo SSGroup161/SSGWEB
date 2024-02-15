@@ -5,6 +5,7 @@ import getArticleReducers from "./getArticleData";
 import getArticleIdReducers from "./getArticleDataId";
 import postArticleData from "./postArticle";
 import loginReducers from "./login";
+import deleteArticleReducers from "./deleteArticle";
 
 const rootReducers = combineReducers({
     brand: getBrandReducers,
@@ -13,6 +14,7 @@ const rootReducers = combineReducers({
     articleid: getArticleIdReducers,
     addarticle: postArticleData,
     auth: loginReducers,
+    deletearticle: deleteArticleReducers,
 });
 
 export default rootReducers;

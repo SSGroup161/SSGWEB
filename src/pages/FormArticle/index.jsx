@@ -14,14 +14,20 @@ import {
     getArticle,
     postArticle,
     getArticleId,
+    deleteArticle,
 } from "../../store/action/article";
 import { useDispatch, useSelector } from "react-redux";
+import { HiOutlineExclamationCircle } from "react-icons/hi";
 
 const FormArcticle = () => {
     const dispatch = useDispatch();
     const [openModal, setOpenModal] = useState(false);
     const [openModalId, setOpenModalId] = useState(false);
+    const [openModalDelete, setOpenModalDelete] = useState(false);
     const [image, setImage] = useState(null);
+    const [idArticle, setIdArticle] = useState(null);
+    const [isEditMode, setIsEditMode] = useState(false);
+    const [selectedArticle, setSelectedArticle] = useState(null);
     const [inputData, setInputData] = useState({
         title: "",
         creator: "",
@@ -57,6 +63,9 @@ const FormArcticle = () => {
     const { isLoading: isLoadingGetId, data: dataId } = useSelector(
         (state) => state.articleid
     );
+    const { isLoading: isLoadingDelete } = useSelector(
+        (state) => state.deletearticle
+    );
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -82,6 +91,8 @@ const FormArcticle = () => {
 
     const onCloseModal = () => {
         setOpenModal(false);
+        setIsEditMode(false);
+        setSelectedArticle(null);
         setImage(null);
         setInputData({
             title: "",
@@ -116,8 +127,25 @@ const FormArcticle = () => {
         }));
     };
 
-    const handleFileChange = (e) => {
-        setImage(e.target.files[0]);
+    const handleEditClick = (article) => {
+        setSelectedArticle(article);
+        setInputData({
+            title: article.title,
+            creator: article.creator,
+            day: article.day,
+            date: article.date,
+            place: article.place,
+            caption: article.caption_img,
+            desc: article.description,
+        });
+        setIsEditMode(true);
+        setOpenModal(true);
+    };
+
+    const handleFileChange = (event) => {
+        if (event.target.files.length > 0) {
+            setImage(event.target.files[0]);
+        }
     };
 
     const handleSubmit = (e) => {
@@ -144,7 +172,13 @@ const FormArcticle = () => {
         bodyFormData.append("caption_img", inputData.caption);
         bodyFormData.append("description", inputData.desc);
         bodyFormData.append("place", inputData.place);
-        bodyFormData.append("link_img", image);
+        if (image instanceof File) {
+            bodyFormData.append("link_img", image, image.name);
+        } else {
+            console.warn("Image is not a file.");
+            toast.error("Please select a valid image file.");
+            return;
+        }
 
         dispatch(postArticle(bodyFormData))
             .then(() => {
@@ -154,8 +188,33 @@ const FormArcticle = () => {
             })
             .catch((error) => {
                 console.error("Post article failed:", error);
-                toast.error("Failed to post article.");
+                const errorMessage = error.response
+                    ? error.response.data.message
+                    : error.message;
+                toast.error(`Failed to post article: ${errorMessage}`);
             });
+    };
+
+    const handleDelete = (id) => {
+        dispatch(deleteArticle(id))
+            .then(() => {
+                dispatch(getArticle())
+                    .then(() => {
+                        setOpenModalDelete(false);
+                        toast.success("Article delete successfully!");
+                    })
+                    .catch((error) => {
+                        toast.error("Failed to delete article.");
+                    });
+            })
+            .catch((error) => {
+                toast.error("Failed to delete article.");
+            });
+    };
+
+    const handleDeleteClick = (id) => {
+        setIdArticle(id);
+        setOpenModalDelete(true);
     };
 
     return (
@@ -163,7 +222,9 @@ const FormArcticle = () => {
             <Toaster richColors />
             <section className="h-screen w-screen flex flex-col gap-4 justify-start items-center relative">
                 <Modal show={openModal} onClose={onCloseModal}>
-                    <Modal.Header>Add New Article</Modal.Header>
+                    <Modal.Header>
+                        {isEditMode ? "Edit Article" : "Add New Article"}
+                    </Modal.Header>
                     <Modal.Body>
                         <form onSubmit={handleSubmit}>
                             <div className="space-y-6">
@@ -252,16 +313,12 @@ const FormArcticle = () => {
                                 </div>
                                 <Button type="submit" color="warning">
                                     {isLoadingPost ? (
-                                        <div>
-                                            <Spinner
-                                                color="info"
-                                                aria-label="Info spinner example"
-                                            />
-                                            {` Saving...`}
-                                        </div>
+                                        <Spinner aria-label="Saving..." />
+                                    ) : isEditMode ? (
+                                        "Update Article"
                                     ) : (
                                         "Save Article"
-                                    )}{" "}
+                                    )}
                                 </Button>
                             </div>
                         </form>
@@ -285,18 +342,14 @@ const FormArcticle = () => {
                                         <div className="w-72 h-10 md:w-[30rem] md:h-12 bg-gray-300 animate-pulse rounded-lg"></div>
                                     ) : (
                                         <h1 className="font-roboto text-2xl md:text-4xl text-black font-medium">
-                                            {dataId &&
-                                                dataId[0] &&
-                                                dataId[0].title}
+                                            {dataId && dataId && dataId.title}
                                         </h1>
                                     )}
                                     {isLoading ? (
                                         <div className="w-36 h-6 md:w-80 md:h-8 mt-2 bg-gray-300 animate-pulse rounded-lg"></div>
                                     ) : (
                                         <h4 className="font-roboto mt-4">
-                                            {dataId &&
-                                                dataId[0] &&
-                                                dataId[0].creator}
+                                            {dataId && dataId && dataId.creator}
                                         </h4>
                                     )}
                                     {isLoading ? (
@@ -304,13 +357,9 @@ const FormArcticle = () => {
                                     ) : (
                                         <h5 className="text-gray-400 font-roboto">
                                             {`${
-                                                dataId &&
-                                                dataId[0] &&
-                                                dataId[0].day
+                                                dataId && dataId && dataId.day
                                             }, ${
-                                                dataId &&
-                                                dataId[0] &&
-                                                dataId[0].date
+                                                dataId && dataId && dataId.date
                                             }`}
                                         </h5>
                                     )}
@@ -322,8 +371,8 @@ const FormArcticle = () => {
                                         <img
                                             src={
                                                 dataId &&
-                                                dataId[0] &&
-                                                dataId[0].link_img
+                                                dataId &&
+                                                dataId.link_img
                                             }
                                             alt="newsdetail"
                                             width={50}
@@ -332,8 +381,8 @@ const FormArcticle = () => {
                                         />
                                         <h1 className="font-roboto text-gray-400 text-xs md:text-sm mt-2">
                                             {dataId &&
-                                                dataId[0] &&
-                                                dataId[0].caption_img}
+                                                dataId &&
+                                                dataId.caption_img}
                                         </h1>
                                     </div>
                                 )}
@@ -348,14 +397,14 @@ const FormArcticle = () => {
                                         <p>
                                             <b>
                                                 {dataId &&
-                                                    dataId[0] &&
-                                                    dataId[0].place}
+                                                    dataId &&
+                                                    dataId.place}
                                             </b>{" "}
                                             {` -- `}
                                             {dataId &&
-                                                dataId[0] &&
+                                                dataId &&
                                                 formatParagraphs(
-                                                    dataId[0].description
+                                                    dataId.description
                                                 )}
                                         </p>
                                     )}
@@ -364,6 +413,40 @@ const FormArcticle = () => {
                         </Modal.Body>
                     </Modal>
                 )}
+                <Modal
+                    show={openModalDelete}
+                    size="md"
+                    onClose={() => setOpenModalDelete(false)}
+                    popup
+                >
+                    <Modal.Header />
+                    <Modal.Body>
+                        <div className="text-center">
+                            <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
+                            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                                Are you sure you want to delete this article?
+                            </h3>
+                            <div className="flex justify-center gap-4">
+                                <Button
+                                    color="failure"
+                                    onClick={() => handleDelete(idArticle)}
+                                >
+                                    {isLoadingDelete ? (
+                                        <Spinner aria-label="Deleting..." />
+                                    ) : (
+                                        "Yes, I'm sure"
+                                    )}
+                                </Button>
+                                <Button
+                                    color="gray"
+                                    onClick={() => setOpenModalDelete(false)}
+                                >
+                                    No, cancel
+                                </Button>
+                            </div>
+                        </div>
+                    </Modal.Body>
+                </Modal>
                 <div className="flex justify-center items-center md:justify-between md:flex-row flex-col w-screen px-4 md:px-20 mt-8">
                     <h1 className="text-2xl font-roboto text-[#D2AC47] font-medium uppercase">
                         List Article SS Group
@@ -427,6 +510,10 @@ const FormArcticle = () => {
                                             <a
                                                 href="#"
                                                 className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                                                onClick={(event) => {
+                                                    event.stopPropagation();
+                                                    handleEditClick(article);
+                                                }}
                                             >
                                                 Edit
                                             </a>
@@ -434,6 +521,12 @@ const FormArcticle = () => {
                                             <a
                                                 href="#"
                                                 className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                                                onClick={(event) => {
+                                                    event.stopPropagation();
+                                                    handleDeleteClick(
+                                                        article.id
+                                                    );
+                                                }}
                                             >
                                                 Delete
                                             </a>

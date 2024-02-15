@@ -42,22 +42,22 @@ const NewsDetail = () => {
                         <div className="w-72 h-10 md:w-[30rem] md:h-12 bg-gray-300 animate-pulse rounded-lg"></div>
                     ) : (
                         <h1 className="font-roboto text-2xl md:text-4xl text-black font-medium">
-                            {data && data[0] && data[0].title}
+                            {data && data && data.title}
                         </h1>
                     )}
                     {isLoading ? (
                         <div className="w-36 h-6 md:w-80 md:h-8 mt-2 bg-gray-300 animate-pulse rounded-lg"></div>
                     ) : (
                         <h4 className="font-roboto mt-4">
-                            {data && data[0] && data[0].creator}
+                            {data && data && data.creator}
                         </h4>
                     )}
                     {isLoading ? (
                         <div className="w-36 h-6 md:w-80 md:h-8 mt-2 bg-gray-300 animate-pulse rounded-lg"></div>
                     ) : (
                         <h5 className="text-gray-400 font-roboto">
-                            {`${data && data[0] && data[0].day}, ${
-                                data && data[0] && data[0].date
+                            {`${data && data && data.day}, ${
+                                data && data && data.date
                             }`}
                         </h5>
                     )}
@@ -67,14 +67,14 @@ const NewsDetail = () => {
                 ) : (
                     <div>
                         <img
-                            src={data && data[0] && data[0].link_img}
+                            src={data && data && data.link_img}
                             alt="newsdetail"
                             width={50}
                             height={50}
                             className="w-full mt-16 rounded-lg"
                         />
                         <h1 className="font-roboto text-gray-400 text-xs md:text-sm mt-2">
-                            {data && data[0] && data[0].caption_img}
+                            {data && data && data.caption_img}
                         </h1>
                     </div>
                 )}
@@ -87,10 +87,8 @@ const NewsDetail = () => {
                         </div>
                     ) : (
                         <p>
-                            <b>{data && data[0] && data[0].place}</b> {` -- `}
-                            {data &&
-                                data[0] &&
-                                formatParagraphs(data[0].description)}
+                            <b>{data && data && data.place}</b> {` -- `}
+                            {data && data && formatParagraphs(data.description)}
                         </p>
                     )}
                 </div>
