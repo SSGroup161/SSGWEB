@@ -15,12 +15,16 @@ import {
     postArticle,
     getArticleId,
     deleteArticle,
+    putArticle,
 } from "../../store/action/article";
 import { useDispatch, useSelector } from "react-redux";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const FormArcticle = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [openModal, setOpenModal] = useState(false);
     const [openModalId, setOpenModalId] = useState(false);
     const [openModalDelete, setOpenModalDelete] = useState(false);
@@ -65,6 +69,9 @@ const FormArcticle = () => {
     );
     const { isLoading: isLoadingDelete } = useSelector(
         (state) => state.deletearticle
+    );
+    const { isLoading: isLoadingUpdate } = useSelector(
+        (state) => state.putArticle
     );
 
     useEffect(() => {
@@ -158,7 +165,7 @@ const FormArcticle = () => {
             !inputData.place ||
             !inputData.caption ||
             !inputData.desc ||
-            !image
+            (!image && !isEditMode)
         ) {
             toast.warn("Please fill in all the fields and select an image.");
             return;
@@ -174,24 +181,38 @@ const FormArcticle = () => {
         bodyFormData.append("place", inputData.place);
         if (image instanceof File) {
             bodyFormData.append("link_img", image, image.name);
-        } else {
+        } else if (!isEditMode) {
             console.warn("Image is not a file.");
             toast.error("Please select a valid image file.");
             return;
         }
 
-        dispatch(postArticle(bodyFormData))
+        const action = isEditMode ? putArticle : postArticle;
+        const actionPayload = isEditMode
+            ? [bodyFormData, selectedArticle.id]
+            : [bodyFormData];
+
+        dispatch(action(...actionPayload))
             .then(() => {
                 onCloseModal();
-                toast.success("Article posted successfully!");
+                toast.success(
+                    `Article ${isEditMode ? "updated" : "posted"} successfully!`
+                );
                 dispatch(getArticle());
             })
             .catch((error) => {
-                console.error("Post article failed:", error);
+                console.error(
+                    `${isEditMode ? "Update" : "Post"} article failed:`,
+                    error
+                );
                 const errorMessage = error.response
                     ? error.response.data.message
                     : error.message;
-                toast.error(`Failed to post article: ${errorMessage}`);
+                toast.error(
+                    `Failed to ${
+                        isEditMode ? "update" : "post"
+                    } article: ${errorMessage}`
+                );
             });
     };
 
@@ -215,6 +236,11 @@ const FormArcticle = () => {
     const handleDeleteClick = (id) => {
         setIdArticle(id);
         setOpenModalDelete(true);
+    };
+
+    const handleLogout = () => {
+        Cookies.remove("token");
+        navigate("/");
     };
 
     return (
@@ -245,7 +271,7 @@ const FormArcticle = () => {
                                         required
                                         onChange={handleInputChange}
                                         value={inputData.creator}
-                                        placeholder="Article Creator"
+                                        placeholder="Raymond Reddington"
                                     />
                                 </div>
                                 <div className="flex gap-4">
@@ -256,7 +282,7 @@ const FormArcticle = () => {
                                             required
                                             onChange={handleInputChange}
                                             value={inputData.day}
-                                            placeholder="Day"
+                                            placeholder="Senin"
                                         />
                                     </div>
                                     <div>
@@ -266,7 +292,7 @@ const FormArcticle = () => {
                                             required
                                             onChange={handleInputChange}
                                             value={inputData.date}
-                                            placeholder="Date"
+                                            placeholder="17 Agustus 1945"
                                         />
                                     </div>
                                 </div>
@@ -277,7 +303,7 @@ const FormArcticle = () => {
                                         required
                                         onChange={handleInputChange}
                                         value={inputData.place}
-                                        placeholder="Location"
+                                        placeholder="Jakarta"
                                     />
                                 </div>
                                 <div>
@@ -307,13 +333,14 @@ const FormArcticle = () => {
                                     <Label htmlFor="image" value="Image" />
                                     <FileInput
                                         id="image"
-                                        required
                                         onChange={handleFileChange}
                                     />
                                 </div>
                                 <Button type="submit" color="warning">
-                                    {isLoadingPost ? (
+                                    {isLoadingPost && !isEditMode ? (
                                         <Spinner aria-label="Saving..." />
+                                    ) : isLoadingUpdate && isEditMode ? (
+                                        <Spinner aria-label="Updating..." />
                                     ) : isEditMode ? (
                                         "Update Article"
                                     ) : (
@@ -451,12 +478,20 @@ const FormArcticle = () => {
                     <h1 className="text-2xl font-roboto text-[#D2AC47] font-medium uppercase">
                         List Article SS Group
                     </h1>
-                    <button
-                        className="w-32 h-8 bg-slate-200 rounded-sm flex justify-center items-center"
-                        onClick={showModal}
-                    >
-                        <h1>Add</h1>
-                    </button>
+                    <div className="flex gap-4">
+                        <button
+                            className="w-32 h-8 bg-[#D2AC47] text-white hover:bg-yellow-300 rounded-sm flex justify-center items-center"
+                            onClick={showModal}
+                        >
+                            <h1>Add</h1>
+                        </button>
+                        <button
+                            className="w-32 h-8 bg-[#D2AC47] text-white hover:bg-yellow-300 rounded-sm flex justify-center items-center"
+                            onClick={handleLogout}
+                        >
+                            <h1>Logout</h1>
+                        </button>
+                    </div>
                 </div>
                 <div className="overflow-x-auto mt-6">
                     <Table hoverable>

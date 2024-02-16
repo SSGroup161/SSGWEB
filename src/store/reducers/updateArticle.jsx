@@ -5,13 +5,13 @@ const initialState = {
     isError: false,
 };
 
-const loginReducers = (state = initialState, action) => {
-    if (action.type === "AUTH_LOGIN_PENDING") {
+const putArticleReducers = (state = initialState, action) => {
+    if (action.type === "PUT_ARTICLE_PENDING") {
         return {
             ...state,
             isLoading: true,
         };
-    } else if (action.type === "AUTH_LOGIN_SUCCESS") {
+    } else if (action.type === "PUT_ARTICLE_SUCCESS") {
         return {
             ...state,
             data: action.payload,
@@ -19,7 +19,7 @@ const loginReducers = (state = initialState, action) => {
             errorMessage: "",
             isError: false,
         };
-    } else if (action.type === "AUTH_LOGIN_FAILED") {
+    } else if (action.type === "PUT_ARTICLE_FAILED") {
         return {
             ...state,
             data: null,
@@ -32,4 +32,4 @@ const loginReducers = (state = initialState, action) => {
     }
 };
 
-export default loginReducers;
+export default putArticleReducers;

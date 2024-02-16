@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     InfoCircleOutlined,
     UserOutlined,
@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Input, Tooltip } from "antd";
 import { Spinner } from "flowbite-react";
+import { Toaster, toast } from "sonner";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../../store/action/auth";
@@ -15,11 +16,17 @@ import { login } from "../../store/action/auth";
 const Login = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { isLoading } = useSelector((state) => state.auth);
+    const { isLoading, isError } = useSelector((state) => state.auth);
     const [inputData, setInputData] = useState({
         email: "",
         password: "",
     });
+
+    useEffect(() => {
+        if (isError) {
+            toast.error(isError);
+        }
+    }, [isError]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,6 +42,7 @@ const Login = () => {
 
     return (
         <>
+            <Toaster richColors />
             <section className="h-screen w-screen flex flex-col gap-4 justify-center items-center">
                 <div className="flex flex-col  gap-4 justify-center items-center -mt-20">
                     <svg
@@ -102,11 +110,7 @@ const Login = () => {
                             type="submit"
                             className={`w-32 h-8 rounded-md bg-[#D2AC47] font-roboto text-white text-sm hover:bg-white hover:text-[#D2AC47] border-2 border-[#D2AC47] active:bg-[#BA9021] active:text-white active:border-[#BA9021]`}
                         >
-                            {isLoading ? (
-                                <h1 className="">Loading..</h1>
-                            ) : (
-                                <h1 className="">Log in</h1>
-                            )}
+                            {isLoading ? <Spinner size="sm" /> : "Log in"}
                         </button>
                     </form>
                 </div>
