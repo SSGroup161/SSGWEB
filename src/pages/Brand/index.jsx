@@ -207,6 +207,7 @@ const Brand = () => {
                         loop
                         autoPlay
                         muted
+                        playsInline
                     >
                         Your browser does not support the video tag.
                     </video>
