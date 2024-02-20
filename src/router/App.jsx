@@ -14,6 +14,8 @@ import UnderConstraction from "../pages/UnderConstraction";
 import Catalog from "../pages/Catalog";
 import FormArcticle from "../pages/FormArticle";
 import Private from "../utils/Private";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsCondition from "../pages/TermConditions";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -37,6 +39,14 @@ const App = () => {
                 <Route path="/brand/:id" element={<Brand />} />
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/news/detail/:id" element={<NewsDetail />} />
+                <Route
+                    path="/legal/privacy-policy"
+                    element={<PrivacyPolicy />}
+                />
+                <Route
+                    path="/legal/terms-conditions"
+                    element={<TermsCondition />}
+                />
                 <Route
                     path="/auth/:id"
                     element={

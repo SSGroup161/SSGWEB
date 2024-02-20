@@ -39,7 +39,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() =>
-                                        navigate("/underconstruction")
+                                        navigate("/legal/terms-conditions")
                                     }
                                 >
                                     Terms & Conditions
@@ -47,7 +47,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() =>
-                                        navigate("/underconstruction")
+                                        navigate("/legal/privacy-policy")
                                     }
                                 >
                                     Privacy Policy
