@@ -29,18 +29,19 @@ const FormArcticle = () => {
     const [openModalId, setOpenModalId] = useState(false);
     const [openModalDelete, setOpenModalDelete] = useState(false);
     const [image, setImage] = useState(null);
+    const [modalType, setModalType] = useState("");
     const [idArticle, setIdArticle] = useState(null);
     const [isEditMode, setIsEditMode] = useState(false);
     const [selectedArticle, setSelectedArticle] = useState(null);
     const [inputData, setInputData] = useState({
         title: "",
-        creator: "",
         day: "",
         date: "",
         place: "",
         caption: "",
         desc: "",
     });
+    const token = Cookies.get("token");
 
     const formatParagraphs = (text) => {
         const sentences = text.split(".  ").filter((sentence) => sentence);
@@ -103,7 +104,6 @@ const FormArcticle = () => {
         setImage(null);
         setInputData({
             title: "",
-            creator: "",
             day: "",
             date: "",
             place: "",
@@ -117,7 +117,6 @@ const FormArcticle = () => {
         setImage(null);
         setInputData({
             title: "",
-            creator: "",
             day: "",
             date: "",
             place: "",
@@ -134,13 +133,14 @@ const FormArcticle = () => {
         }));
     };
 
-    const handleEditClick = (article) => {
+    const handleEditClick = async (article) => {
         setSelectedArticle(article);
+        const dataid = await dispatch(getArticleId(article.id));
+
         setInputData({
             title: article.title,
-            creator: article.creator,
-            day: article.day,
-            date: article.date,
+            day: dataid && dataid.day,
+            date: dataid && dataid.date,
             place: article.place,
             caption: article.caption_img,
             desc: article.description,
@@ -155,27 +155,59 @@ const FormArcticle = () => {
         }
     };
 
+    function decodeJwt(token) {
+        const parts = token.split(".");
+        if (parts.length !== 3) {
+            throw new Error("JWT token yang diberikan tidak valid.");
+        }
+
+        const payload = parts[1].replace(/-/g, "+").replace(/_/g, "/");
+        const decodedPayload = atob(payload);
+
+        return JSON.parse(decodedPayload);
+    }
+
+    const decodeToken = decodeJwt(token);
+
+    function getFormattedDate() {
+        const today = new Date();
+
+        const dayFormatter = new Intl.DateTimeFormat("id-ID", {
+            weekday: "long",
+        });
+        const day = dayFormatter.format(today);
+
+        const dateFormatter = new Intl.DateTimeFormat("id-ID", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+        });
+        const date = dateFormatter.format(today);
+
+        return { day, date };
+    }
+
+    const { day, date } = getFormattedDate();
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        // setInputData
         if (
             !inputData.title ||
-            !inputData.creator ||
-            !inputData.day ||
-            !inputData.date ||
             !inputData.place ||
             !inputData.caption ||
             !inputData.desc ||
             (!image && !isEditMode)
         ) {
-            toast.warn("Please fill in all the fields and select an image.");
+            toast.warning("Please fill in all the fields and select an image.");
             return;
         }
 
         let bodyFormData = new FormData();
         bodyFormData.append("title", inputData.title);
-        bodyFormData.append("creator", inputData.creator);
-        bodyFormData.append("day", inputData.day);
-        bodyFormData.append("date", inputData.date);
+        bodyFormData.append("creator", decodeToken.username);
+        bodyFormData.append("day", isEditMode ? inputData.day || "" : day);
+        bodyFormData.append("date", isEditMode ? inputData.date || "" : date);
         bodyFormData.append("caption_img", inputData.caption);
         bodyFormData.append("description", inputData.desc);
         bodyFormData.append("place", inputData.place);
@@ -235,12 +267,13 @@ const FormArcticle = () => {
 
     const handleDeleteClick = (id) => {
         setIdArticle(id);
+        setModalType("delete");
         setOpenModalDelete(true);
     };
 
     const handleLogout = () => {
-        Cookies.remove("token");
-        navigate("/");
+        setModalType("logout");
+        setOpenModalDelete(true);
     };
 
     return (
@@ -263,38 +296,6 @@ const FormArcticle = () => {
                                         value={inputData.title}
                                         placeholder="Article Title"
                                     />
-                                </div>
-                                <div>
-                                    <Label htmlFor="creator" value="Creator" />
-                                    <TextInput
-                                        id="creator"
-                                        required
-                                        onChange={handleInputChange}
-                                        value={inputData.creator}
-                                        placeholder="Raymond Reddington"
-                                    />
-                                </div>
-                                <div className="flex gap-4">
-                                    <div>
-                                        <Label htmlFor="day" value="Day" />
-                                        <TextInput
-                                            id="day"
-                                            required
-                                            onChange={handleInputChange}
-                                            value={inputData.day}
-                                            placeholder="Senin"
-                                        />
-                                    </div>
-                                    <div>
-                                        <Label htmlFor="date" value="Date" />
-                                        <TextInput
-                                            id="date"
-                                            required
-                                            onChange={handleInputChange}
-                                            value={inputData.date}
-                                            placeholder="17 Agustus 1945"
-                                        />
-                                    </div>
                                 </div>
                                 <div>
                                     <Label htmlFor="place" value="Place" />
@@ -448,32 +449,66 @@ const FormArcticle = () => {
                 >
                     <Modal.Header />
                     <Modal.Body>
-                        <div className="text-center">
-                            <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-                            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-                                Are you sure you want to delete this article?
-                            </h3>
-                            <div className="flex justify-center gap-4">
-                                <Button
-                                    color="failure"
-                                    onClick={() => handleDelete(idArticle)}
-                                >
-                                    {isLoadingDelete ? (
-                                        <Spinner aria-label="Deleting..." />
-                                    ) : (
-                                        "Yes, I'm sure"
-                                    )}
-                                </Button>
-                                <Button
-                                    color="gray"
-                                    onClick={() => setOpenModalDelete(false)}
-                                >
-                                    No, cancel
-                                </Button>
+                        {modalType === "delete" && (
+                            <div className="text-center">
+                                <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
+                                <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                                    Are you sure you want to delete this
+                                    article?
+                                </h3>
+                                <div className="flex justify-center gap-4">
+                                    <Button
+                                        color="failure"
+                                        onClick={() => handleDelete(idArticle)}
+                                    >
+                                        {isLoadingDelete ? (
+                                            <Spinner aria-label="Deleting..." />
+                                        ) : (
+                                            "Yes, I'm sure"
+                                        )}
+                                    </Button>
+                                    <Button
+                                        color="gray"
+                                        onClick={() =>
+                                            setOpenModalDelete(false)
+                                        }
+                                    >
+                                        No, cancel
+                                    </Button>
+                                </div>
                             </div>
-                        </div>
+                        )}
+                        {modalType === "logout" && (
+                            <div className="text-center">
+                                <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
+                                <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                                    Are you sure you want to logout?
+                                </h3>
+                                <div className="flex justify-center gap-4">
+                                    <Button
+                                        color="failure"
+                                        onClick={() => {
+                                            Cookies.remove("token");
+                                            navigate("/");
+                                            setOpenModalDelete(false);
+                                        }}
+                                    >
+                                        Yes, Logout
+                                    </Button>
+                                    <Button
+                                        color="gray"
+                                        onClick={() =>
+                                            setOpenModalDelete(false)
+                                        }
+                                    >
+                                        No, cancel
+                                    </Button>
+                                </div>
+                            </div>
+                        )}
                     </Modal.Body>
                 </Modal>
+
                 <div className="flex justify-center items-center md:justify-between md:flex-row flex-col w-screen px-4 md:px-20 mt-8">
                     <h1 className="text-2xl font-roboto text-[#D2AC47] font-medium uppercase">
                         List Article SS Group
