@@ -19,6 +19,31 @@ const Search = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const title = "Search Page";
+    const description = "Search";
+
+    console.log(data);
+
+    useEffect(() => {
+        document.title = title;
+
+        let metaDescription = document.querySelector(
+            'meta[name="description"]'
+        );
+        if (!metaDescription) {
+            metaDescription = document.createElement("meta");
+            metaDescription.setAttribute("name", "description");
+            document.head.appendChild(metaDescription);
+        }
+        metaDescription.setAttribute("content", description);
+
+        return () => {
+            if (metaDescription) {
+                metaDescription.remove();
+            }
+        };
+    }, [title, description]);
+
     const handleAll = () => {
         setAll(true);
         setSsskin(false);
