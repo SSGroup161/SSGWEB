@@ -17,6 +17,31 @@ const NewsDetail = () => {
         dispatch(getArticleId(id));
     }, [id, dispatch]);
 
+    console.log(data);
+
+    const title = data && data && data.title;
+    const description = data && data && data.description;
+
+    useEffect(() => {
+        document.title = title;
+
+        let metaDescription = document.querySelector(
+            'meta[name="description"]'
+        );
+        if (!metaDescription) {
+            metaDescription = document.createElement("meta");
+            metaDescription.setAttribute("name", "description");
+            document.head.appendChild(metaDescription);
+        }
+        metaDescription.setAttribute("content", description);
+
+        return () => {
+            if (metaDescription) {
+                metaDescription.remove();
+            }
+        };
+    }, [title, description]);
+
     const formatParagraphs = (text) => {
         const sentences = text.split(".  ").filter((sentence) => sentence);
         const paragraphs = sentences.map((sentence, index) => (

@@ -15,6 +15,31 @@ const News = () => {
     const { isError, errorMessage, data, isLoading } = useSelector(
         (state) => state.article
     );
+
+    const title = "Berita terbaru tentang Shella Saukia Group";
+    const description =
+        "Selamat datang di halaman berita terbaru dari SS Group (Shella Saukia Group). Di sini, Anda akan menemukan kumpulan berita terbaru dan informasi menarik seputar berbagai merek unggulan kami, termasuk SS Shop, SS Skin, Level Up Beaute, dan Level Up Style. Kami berkomitmen untuk menyajikan berita-berita terkini yang relevan dan informatif mengenai tren terbaru dalam industri kecantikan, fashion, dan perawatan pribadi. Jelajahi ragam artikel yang membahas tips kecantikan, ulasan produk, acara terbaru, dan masih banyak lagi. Dengan berita terbaru dari SS Group, Anda akan tetap up-to-date dengan informasi terkini dan dapat menemukan inspirasi baru untuk meningkatkan gaya hidup Anda.";
+
+    useEffect(() => {
+        document.title = title;
+
+        let metaDescription = document.querySelector(
+            'meta[name="description"]'
+        );
+        if (!metaDescription) {
+            metaDescription = document.createElement("meta");
+            metaDescription.setAttribute("name", "description");
+            document.head.appendChild(metaDescription);
+        }
+        metaDescription.setAttribute("content", description);
+
+        return () => {
+            if (metaDescription) {
+                metaDescription.remove();
+            }
+        };
+    }, [title, description]);
+
     useEffect(() => {
         window.scrollTo(0, 0);
         dispatch(getArticle());
