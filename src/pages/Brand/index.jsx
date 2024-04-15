@@ -14,6 +14,31 @@ const Brand = () => {
         (state) => state.brand
     );
 
+    const title = data && data[0] && data[0].brand_product;
+    const description = data && data[0] && data[0].description;
+
+    console.log(data);
+
+    useEffect(() => {
+        document.title = title;
+
+        let metaDescription = document.querySelector(
+            'meta[name="description"]'
+        );
+        if (!metaDescription) {
+            metaDescription = document.createElement("meta");
+            metaDescription.setAttribute("name", "description");
+            document.head.appendChild(metaDescription);
+        }
+        metaDescription.setAttribute("content", description);
+
+        return () => {
+            if (metaDescription) {
+                metaDescription.remove();
+            }
+        };
+    }, [title, description]);
+
     useEffect(() => {
         getBrand(dispatch, id);
     }, []);
