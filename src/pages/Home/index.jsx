@@ -87,13 +87,18 @@ const Home = () => {
         setIsloading(true);
 
         try {
-            const scriptURL =
-                "https://script.google.com/macros/s/AKfycbzqiXJdplQTWGbCjI1uigYVkIzvFn4ZZifY58CRSKCY7kuLgtLv9Vd25m2lalEngtZO/exec";
             const formDataObj = new URLSearchParams();
             formDataObj.append("name", formData.name);
             formDataObj.append("email", formData.email);
             formDataObj.append("message", formData.message);
 
+            const result = await dispatch(postContact(formDataObj));
+            if (!result) {
+                throw new Error("Failed to send message, try again");
+            }
+
+            const scriptURL =
+                "https://script.google.com/macros/s/AKfycbzqiXJdplQTWGbCjI1uigYVkIzvFn4ZZifY58CRSKCY7kuLgtLv9Vd25m2lalEngtZO/exec";
             const response = await fetch(scriptURL, {
                 method: "POST",
                 headers: {
@@ -102,28 +107,23 @@ const Home = () => {
                 body: formDataObj,
             });
 
-            const result = dispatch(postContact(formDataObj));
-            await result;
-            if (response.ok && result) {
-                console.log("Berhasil!", response);
-                toast.success("Message has been sent!");
-                console.log(formDataObj);
-                setFormData({
-                    name: "",
-                    email: "",
-                    message: "",
-                });
-                setIsloading(false);
-            } else {
-                console.error("Error!", response.statusText);
-                toast.error("Failed to send message, try again");
-                setIsloading(false);
+            if (!response.ok) {
+                throw new Error("Failed to send message, try again");
             }
+
+            console.log("Berhasil!", response);
+            toast.success("Message has been sent!");
+            console.log(formDataObj);
+            setFormData({
+                name: "",
+                email: "",
+                message: "",
+            });
         } catch (error) {
-            toast.error("Failed to send message, try again");
-            console.error("Error!", error);
+            console.error("Error!", error.message);
+            toast.error(error.message);
+        } finally {
             setIsloading(false);
-            console.log("this is data", result);
         }
     };
 
