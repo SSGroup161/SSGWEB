@@ -47,7 +47,7 @@ const Home = () => {
     const title = "Official Website SS Group";
     const description =
         "SS Group (Shella Saukia Group) merupakan perusahaan yang berperan sebagai payung bagi sejumlah merek terkemuka di Indonesia, termasuk SS Shop, SS Skin, Level Up Beaute, dan Level Up Style. Dengan fokus pada kecantikan, fashion, dan perawatan pribadi, kami menghadirkan rangkaian produk berkualitas tinggi yang menggabungkan inovasi terbaru dengan keahlian tradisional. Dari produk perawatan kulit hingga koleksi pakaian terkini, kami berkomitmen untuk menyediakan pengalaman belanja yang tak tertandingi bagi para pelanggan kami. Temukan kecantikan dan gaya yang sesuai dengan kepribadian Anda, dan jelajahi ragam pilihan kami untuk memenuhi segala kebutuhan fashion dan perawatan Anda dengan kenyamanan dan kepuasan yang tak tertandingi.";
-    const canonicalUrl = `/`;
+    const canonicalUrl = `https://www.ssgroup.id`;
 
     useEffect(() => {
         document.title = title;
