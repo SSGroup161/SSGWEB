@@ -19,6 +19,7 @@ const News = () => {
     const title = "Berita terbaru tentang Shella Saukia Group";
     const description =
         "Selamat datang di halaman berita terbaru dari SS Group (Shella Saukia Group). Di sini, Anda akan menemukan kumpulan berita terbaru dan informasi menarik seputar berbagai merek unggulan kami, termasuk SS Shop, SS Skin, Level Up Beaute, dan Level Up Style. Kami berkomitmen untuk menyajikan berita-berita terkini yang relevan dan informatif mengenai tren terbaru dalam industri kecantikan, fashion, dan perawatan pribadi. Jelajahi ragam artikel yang membahas tips kecantikan, ulasan produk, acara terbaru, dan masih banyak lagi. Dengan berita terbaru dari SS Group, Anda akan tetap up-to-date dengan informasi terkini dan dapat menemukan inspirasi baru untuk meningkatkan gaya hidup Anda.";
+    const canonicalUrl = `/news`;
 
     useEffect(() => {
         document.title = title;
@@ -33,12 +34,23 @@ const News = () => {
         }
         metaDescription.setAttribute("content", description);
 
+        let linkCanonical = document.querySelector('link[rel="canonical"]');
+        if (!linkCanonical) {
+            linkCanonical = document.createElement("link");
+            linkCanonical.setAttribute("rel", "canonical");
+            document.head.appendChild(linkCanonical);
+        }
+        linkCanonical.setAttribute("href", canonicalUrl);
+
         return () => {
             if (metaDescription) {
                 metaDescription.remove();
             }
+            if (linkCanonical) {
+                linkCanonical.remove();
+            }
         };
-    }, [title, description]);
+    }, [title, description, canonicalUrl]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -97,7 +109,9 @@ const News = () => {
                                                 <div
                                                     className="w-28 md:w-48 h-8 md:h-14 border-white border-2 flex justify-center items-center text-white font-roboto text-xs md:text-base rounded-md md:rounded-md cursor-pointer hover:text-[#D2AC47] hover:bg-white"
                                                     onClick={() =>
-                                                        handleDetail(article.id)
+                                                        handleDetail(
+                                                            article.id_title
+                                                        )
                                                     }
                                                 >
                                                     <h1>Read more</h1>
@@ -145,7 +159,7 @@ const News = () => {
                                         </p>
                                         <p
                                             onClick={() =>
-                                                handleDetail(article.id)
+                                                handleDetail(article.id_title)
                                             }
                                             className="text-end hover:cursor-pointer hover:text-[#D2AC47]"
                                         >

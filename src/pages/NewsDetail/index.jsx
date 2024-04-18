@@ -21,6 +21,7 @@ const NewsDetail = () => {
 
     const title = data && data && data.title;
     const description = data && data && data.description;
+    const canonicalUrl = `/news/detail/${id}`;
 
     useEffect(() => {
         document.title = title;
@@ -35,12 +36,23 @@ const NewsDetail = () => {
         }
         metaDescription.setAttribute("content", description);
 
+        let linkCanonical = document.querySelector('link[rel="canonical"]');
+        if (!linkCanonical) {
+            linkCanonical = document.createElement("link");
+            linkCanonical.setAttribute("rel", "canonical");
+            document.head.appendChild(linkCanonical);
+        }
+        linkCanonical.setAttribute("href", canonicalUrl);
+
         return () => {
             if (metaDescription) {
                 metaDescription.remove();
             }
+            if (linkCanonical) {
+                linkCanonical.remove();
+            }
         };
-    }, [title, description]);
+    }, [title, description, canonicalUrl]);
 
     const formatParagraphs = (text) => {
         const sentences = text.split(".  ").filter((sentence) => sentence);

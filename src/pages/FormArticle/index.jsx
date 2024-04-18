@@ -135,7 +135,7 @@ const FormArcticle = () => {
 
     const handleEditClick = async (article) => {
         setSelectedArticle(article);
-        const dataid = await dispatch(getArticleId(article.id));
+        const dataid = await dispatch(getArticleId(article.id_title));
 
         setInputData({
             title: article.title,
@@ -221,7 +221,7 @@ const FormArcticle = () => {
 
         const action = isEditMode ? putArticle : postArticle;
         const actionPayload = isEditMode
-            ? [bodyFormData, selectedArticle.id]
+            ? [bodyFormData, selectedArticle.id_title]
             : [bodyFormData];
 
         dispatch(action(...actionPayload))
@@ -545,7 +545,7 @@ const FormArcticle = () => {
                                     className="divide-y hover:cursor-pointer"
                                     key={index}
                                     onClick={() =>
-                                        showArticleDetails(article.id)
+                                        showArticleDetails(article.id_title)
                                     }
                                 >
                                     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">

@@ -99,9 +99,7 @@ const Navbar = () => {
             setActiveSSSkin(false);
             setActiveLevelupBeaute(false);
             setActiveLevelupStyle(false);
-        } else if (
-            location.pathname === "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-        ) {
+        } else if (location.pathname === "/brand/ss-shop") {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(false);
@@ -111,9 +109,7 @@ const Navbar = () => {
             setActiveSSSkin(false);
             setActiveLevelupBeaute(false);
             setActiveLevelupStyle(false);
-        } else if (
-            location.pathname === "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-        ) {
+        } else if (location.pathname === "/brand/ss-skin") {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(false);
@@ -123,9 +119,7 @@ const Navbar = () => {
             setActiveSSSkin(true);
             setActiveLevelupBeaute(false);
             setActiveLevelupStyle(false);
-        } else if (
-            location.pathname === "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-        ) {
+        } else if (location.pathname === "/brand/level-up-style") {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(false);
@@ -135,9 +129,7 @@ const Navbar = () => {
             setActiveSSSkin(false);
             setActiveLevelupBeaute(false);
             setActiveLevelupStyle(true);
-        } else if (
-            location.pathname === "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-        ) {
+        } else if (location.pathname === "/brand/level-up-beaute") {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(false);
@@ -161,13 +153,10 @@ const Navbar = () => {
         if (
             location.pathname === "/product/search" ||
             location.pathname === "/news" ||
-            location.pathname ===
-                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
-            location.pathname ===
-                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
-            location.pathname ===
-                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
-            location.pathname === "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+            location.pathname === "/brand/ss-shop" ||
+            location.pathname === "/brand/ss-skin" ||
+            location.pathname === "/brand/level-up-style" ||
+            location.pathname === "/brand/level-up-beaute"
         ) {
             if (isScrolled) {
                 setColorSearch(true);
@@ -204,14 +193,12 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
+                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
-                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        "/brand/level-up-style" ||
                                     location.pathname ===
-                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
-                                    location.pathname ===
-                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
-                                    location.pathname ===
-                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                        "/brand/level-up-beaute")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -222,14 +209,12 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
+                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
-                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        "/brand/level-up-style" ||
                                     location.pathname ===
-                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
-                                    location.pathname ===
-                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
-                                    location.pathname ===
-                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                        "/brand/level-up-beaute")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -240,14 +225,12 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
+                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
-                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        "/brand/level-up-style" ||
                                     location.pathname ===
-                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
-                                    location.pathname ===
-                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
-                                    location.pathname ===
-                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                        "/brand/level-up-beaute")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -258,14 +241,12 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
+                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
-                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        "/brand/level-up-style" ||
                                     location.pathname ===
-                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
-                                    location.pathname ===
-                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
-                                    location.pathname ===
-                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                        "/brand/level-up-beaute")
                                     ? "#FFFFFF"
                                     : "black"
                             }`}
@@ -276,14 +257,12 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
+                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
-                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                        "/brand/level-up-style" ||
                                     location.pathname ===
-                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
-                                    location.pathname ===
-                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
-                                    location.pathname ===
-                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                        "/brand/level-up-beaute")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -304,26 +283,26 @@ const Navbar = () => {
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                            "/brand/level-up-beaute")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
+                                            "/brand/level-up-beaute") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -344,26 +323,26 @@ const Navbar = () => {
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                            "/brand/level-up-beaute")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
+                                            "/brand/level-up-beaute") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -382,26 +361,26 @@ const Navbar = () => {
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                            "/brand/level-up-beaute")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
+                                            "/brand/level-up-beaute") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -420,26 +399,26 @@ const Navbar = () => {
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                            "/brand/level-up-beaute")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
+                                            "/brand/level-up-beaute") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -458,26 +437,26 @@ const Navbar = () => {
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                            "/brand/level-up-beaute")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5") &&
+                                            "/brand/level-up-beaute") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -486,9 +465,7 @@ const Navbar = () => {
                                 <Dropdown label="Brand" inline>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate(
-                                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                                            );
+                                            navigate("/brand/ss-shop");
                                             window.location.reload();
                                         }}
                                         className={`hover:text-[#D2AC47] ${
@@ -501,9 +478,7 @@ const Navbar = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate(
-                                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                                            );
+                                            navigate("/brand/ss-skin");
                                             window.location.reload();
                                         }}
                                         className={`hover:text-[#D2AC47] ${
@@ -516,9 +491,7 @@ const Navbar = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate(
-                                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                                            );
+                                            navigate("/brand/level-up-style");
                                             window.location.reload();
                                         }}
                                         className={`hover:text-[#D2AC47] ${
@@ -531,9 +504,7 @@ const Navbar = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate(
-                                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                                            );
+                                            navigate("/brand/level-up-beaute");
                                             window.location.reload();
                                         }}
                                         className={`hover:text-[#D2AC47] ${
@@ -563,13 +534,13 @@ const Navbar = () => {
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
                                         location.pathname ===
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793" ||
+                                            "/brand/ss-shop" ||
                                         location.pathname ===
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867" ||
+                                            "/brand/ss-skin" ||
                                         location.pathname ===
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1" ||
+                                            "/brand/level-up-style" ||
                                         location.pathname ===
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5")
+                                            "/brand/level-up-beaute")
                                         ? "#FFFFFF"
                                         : "#D2AC47"
                                 }`}
@@ -636,9 +607,7 @@ const Navbar = () => {
                                     <Dropdown label="Brand" inline>
                                         <Dropdown.Item
                                             onClick={() => {
-                                                navigate(
-                                                    "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                                                );
+                                                navigate("/brand/ss-shop");
                                                 window.location.reload();
                                             }}
                                         >
@@ -646,9 +615,7 @@ const Navbar = () => {
                                         </Dropdown.Item>
                                         <Dropdown.Item
                                             onClick={() => {
-                                                navigate(
-                                                    "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                                                );
+                                                navigate("/brand/ss-skin");
                                                 window.location.reload();
                                             }}
                                         >
@@ -657,7 +624,7 @@ const Navbar = () => {
                                         <Dropdown.Item
                                             onClick={() => {
                                                 navigate(
-                                                    "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
+                                                    "/brand/level-up-style"
                                                 );
                                                 window.location.reload();
                                             }}
@@ -667,7 +634,7 @@ const Navbar = () => {
                                         <Dropdown.Item
                                             onClick={() => {
                                                 navigate(
-                                                    "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
+                                                    "/brand/level-up-beaute"
                                                 );
                                                 window.location.reload();
                                             }}

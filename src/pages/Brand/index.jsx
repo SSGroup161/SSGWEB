@@ -16,8 +16,7 @@ const Brand = () => {
 
     const title = data && data[0] && data[0].brand_product;
     const description = data && data[0] && data[0].description;
-
-    console.log(data);
+    const canonicalUrl = `/brand/${id}`;
 
     useEffect(() => {
         document.title = title;
@@ -32,12 +31,23 @@ const Brand = () => {
         }
         metaDescription.setAttribute("content", description);
 
+        let linkCanonical = document.querySelector('link[rel="canonical"]');
+        if (!linkCanonical) {
+            linkCanonical = document.createElement("link");
+            linkCanonical.setAttribute("rel", "canonical");
+            document.head.appendChild(linkCanonical);
+        }
+        linkCanonical.setAttribute("href", canonicalUrl);
+
         return () => {
             if (metaDescription) {
                 metaDescription.remove();
             }
+            if (linkCanonical) {
+                linkCanonical.remove();
+            }
         };
-    }, [title, description]);
+    }, [id, title, description, canonicalUrl]);
 
     useEffect(() => {
         getBrand(dispatch, id);
