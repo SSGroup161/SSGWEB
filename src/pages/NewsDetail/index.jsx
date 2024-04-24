@@ -21,7 +21,7 @@ const NewsDetail = () => {
 
     const title = data && data && data.title;
     const description = data && data && data.description;
-    const canonicalUrl = `/news/detail/${id}`;
+    const canonicalUrl = `https://www.ssgroup.id/news/detail/${id}`;
 
     useEffect(() => {
         document.title = title;

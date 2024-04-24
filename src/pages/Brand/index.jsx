@@ -16,7 +16,7 @@ const Brand = () => {
 
     const title = data && data[0] && data[0].brand_product;
     const description = data && data[0] && data[0].description;
-    const canonicalUrl = `/brand/${id}`;
+    const canonicalUrl = `https://www.ssgroup.id/brand/${id}`;
 
     useEffect(() => {
         document.title = title;

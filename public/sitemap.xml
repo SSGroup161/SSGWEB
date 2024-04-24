@@ -7,7 +7,22 @@
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://ssgroup.id/group</loc>
+	<loc>https://ssgroup.id/brand/level-up-style</loc>
+	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://ssgroup.id/brand/level-up-beaute</loc>
+	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://ssgroup.id/brand/ss-skin</loc>
+	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://ssgroup.id/brand/ss-shop</loc>
 	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
@@ -17,47 +32,52 @@
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://ssgroup.id/product</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/product/search</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/product/search/catalog</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
 	<loc>https://ssgroup.id/news</loc>
 	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://ssgroup.id/auth/login</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/faq</loc>
+	<loc>https://ssgroup.id/news/macam-macam-serum-wajah-dan-fungsinya-yang-perlu-diketahui</loc>
 	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://ssgroup.id/legal/privacy-policy</loc>
+	<loc>https://ssgroup.id/news/yuk-“puasa-skincare”-dengan-metode-skin-fasting</loc>
 	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
+	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://ssgroup.id/legal/terms-conditions</loc>
+	<loc>https://ssgroup.id/news/kasih-promo-besar-besaran,-ss-skin-ikut-meriahkan-jakarta-x-beauty-2023</loc>
 	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
+	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://ssgroup.id/underconstruction</loc>
+	<loc>https://ssgroup.id/news/retinol-dan-manfaatnya-untuk-wajah</loc>
+	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://ssgroup.id/news/ss-group-mengucapkan-selamat-hari-raya-idul-fitri-1445-h</loc>
+	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://ssgroup.id/news/mengetahui-manfaat-sleep-mask-bagi-wajah</loc>
+	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://ssgroup.id/news/manfaat-mouth-spray-sebagai-penghilang-bau-mulut</loc>
+	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://ssgroup.id/news/mrayakan-satu-dekade-kesuksesan-di-industri-fashion,-inilah-kisah-sukses-crazy-rich-aceh-shella-saukia</loc>
+	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://ssgroup.id/news/apa-yang-menyebabkan-penuaan-dini-pada-wajah?</loc>
 	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
 	<priority>1.0</priority>
 </url>

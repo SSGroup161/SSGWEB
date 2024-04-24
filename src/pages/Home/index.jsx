@@ -39,6 +39,9 @@ const Home = () => {
     });
     const formRef = useRef(null);
     const dispatch = useDispatch();
+    const { isError, errorMessage, data, isLoading } = useSelector(
+        (state) => state.contact
+    );
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -105,8 +108,8 @@ const Home = () => {
             formDataObj.append("message", formData.message);
 
             const result = await dispatch(postContact(formDataObj));
-            if (!result) {
-                throw new Error("Failed to send message, try again");
+            if (isError) {
+                throw new Error(data);
             }
 
             const scriptURL =
