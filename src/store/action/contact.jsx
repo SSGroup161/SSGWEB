@@ -5,7 +5,7 @@ let url = import.meta.env.VITE_REACT_APP_API_KEY;
 export const postContact = (data) => async (dispatch) => {
     try {
         dispatch({ type: "POST_CONTACT_PENDING" });
-        const result = await axios.post(url + `/contact`, data, {
+        const result = await axios.post(url + `contact`, data, {
             name: data.get("name"),
             email: data.get("email"),
             message: data.get("message"),
