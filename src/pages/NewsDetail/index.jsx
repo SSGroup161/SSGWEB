@@ -19,9 +19,10 @@ const NewsDetail = () => {
 
     console.log(data);
 
-    const title = data && data && data.title;
-    const description = data && data && data.description;
-    const canonicalUrl = `https://www.ssgroup.id/news/detail/${id}`;
+    const title = (data && data && data.title) || "SS Group";
+    const description =
+        (data && data && data.description) || "Shella Saukia Group";
+    const canonicalUrl = `/news/detail/${id}`;
 
     useEffect(() => {
         document.title = title;

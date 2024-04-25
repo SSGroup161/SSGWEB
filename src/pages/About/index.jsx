@@ -32,9 +32,9 @@ const About = () => {
     }, []);
 
     const title = "SS Group (Shella Saukia Group)";
-    const description = `SS Group merupakan perusahaan yang terdiri dari brand Indonesia (SS Shop, SS Skin, Level Up Beaute, dan Level Up Style) yang bergerak di bidang produk kecantikan, fashion, dan perawatan pribadi. Perusahaan kami didirikan pada tahun 2019, dan dua kesuksesan kami yang paling sensasional terjadi pada tahun 2023, ketika kami menerima dua pengakuan dari Tiktok Shop untuk Nilai Barang Dagangan Kotor: Pencapaian $1.000.000+ dan Kolaborasi Merek Pemecah Rekor untuk Pencapaian Paket Pemutih Bersih Terlaris di seluruh FMCG . Kami bertujuan untuk menjadi merek terkemuka yang menyediakan fashion, kecantikan, dan perawatan pribadi untuk seluruh masyarakat Indonesia. Kami akan terus menemukan produk-produk berkualitas terbaik di seluruh unit bisnis kami untuk memberikan kepuasan tertinggi kepada pelanggan setia kami di seluruh tanah air.
-    Inilah satu-satunya tempat di mana keajaiban keindahan terjadi.`;
-    const canonicalUrl = `https://www.ssgroup.id/about`;
+    const description = `SS Group is a company consisting of Indonesian brands (SS Shop, SS Skin, Level Up Beaute, and Level Up Style) engaged in beauty, fashion, and personal care products. Our company was established in 2019, and two of our most sensational successes were in 2023, when we received two recognitions from Tiktok Shop for Gross Merchandise Value: $1,000,000+ Achievement and Record-breaking Brand Collaboration for Best Selling Spotless Whitening Package Achievement across all FMCG. We are aiming to be the leading brand providing fashion, beauty, and personal care for all Indonesians. We will continuously discover the best high-quality products in all of our business units to bring the highest satisfaction to our loyal customers around the country.
+    This is the only place where the magic of beauty happens.`;
+    const canonicalUrl = `/about`;
 
     useEffect(() => {
         document.title = title;

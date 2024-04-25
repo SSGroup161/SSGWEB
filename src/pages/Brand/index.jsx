@@ -14,9 +14,10 @@ const Brand = () => {
         (state) => state.brand
     );
 
-    const title = data && data[0] && data[0].brand_product;
-    const description = data && data[0] && data[0].description;
-    const canonicalUrl = `https://www.ssgroup.id/brand/${id}`;
+    const title = (data && data[0] && data[0].brand_product) || "SS Group";
+    const description =
+        (data && data[0] && data[0].description) || "Shella Saukia Group";
+    const canonicalUrl = `/brand/${id}`;
 
     useEffect(() => {
         document.title = title;

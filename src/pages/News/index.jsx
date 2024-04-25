@@ -19,7 +19,7 @@ const News = () => {
     const title = "Berita terbaru tentang Shella Saukia Group";
     const description =
         "Selamat datang di halaman berita terbaru dari SS Group (Shella Saukia Group). Di sini, Anda akan menemukan kumpulan berita terbaru dan informasi menarik seputar berbagai merek unggulan kami, termasuk SS Shop, SS Skin, Level Up Beaute, dan Level Up Style. Kami berkomitmen untuk menyajikan berita-berita terkini yang relevan dan informatif mengenai tren terbaru dalam industri kecantikan, fashion, dan perawatan pribadi. Jelajahi ragam artikel yang membahas tips kecantikan, ulasan produk, acara terbaru, dan masih banyak lagi. Dengan berita terbaru dari SS Group, Anda akan tetap up-to-date dengan informasi terkini dan dapat menemukan inspirasi baru untuk meningkatkan gaya hidup Anda.";
-    const canonicalUrl = `https://www.ssgroup.id/news`;
+    const canonicalUrl = `/news`;
 
     useEffect(() => {
         document.title = title;
