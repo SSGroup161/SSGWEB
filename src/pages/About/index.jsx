@@ -234,11 +234,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
-                        onClick={() =>
-                            navigate(
-                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                            )
-                        }
+                        onClick={() => navigate("/brand/ss-skin")}
                     />
                     <img
                         src={imagessshop}
@@ -252,11 +248,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        onClick={() =>
-                            navigate(
-                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                            )
-                        }
+                        onClick={() => navigate("/brand/ss-shop")}
                     />
                     <img
                         src={imagelevelup}
@@ -270,11 +262,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
-                        onClick={() =>
-                            navigate(
-                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                            )
-                        }
+                        onClick={() => navigate("/brand/level-up-style")}
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -290,11 +278,7 @@ const About = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
-                        onClick={() =>
-                            navigate(
-                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                            )
-                        }
+                        onClick={() => navigate("/brand/level-up-beaute")}
                     />
                     <img
                         src={imagessskin}
@@ -308,11 +292,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
                         data-aos="fade-up"
                         data-aos-duration="800"
-                        onClick={() =>
-                            navigate(
-                                "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                            )
-                        }
+                        onClick={() => navigate("/brand/ss-skin")}
                     />
                     <img
                         src={imagessshop}
@@ -326,11 +306,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        onClick={() =>
-                            navigate(
-                                "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                            )
-                        }
+                        onClick={() => navigate("/brand/ss-shop")}
                     />
                     <img
                         src={imagelevelup}
@@ -344,11 +320,7 @@ const About = () => {
                         onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
                         data-aos="fade-up"
                         data-aos-duration="1200"
-                        onClick={() =>
-                            navigate(
-                                "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                            )
-                        }
+                        onClick={() => navigate("/brand/level-up-style")}
                     />
                     <img
                         src={imagelevelupbeaute}
@@ -364,11 +336,7 @@ const About = () => {
                         }
                         data-aos="fade-up"
                         data-aos-duration="1400"
-                        onClick={() =>
-                            navigate(
-                                "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                            )
-                        }
+                        onClick={() => navigate("/brand/level-up-beaute")}
                     />
                     <div className="md:hidden flex flex-col gap-20">
                         <div className="flex gap-20">
@@ -386,11 +354,7 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="800"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                                    )
-                                }
+                                onClick={() => navigate("/brand/ss-skin")}
                             />
                             <img
                                 src={imagessshop}
@@ -406,11 +370,7 @@ const About = () => {
                                 }
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
-                                onClick={() =>
-                                    navigate(
-                                        "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                                    )
-                                }
+                                onClick={() => navigate("/brand/ss-shop")}
                             />
                         </div>
                         <div className="flex gap-16">
@@ -429,9 +389,7 @@ const About = () => {
                                 data-aos="fade-up"
                                 data-aos-duration="1200"
                                 onClick={() =>
-                                    navigate(
-                                        "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                                    )
+                                    navigate("/brand/level-up-style")
                                 }
                             />
                             <img
@@ -450,9 +408,7 @@ const About = () => {
                                 data-aos="fade-up"
                                 data-aos-duration="1400"
                                 onClick={() =>
-                                    navigate(
-                                        "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                                    )
+                                    navigate("/brand/level-up-beaute")
                                 }
                             />
                         </div>
