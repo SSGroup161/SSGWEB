@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import FAB from "../../components/FAB";
 
 const PrivacyPolicy = () => {
     useEffect(() => {
@@ -9,6 +10,7 @@ const PrivacyPolicy = () => {
     return (
         <>
             <Navbar />
+            <FAB />
             <section className="mt-32 flex flex-col justify-center items-center">
                 <div className="lg:px-72 md:px-36 px-12">
                     <h1 className="text-center mb-14 font-roboto font-normal tracking-wide text-2xl">

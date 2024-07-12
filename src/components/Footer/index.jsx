@@ -105,9 +105,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() => {
-                                        navigate(
-                                            "/brand/79d0067b-cc98-4c6a-a17b-9d1baabc0793"
-                                        );
+                                        navigate("/brand/ss-shop");
                                         window.location.reload();
                                         scrollToTop();
                                     }}
@@ -117,9 +115,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() => {
-                                        navigate(
-                                            "/brand/764958cf-f49a-469a-b0f1-a23cfbd37867"
-                                        );
+                                        navigate("/brand/ss-skin");
                                         window.location.reload();
                                         scrollToTop();
                                     }}
@@ -129,9 +125,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() => {
-                                        navigate(
-                                            "/brand/9754fe2a-99cc-4fe1-8480-e698e0b46bb1"
-                                        );
+                                        navigate("/brand/level-up-beaute");
                                         window.location.reload();
                                         scrollToTop();
                                     }}
@@ -141,9 +135,7 @@ const Footer = () => {
                                 <li
                                     className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                     onClick={() => {
-                                        navigate(
-                                            "/brand/0071599e-e419-4577-a466-b7e7c777c4a5"
-                                        );
+                                        navigate("/brand/level-up-style");
                                         window.location.reload();
                                         scrollToTop();
                                     }}

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import FAB from "../../components/FAB";
 import { Accordion } from "flowbite-react";
 
 const Faq = () => {
@@ -10,6 +11,7 @@ const Faq = () => {
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
+            <FAB />
             <section className="h-auto w-screen flex items-center flex-col">
                 <h1 className="text-3xl font-roboto mb-14 font-medium text-[#444341] mt-32 uppercase">
                     Faq

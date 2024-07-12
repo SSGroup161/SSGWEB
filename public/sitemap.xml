@@ -1,94 +1,125 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-	<loc>https://ssgroup.id/</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/brand/level-up-style</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/brand/level-up-beaute</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/brand/ss-skin</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/brand/ss-shop</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/about</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/macam-macam-serum-wajah-dan-fungsinya-yang-perlu-diketahui</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/yuk-“puasa-skincare”-dengan-metode-skin-fasting</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/kasih-promo-besar-besaran,-ss-skin-ikut-meriahkan-jakarta-x-beauty-2023</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/retinol-dan-manfaatnya-untuk-wajah</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/ss-group-mengucapkan-selamat-hari-raya-idul-fitri-1445-h</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/mengetahui-manfaat-sleep-mask-bagi-wajah</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/manfaat-mouth-spray-sebagai-penghilang-bau-mulut</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/rayakan-satu-dekade-kesuksesan-di-industri-fashion,-inilah-kisah-sukses-crazy-rich-aceh-shella-saukia</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/apa-yang-menyebabkan-penuaan-dini-pada-wajah?</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/manfaat-mouth-spray-sebagai-penghilang-bau-mulut</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://ssgroup.id/news/detail/inilah-berbagai-jenis-kulit-wajah-dan-cara-merawatnya-</loc>
-	<lastmod>2024-04-18T20:13:35+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://ssgroup.id/</loc>
+        <lastmod>2024-04-18T20:13:35+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/brand/level-up-style</loc>
+        <lastmod>2024-04-18T20:13:35+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/brand/level-up-beaute</loc>
+        <lastmod>2024-04-18T20:13:35+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/brand/ss-skin</loc>
+        <lastmod>2024-04-18T20:13:35+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/brand/ss-shop</loc>
+        <lastmod>2024-04-18T20:13:35+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/about</loc>
+        <lastmod>2024-04-18T20:13:35+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news</loc>
+        <lastmod>2024-04-18T20:13:35+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/macam-macam-serum-wajah-dan-fungsinya-yang-perlu-diketahui</loc>
+        <lastmod>2024-04-18T20:13:35+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <!-- Added URLs from the provided list -->
+    <url>
+        <loc>https://ssgroup.id/news/detail/rayakan-satu-dekade-kesuksesan-di-industri-fashion-,inilah-kisah-sukses-crazy-rich-aceh-shella-saukia</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/manfaat-mouth-spray-sebagai-penghilang-bau-mulut</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/retinol-dan-manfaatnya-untuk-wajah</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/yuk-“puasa-skincare”-dengan-metode-skin-fasting</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/ss-group-mengucapkan-selamat-hari-raya-idul-fitri-1445-h</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/mengetahui-manfaat-sleep-mask-bagi-wajah</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/macam-macam-serum-wajah-dan-fungsinya-yang-perlu-diketahui</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/kasih-promo-besar-besaran,-ss-skin-ikut-meriahkan-jakarta-x-beauty-2023</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/penyebab-kulit-dehidrasi-dan-cara-mengatasinya</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/inilah-berbagai-jenis-kulit-wajah-dan-cara-merawatnya</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/launching-hydro-b5-moisturizer-di-jakarta-x-beauty-2023,-level-up-beaute-hadirkan-beragam-aktivitas-seru</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/mengetahui-apa-itu-body-serum,-kegunaan,-dan-bedanya-dengan-body-lotion</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/ketahui-urutan-basic-skincare-routine-untuk-pemula</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/ketahui-manfaat-dan-cara-melakukan-eksfoliasi-wajah</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/apa-itu-facial-wash,-kegunaan,-dan-cara-pakai-yang-benar-untuk-wajah-kamu</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/pentingnya-double-cleansing-dalam-skincare</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/alasan-kenapa-kamu-mengalami-wajah-breakout-dan-cara-mengatasinya-</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/bikin-gaya-makin-mewah,-shella-saukia-luncurkan-brand-fashion-baru-“shella-saukia-couture”</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/yuk,-kenalan-sama-sun-cushion!-kombinasi-cushion-dan-sunscreen-yang-super-praktis</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/jelang-berangkat-haji,-shella-saukia-dan-keluarga-gelar-walimatussafar-</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/cara-membuat-kulit-kencang-dan-lebih-elastis-</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/berangkat-ibadah-haji-ke-tanah-suci,-shella-saukia-ajak-orang-tua-menginap-di-hotel-mewah!</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/mengenal-face-mist-dan-manfaatnya-untuk-wajah-yang-lebih-cantik-dan-segar</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/intip-kegiatan-shella-saukia-selama-di-tanah-suci,-menangis-saat-pertama-kali-mencium-hajar-aswad</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/siap-siap,-ss-akan-buka-store-di-jakarta!</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/alasan-kenapa-skin-barrier-harus-dirawat</loc>
+    </url>
+    <url>
+        <loc>https://ssgroup.id/news/detail/serba-serbi-tentang-kerutan-yang-perlu-kamu-tahu-</loc>
+    </url>
 </urlset>

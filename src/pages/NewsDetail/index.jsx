@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import FAB from "../../components/FAB";
 import { useNavigate, useParams } from "react-router-dom";
 import { getArticleId } from "../../store/action/article";
 import { useDispatch, useSelector } from "react-redux";
@@ -74,6 +75,7 @@ const NewsDetail = () => {
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
+            <FAB />
             <section className="w-80 md:w-[40rem] lg:w-[60rem] h-auto m-auto mt-20">
                 <div className="mt-16 md:mt-32">
                     {isLoading ? (

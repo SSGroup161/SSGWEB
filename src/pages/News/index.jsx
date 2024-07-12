@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import FAB from "../../components/FAB";
 import { Carousel, Card, Pagination } from "flowbite-react";
 import { useNavigate } from "react-router-dom";
 import { getArticle } from "../../store/action/article";
@@ -74,6 +75,7 @@ const News = () => {
     return (
         <div className="max-w-screen-3xl m-auto relative">
             <Navbar />
+            <FAB />
             {isLoading ? (
                 <div className="h-screen">
                     <div className="absolute bg-opacity-40 flex justify-center items-center w-screen h-screen">

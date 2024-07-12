@@ -8,6 +8,8 @@ import { Spinner } from "flowbite-react";
 import { postContact } from "../../store/action/contact";
 import { useDispatch, useSelector } from "react-redux";
 
+let url = import.meta.env.VITE_REACT_APP_SCRIPT_GOOGLE_API;
+
 const imagekakshell = "/Asset1.webp";
 const imagekakshell2 = "/Asset6.png";
 const imagessskin =
@@ -112,9 +114,7 @@ const Home = () => {
                 throw new Error(data);
             }
 
-            const scriptURL =
-                "https://script.google.com/macros/s/AKfycbzqiXJdplQTWGbCjI1uigYVkIzvFn4ZZifY58CRSKCY7kuLgtLv9Vd25m2lalEngtZO/exec";
-            const response = await fetch(scriptURL, {
+            const response = await fetch(url, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",

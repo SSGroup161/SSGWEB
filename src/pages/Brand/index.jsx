@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import FAB from "../../components/FAB";
 import { useParams } from "react-router-dom";
 import { Card, Dropdown } from "flowbite-react";
 import { getBrand } from "../../store/action/brand";
@@ -61,6 +62,7 @@ const Brand = () => {
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
+            <FAB />
             <section className="h-screen relative flex-col">
                 <div className="absolute w-full h-screen flex items-center justify-start">
                     <div className="content-container flex-1 z-10 w-72 md:w-[35rem] px-8 text-center md:text-start items-center justify-center md:items-start md:justify-start md:ms-10 lg:ms-20 xl:ms-44 flex flex-col gap-2 md:gap-4">

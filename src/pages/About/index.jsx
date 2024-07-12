@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import FAB from "../../components/FAB";
 import { useNavigate } from "react-router-dom";
 
 const aboutkakshell = "/Asset2.png";
@@ -70,6 +71,7 @@ const About = () => {
     return (
         <div className="max-w-screen-3xl m-auto">
             <Navbar />
+            <FAB />
             <div className="h-auto flex items-center md:items-start relative flex-col mt-20 md:mt-6 gap-28 md:gap-0">
                 <div
                     className="lg:ms-32 md:ms-20 md:mb-48 me-10 md:mt-12 lg:mt-48"
