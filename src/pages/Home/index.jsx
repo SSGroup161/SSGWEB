@@ -633,7 +633,7 @@ const Home = () => {
                             />
                         </svg>
                         <h1 className="font-roboto text-white text-base font-light">
-                            +62-851-5600-5881
+                            +62-851-2104-5083
                         </h1>
                     </div>
                     <div className="flex gap-4">

@@ -472,7 +472,7 @@ const About = () => {
                                     />
                                 </svg>
                                 <h1 className="font-roboto text-[#A18E64] md:text-lg">
-                                    (+62)851-5600-5881
+                                    +62-851-2104-5083
                                 </h1>
                             </div>
                             <div className="flex items-center gap-4">

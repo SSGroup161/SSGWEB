@@ -233,7 +233,7 @@ const Footer = () => {
                                 </svg>
                             </a>
                             <a
-                                href="https://wa.me/+6285156005881"
+                                href="https://wa.me/+6285121045083"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Whatsapp"
