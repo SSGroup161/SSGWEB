@@ -619,7 +619,10 @@ const Home = () => {
                             Thank you, we will contact you soon!
                         </h1>
                     </div>
-                    <div className="flex gap-4 mt-6">
+                    <h1 className="font-roboto text-white text-base mt-6 font-medium">
+                        PT Abil Mannaf Perkasa
+                    </h1>
+                    <div className="flex gap-4 ">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
