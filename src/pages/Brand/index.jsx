@@ -93,7 +93,13 @@ const Brand = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <div className="w-48 h-8 md:h-14 border-white border-2 flex justify-center items-center text-white font-roboto text-xs md:text-base rounded-md md:rounded-md cursor-pointer hover:text-[#D2AC47] hover:bg-white">
+                                    <div
+                                        className={`w-48 h-8 md:h-14 border-2 flex justify-center items-center text-white font-roboto text-xs md:text-base rounded-md md:rounded-md  ${
+                                            data && data[0] && data[0].link_web
+                                                ? "cursor-pointer hover:text-[#D2AC47] hover:bg-white border-white"
+                                                : "cursor-not-allowed bg-slate-200 "
+                                        }`}
+                                    >
                                         <h1>Go to Website</h1>
                                     </div>
                                 </a>
@@ -108,7 +114,11 @@ const Brand = () => {
                                         }
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="cursor-pointer hover:scale-110"
+                                        className={`cursor-pointer hover:scale-110 ${
+                                            data && data[0] && data[0].link_ig
+                                                ? ""
+                                                : "hidden"
+                                        }`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +145,13 @@ const Brand = () => {
                                         }
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="cursor-pointer hover:scale-110"
+                                        className={`cursor-pointer hover:scale-110 ${
+                                            data &&
+                                            data[0] &&
+                                            data[0].link_tiktok
+                                                ? ""
+                                                : "hidden"
+                                        }`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +178,13 @@ const Brand = () => {
                                         }
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="cursor-pointer hover:scale-110"
+                                        className={`cursor-pointer hover:scale-110 ${
+                                            data &&
+                                            data[0] &&
+                                            data[0].link_shopee
+                                                ? ""
+                                                : "hidden"
+                                        }`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +217,13 @@ const Brand = () => {
                                         }
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="cursor-pointer hover:scale-110"
+                                        className={`cursor-pointer hover:scale-110 ${
+                                            data &&
+                                            data[0] &&
+                                            data[0].link_whatsapp
+                                                ? ""
+                                                : "hidden"
+                                        }`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +251,7 @@ const Brand = () => {
                                 alt="asset"
                                 width={20}
                                 height={20}
-                                className="w-60 lg:w-80"
+                                className="w-60 lg:w-80 rounded-lg"
                             />
                         )}
                     </div>

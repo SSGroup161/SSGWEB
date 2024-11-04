@@ -12,22 +12,6 @@ let url = import.meta.env.VITE_REACT_APP_SCRIPT_GOOGLE_API;
 
 const imagekakshell = "/Asset1.webp";
 const imagekakshell2 = "/Asset6.png";
-const imagessskin =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136421/SSG/SSSKIN_nnzc1p.svg";
-const imagessshop =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700136421/SSG/SSSHOP_w8okrk.svg";
-const imagelevelup =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703038769/SSG/LEVELUPstyle_qthn1c.svg";
-const imagessskingold =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137959/SSG/SSSKINGOLD_kseonm.png";
-const imagessshopgold =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1700137959/SSG/SSSHOPGOLD_zuncts.png";
-const imagelevelupblack =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703038889/SSG/LEVELUPstyleblack_y8xvvt.svg";
-const imagelevelupbeaute =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040124/SSG/LEVELUPbeaute_dtcal7.svg";
-const imagelevelupbeauteblack =
-    "https://res.cloudinary.com/dixxtnquz/image/upload/v1703040140/SSG/LEVELUPbeauteblack_txkvty.svg";
 const imagebeauty = "/Asset3.svg";
 const imagefashion = "/Asset4.png";
 
@@ -51,7 +35,7 @@ const Home = () => {
 
     const title = "Official Website SS Group";
     const description =
-        "SS Group is a company consist of Indonesian brands (SS Shop, SS Skin, Level Up Beaute, and Level Up Style) engaged in beauty, fashion, and personal care products. Find the beauty and fashion you are looking for with us!";
+        "SS Group is a company consist of Indonesian brands (SS Shop, SS Skin, SS Travel, SS Your Make Up, X-Fitz, Level Up Beaute, and Level Up Style ) engaged in beauty, fashion, travel, and personal care products. Find the beauty and fashion you are looking for with us!";
     const canonicalUrl = `https://www.ssgroup.id`;
 
     useEffect(() => {
@@ -251,8 +235,9 @@ const Home = () => {
                         <div className="mt-8 font-roboto text-[#A18E64] font-light">
                             <h1>
                                 SS Group is a company consist of Indonesian
-                                brands (SS Shop, SS Skin, Level Up Beaute, and
-                                Level Up Style) engaged in beauty, fashion, and
+                                brands (SS Shop, SS Skin, SS Travel, SS Your
+                                Make Up, X-Fitz, Level Up Beaute, and Level Up
+                                Style ) engaged in beauty, fashion, travel, and
                                 personal care products. Find the beauty and
                                 fashion you are looking for with us!
                             </h1>
@@ -298,197 +283,76 @@ const Home = () => {
                 >
                     Our Brand
                 </h1>
-                <div className="flex items-center gap-4 md:gap-24 lg:gap-36">
-                    <img
-                        src={imagessskin}
-                        alt="imagesskin"
-                        width={130}
-                        height={130}
-                        className="cursor-pointer hidden lg:block"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessskingold)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
-                        data-aos="fade-up"
-                        data-aos-duration="800"
-                        onClick={() => navigate("/brand/ss-skin")}
-                    />
-                    <img
-                        src={imagessshop}
-                        alt="imagesskin"
-                        width={130}
-                        height={130}
-                        className="cursor-pointer hidden lg:block"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessshopgold)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        onClick={() => navigate("/brand/ss-shop")}
-                    />
-                    <img
-                        src={imagelevelup}
-                        alt="imagesskin"
-                        width={150}
-                        height={150}
-                        className="cursor-pointer hidden lg:block"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagelevelupblack)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
-                        data-aos="fade-up"
-                        data-aos-duration="1200"
-                        onClick={() => navigate("/brand/level-up-style")}
-                    />
-                    <img
-                        src={imagelevelupbeaute}
-                        alt="imagelevelup"
-                        width={150}
-                        height={150}
-                        className="cursor-pointer hidden lg:block"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagelevelupbeauteblack)
-                        }
-                        onMouseOut={(e) =>
-                            (e.currentTarget.src = imagelevelupbeaute)
-                        }
-                        data-aos="fade-up"
-                        data-aos-duration="1400"
-                        onClick={() => navigate("/brand/level-up-beaute")}
-                    />
-                    <img
-                        src={imagessskin}
-                        alt="imagesskin"
-                        width={100}
-                        height={100}
-                        className="cursor-pointer hidden md:block lg:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessskingold)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessskin)}
-                        data-aos="fade-up"
-                        data-aos-duration="800"
-                        onClick={() => navigate("/brand/ss-skin")}
-                    />
-                    <img
-                        src={imagessshop}
-                        alt="imagesskin"
-                        width={100}
-                        height={100}
-                        className="cursor-pointer hidden md:block lg:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagessshopgold)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagessshop)}
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        onClick={() => navigate("/brand/ss-shop")}
-                    />
-                    <img
-                        src={imagelevelup}
-                        alt="imagesskin"
-                        width={110}
-                        height={110}
-                        className="cursor-pointer hidden md:block lg:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagelevelupblack)
-                        }
-                        onMouseOut={(e) => (e.currentTarget.src = imagelevelup)}
-                        data-aos="fade-up"
-                        data-aos-duration="1200"
-                        onClick={() => navigate("/brand/level-up-style")}
-                    />
-                    <img
-                        src={imagelevelupbeaute}
-                        alt="imagesskin"
-                        width={110}
-                        height={110}
-                        className="cursor-pointer hidden md:block lg:hidden"
-                        onMouseOver={(e) =>
-                            (e.currentTarget.src = imagelevelupbeauteblack)
-                        }
-                        onMouseOut={(e) =>
-                            (e.currentTarget.src = imagelevelupbeaute)
-                        }
-                        data-aos="fade-up"
-                        data-aos-duration="1400"
-                        onClick={() => navigate("/brand/level-up=beaute")}
-                    />
-                    <div className="md:hidden flex flex-col gap-20">
-                        <div className="flex gap-20">
-                            <img
-                                src={imagessskin}
-                                alt="imagesskin"
-                                width={80}
-                                height={80}
-                                className="cursor-pointer block md:hidden"
-                                onMouseOver={(e) =>
-                                    (e.currentTarget.src = imagessskingold)
-                                }
-                                onMouseOut={(e) =>
-                                    (e.currentTarget.src = imagessskin)
-                                }
-                                data-aos="fade-up"
-                                data-aos-duration="800"
-                                onClick={() => navigate("/brand/ss-skin")}
-                            />
-                            <img
-                                src={imagessshop}
-                                alt="imagesskin"
-                                width={80}
-                                height={80}
-                                className="cursor-pointer block md:hidden"
-                                onMouseOver={(e) =>
-                                    (e.currentTarget.src = imagessshopgold)
-                                }
-                                onMouseOut={(e) =>
-                                    (e.currentTarget.src = imagessshop)
-                                }
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                onClick={() => navigate("/brand/ss-hop")}
-                            />
-                        </div>
-                        <div className="flex gap-16">
-                            <img
-                                src={imagelevelup}
-                                alt="imagesskin"
-                                width={90}
-                                height={90}
-                                className="cursor-pointer block md:hidden"
-                                onMouseOver={(e) =>
-                                    (e.currentTarget.src = imagelevelupblack)
-                                }
-                                onMouseOut={(e) =>
-                                    (e.currentTarget.src = imagelevelup)
-                                }
-                                data-aos="fade-up"
-                                data-aos-duration="1200"
-                                onClick={() =>
-                                    navigate("/brand/level-up-style")
-                                }
-                            />
-                            <img
-                                src={imagelevelupbeaute}
-                                alt="imagesskin"
-                                width={90}
-                                height={90}
-                                className="cursor-pointer block md:hidden"
-                                onMouseOver={(e) =>
-                                    (e.currentTarget.src =
-                                        imagelevelupbeauteblack)
-                                }
-                                onMouseOut={(e) =>
-                                    (e.currentTarget.src = imagelevelupbeaute)
-                                }
-                                data-aos="fade-up"
-                                data-aos-duration="1400"
-                                onClick={() =>
-                                    navigate("/brand/level-up-beaute")
-                                }
-                            />
-                        </div>
+                <div
+                    className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 max-w-screen-2xl mx-auto md:px-10 lg:px-20 items-center"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
+                    <div className="w-20 h-20 flex items-center justify-center">
+                        <img
+                            src="/SSSKINLOGO.png"
+                            alt="SSSKINLOGO"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() => navigate("/brand/ss-skin")}
+                        />
+                    </div>
+                    <div className="w-24 h-24 flex items-center justify-center">
+                        <img
+                            src="/SSSHOPLOGO.png"
+                            alt="SSSHOP Logo"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() => navigate("/brand/ss-shop")}
+                        />
+                    </div>
+                    <div className="w-24 h-24 flex items-center justify-center">
+                        <img
+                            src="/SSYMULOGO.png"
+                            alt="SS Your Make Up Logo"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() => navigate("/brand/ss-your-make-up")}
+                        />
+                    </div>
+                    <div className="w-24 h-24 flex items-center justify-center">
+                        <img
+                            src="/SSTravelLogo.png"
+                            alt="SS Travel Logo"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() =>
+                                navigate("/brand/ss-travel-indonesia")
+                            }
+                        />
+                    </div>
+                    <div className="w-24 h-24 flex items-center justify-center">
+                        <img
+                            src="/SSLoveKidsLogo.png"
+                            alt="SS Love Kids Logo"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() => navigate("/brand/ss-love-kids")}
+                        />
+                    </div>
+                    <div className="w-24 h-24 flex items-center justify-center">
+                        <img
+                            src="/Levelupbeaute.png"
+                            alt="Level Up Beaute Logo"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() => navigate("/brand/level-up-beaute")}
+                        />
+                    </div>
+                    <div className="w-24 h-24 flex items-center justify-center">
+                        <img
+                            src="/Levelupstyle.png"
+                            alt="Level Up Style Logo"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() => navigate("/brand/level-up-style")}
+                        />
+                    </div>
+                    <div className="w-24 h-24 flex items-center justify-center">
+                        <img
+                            src="/xfitz-logo.png"
+                            alt="XFitz Logo"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() => navigate("/brand/x-fitz")}
+                        />
                     </div>
                 </div>
             </section>

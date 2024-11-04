@@ -89,7 +89,7 @@ const Navbar = () => {
             setActiveSSSkin(false);
             setActiveLevelupBeaute(false);
             setActiveLevelupStyle(false);
-        } else if (location.pathname === "/brand") {
+        } else if (location.pathname.startsWith("/brand")) {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(false);
@@ -99,7 +99,7 @@ const Navbar = () => {
             setActiveSSSkin(false);
             setActiveLevelupBeaute(false);
             setActiveLevelupStyle(false);
-        } else if (location.pathname === "/brand/ss-shop") {
+        } else if (location.pathname.startsWith("/brand/")) {
             setActiveHome(false);
             setActiveAbout(false);
             setActiveProduct(false);
@@ -153,6 +153,7 @@ const Navbar = () => {
         if (
             location.pathname === "/product/search" ||
             location.pathname === "/news" ||
+            location.pathname.startsWith("/brand") ||
             location.pathname === "/brand/ss-shop" ||
             location.pathname === "/brand/ss-skin" ||
             location.pathname === "/brand/level-up-style" ||
@@ -193,7 +194,7 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname.startsWith("/brand/") ||
                                     location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
                                         "/brand/level-up-style" ||
@@ -209,7 +210,7 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname.startsWith("/brand/") ||
                                     location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
                                         "/brand/level-up-style" ||
@@ -225,7 +226,7 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname.startsWith("/brand/") ||
                                     location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
                                         "/brand/level-up-style" ||
@@ -241,7 +242,7 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname.startsWith("/brand/") ||
                                     location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
                                         "/brand/level-up-style" ||
@@ -257,7 +258,7 @@ const Navbar = () => {
                                 !isScrolled &&
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
-                                    location.pathname === "/brand/ss-shop" ||
+                                    location.pathname.startsWith("/brand/") ||
                                     location.pathname === "/brand/ss-skin" ||
                                     location.pathname ===
                                         "/brand/level-up-style" ||
@@ -282,8 +283,9 @@ const Navbar = () => {
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -295,8 +297,9 @@ const Navbar = () => {
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -322,8 +325,9 @@ const Navbar = () => {
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -335,8 +339,9 @@ const Navbar = () => {
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -360,8 +365,9 @@ const Navbar = () => {
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -373,8 +379,9 @@ const Navbar = () => {
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -398,8 +405,9 @@ const Navbar = () => {
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -411,8 +419,9 @@ const Navbar = () => {
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -436,8 +445,9 @@ const Navbar = () => {
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -449,8 +459,9 @@ const Navbar = () => {
                                 } ${
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -491,6 +502,32 @@ const Navbar = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Item
                                         onClick={() => {
+                                            navigate(
+                                                "/brand/ss-travel-indonesia"
+                                            );
+                                            window.location.reload();
+                                        }}
+                                    >
+                                        SS Travel Indonesia
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => {
+                                            navigate("/brand/ss-your-make-up");
+                                            window.location.reload();
+                                        }}
+                                    >
+                                        SS Your Make Up
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => {
+                                            navigate("/brand/ss-love-kids");
+                                            window.location.reload();
+                                        }}
+                                    >
+                                        SS Love Kids
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => {
                                             navigate("/brand/level-up-style");
                                             window.location.reload();
                                         }}
@@ -515,6 +552,14 @@ const Navbar = () => {
                                     >
                                         LevelUp Beaute
                                     </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => {
+                                            navigate("/brand/x-fitz");
+                                            window.location.reload();
+                                        }}
+                                    >
+                                        X-Fitz
+                                    </Dropdown.Item>
                                 </Dropdown>
                             </li>
                         </ul>
@@ -533,8 +578,9 @@ const Navbar = () => {
                                     !colorSearch &&
                                     (location.pathname === "/product/search" ||
                                         location.pathname === "/news" ||
-                                        location.pathname ===
-                                            "/brand/ss-shop" ||
+                                        location.pathname.startsWith(
+                                            "/brand/"
+                                        ) ||
                                         location.pathname ===
                                             "/brand/ss-skin" ||
                                         location.pathname ===
@@ -624,6 +670,34 @@ const Navbar = () => {
                                         <Dropdown.Item
                                             onClick={() => {
                                                 navigate(
+                                                    "/brand/ss-travel-indonesia"
+                                                );
+                                                window.location.reload();
+                                            }}
+                                        >
+                                            SS Travel Indonesia
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                            onClick={() => {
+                                                navigate(
+                                                    "/brand/ss-your-make-up"
+                                                );
+                                                window.location.reload();
+                                            }}
+                                        >
+                                            SS Your Make Up
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                            onClick={() => {
+                                                navigate("/brand/ss-love-kids");
+                                                window.location.reload();
+                                            }}
+                                        >
+                                            SS Love Kids
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                            onClick={() => {
+                                                navigate(
                                                     "/brand/level-up-style"
                                                 );
                                                 window.location.reload();
@@ -640,6 +714,14 @@ const Navbar = () => {
                                             }}
                                         >
                                             LevelUp Beaute
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                            onClick={() => {
+                                                navigate("/brand/x-fitz");
+                                                window.location.reload();
+                                            }}
+                                        >
+                                            X-Fitz
                                         </Dropdown.Item>
                                     </Dropdown>
                                 </li>

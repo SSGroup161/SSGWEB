@@ -101,48 +101,94 @@ const Footer = () => {
                             <h1 className="font-aref font-bold text-white text-lg">
                                 Brand
                             </h1>
-                            <ul className="">
-                                <li
-                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                    onClick={() => {
-                                        navigate("/brand/ss-shop");
-                                        window.location.reload();
-                                        scrollToTop();
-                                    }}
-                                >
-                                    Shella Saukia Shop
-                                </li>
-                                <li
-                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                    onClick={() => {
-                                        navigate("/brand/ss-skin");
-                                        window.location.reload();
-                                        scrollToTop();
-                                    }}
-                                >
-                                    Shella Saukia Skin
-                                </li>
-                                <li
-                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                    onClick={() => {
-                                        navigate("/brand/level-up-beaute");
-                                        window.location.reload();
-                                        scrollToTop();
-                                    }}
-                                >
-                                    Level Up Beaute
-                                </li>
-                                <li
-                                    className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                    onClick={() => {
-                                        navigate("/brand/level-up-style");
-                                        window.location.reload();
-                                        scrollToTop();
-                                    }}
-                                >
-                                    Level Up Style
-                                </li>
-                            </ul>
+                            <div className="flex gap-16 lg:gap-2">
+                                <ul className="">
+                                    <li
+                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                        onClick={() => {
+                                            navigate("/brand/ss-shop");
+                                            window.location.reload();
+                                            scrollToTop();
+                                        }}
+                                    >
+                                        Shella Saukia Shop
+                                    </li>
+                                    <li
+                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                        onClick={() => {
+                                            navigate("/brand/ss-skin");
+                                            window.location.reload();
+                                            scrollToTop();
+                                        }}
+                                    >
+                                        Shella Saukia Skin
+                                    </li>
+                                    <li
+                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                        onClick={() => {
+                                            navigate("/brand/level-up-beaute");
+                                            window.location.reload();
+                                            scrollToTop();
+                                        }}
+                                    >
+                                        Level Up Beaute
+                                    </li>
+                                    <li
+                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                        onClick={() => {
+                                            navigate("/brand/level-up-style");
+                                            window.location.reload();
+                                            scrollToTop();
+                                        }}
+                                    >
+                                        Level Up Style
+                                    </li>
+                                </ul>
+                                <ul className="">
+                                    <li
+                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                        onClick={() => {
+                                            navigate("/brand/ss-your-make-up");
+                                            window.location.reload();
+                                            scrollToTop();
+                                        }}
+                                    >
+                                        SS Your Make Up
+                                    </li>
+                                    <li
+                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                        onClick={() => {
+                                            navigate("/brand/ss-love-kids");
+                                            window.location.reload();
+                                            scrollToTop();
+                                        }}
+                                    >
+                                        SS Love Kids
+                                    </li>
+                                    <li
+                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                        onClick={() => {
+                                            navigate(
+                                                "/brand/ss-travel-indonesia"
+                                            );
+                                            window.location.reload();
+                                            scrollToTop();
+                                        }}
+                                    >
+                                        SS Travel Indonesia
+                                    </li>
+                                    <li
+                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
+                                        onClick={() => {
+                                            navigate("/brand/x-fitz");
+                                            window.location.reload();
+                                            scrollToTop();
+                                        }}
+                                    >
+                                        X-Fitz
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="flex flex-col justify-between">
                             <h1 className="font-aref font-bold text-white text-lg">
