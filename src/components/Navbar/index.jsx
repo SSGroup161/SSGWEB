@@ -502,16 +502,6 @@ const Navbar = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Item
                                         onClick={() => {
-                                            navigate(
-                                                "/brand/ss-travel-indonesia"
-                                            );
-                                            window.location.reload();
-                                        }}
-                                    >
-                                        SS Travel Indonesia
-                                    </Dropdown.Item>
-                                    <Dropdown.Item
-                                        onClick={() => {
                                             navigate("/brand/ss-your-make-up");
                                             window.location.reload();
                                         }}
@@ -525,40 +515,6 @@ const Navbar = () => {
                                         }}
                                     >
                                         SS Love Kids
-                                    </Dropdown.Item>
-                                    <Dropdown.Item
-                                        onClick={() => {
-                                            navigate("/brand/level-up-style");
-                                            window.location.reload();
-                                        }}
-                                        className={`hover:text-[#D2AC47] ${
-                                            activeLevelupStyle
-                                                ? "text-[#D2AC47] font-normal"
-                                                : "text-[#444341] font-light"
-                                        }`}
-                                    >
-                                        LevelUp Style
-                                    </Dropdown.Item>
-                                    <Dropdown.Item
-                                        onClick={() => {
-                                            navigate("/brand/level-up-beaute");
-                                            window.location.reload();
-                                        }}
-                                        className={`hover:text-[#D2AC47] ${
-                                            activeLevelupBeaute
-                                                ? "text-[#D2AC47] font-normal"
-                                                : "text-[#444341] font-light"
-                                        }`}
-                                    >
-                                        LevelUp Beaute
-                                    </Dropdown.Item>
-                                    <Dropdown.Item
-                                        onClick={() => {
-                                            navigate("/brand/x-fitz");
-                                            window.location.reload();
-                                        }}
-                                    >
-                                        X-Fitz
                                     </Dropdown.Item>
                                 </Dropdown>
                             </li>

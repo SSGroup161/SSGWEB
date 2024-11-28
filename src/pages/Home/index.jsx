@@ -234,12 +234,10 @@ const Home = () => {
                         </div>
                         <div className="mt-8 font-roboto text-[#A18E64] font-light">
                             <h1>
-                                SS Group is a company consist of Indonesian
-                                brands (SS Shop, SS Skin, SS Travel, SS Your
-                                Make Up, X-Fitz, Level Up Beaute, and Level Up
-                                Style ) engaged in beauty, fashion, travel, and
+                                {`SS Group is a company consist of Indonesian
+                                brands (Shellasaukia.co, SS Skin, SS Your Make Up, and SS Love Kids) engaged in beauty, fashion, and
                                 personal care products. Find the beauty and
-                                fashion you are looking for with us!
+                                fashion you are looking for with us!`}
                             </h1>
                         </div>
                         <div className="flex mt-8 gap-6 md:gap-10 mb-28">
@@ -284,11 +282,11 @@ const Home = () => {
                     Our Brand
                 </h1>
                 <div
-                    className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 max-w-screen-2xl mx-auto md:px-10 lg:px-20 items-center"
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 max-w-screen-2xl mx-auto md:px-10 lg:px-20 items-center"
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 >
-                    <div className="w-20 h-20 flex items-center justify-center">
+                    <div className="w-20 h-20 lg:h-24 lg:w-24 flex items-center justify-center">
                         <img
                             src="/SSSKINLOGO.png"
                             alt="SSSKINLOGO"
@@ -296,7 +294,7 @@ const Home = () => {
                             onClick={() => navigate("/brand/ss-skin")}
                         />
                     </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
+                    <div className="lg:w-28 lg:h-28 w-24 h-24 flex items-center justify-center">
                         <img
                             src="/SSSHOPLOGO.png"
                             alt="SSSHOP Logo"
@@ -304,7 +302,7 @@ const Home = () => {
                             onClick={() => navigate("/brand/ss-shop")}
                         />
                     </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
+                    <div className="lg:w-32 lg:h-32 w-24 h-24 flex items-center justify-center">
                         <img
                             src="/SSYMULOGO.png"
                             alt="SS Your Make Up Logo"
@@ -312,46 +310,12 @@ const Home = () => {
                             onClick={() => navigate("/brand/ss-your-make-up")}
                         />
                     </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
-                        <img
-                            src="/SSTravelLogo.png"
-                            alt="SS Travel Logo"
-                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
-                            onClick={() =>
-                                navigate("/brand/ss-travel-indonesia")
-                            }
-                        />
-                    </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
+                    <div className="lg:w-32 lg:h-32 w-24 h-24 flex items-center justify-center">
                         <img
                             src="/SSLoveKidsLogo.png"
                             alt="SS Love Kids Logo"
                             className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
                             onClick={() => navigate("/brand/ss-love-kids")}
-                        />
-                    </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
-                        <img
-                            src="/Levelupbeaute.png"
-                            alt="Level Up Beaute Logo"
-                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
-                            onClick={() => navigate("/brand/level-up-beaute")}
-                        />
-                    </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
-                        <img
-                            src="/Levelupstyle.png"
-                            alt="Level Up Style Logo"
-                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
-                            onClick={() => navigate("/brand/level-up-style")}
-                        />
-                    </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
-                        <img
-                            src="/xfitz-logo.png"
-                            alt="XFitz Logo"
-                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
-                            onClick={() => navigate("/brand/x-fitz")}
                         />
                     </div>
                 </div>
@@ -363,16 +327,7 @@ const Home = () => {
                     </h1>
                     <div className="w-80 md:w-[26rem] lg:w-[30rem]">
                         <p className="font-roboto font-light text-[#A18E64] md:mt-10 mt-6">
-                            SS Group is a company consisting of Indonesian
-                            brands (SS Shop, SS Skin, Level Up Beaute, and Level
-                            Up Style) engaged in beauty, fashion, and personal
-                            care products. Our company was established in 2019,
-                            and two of our most sensational successes were in
-                            2023, when we received two recognitions from Tiktok
-                            Shop for Gross Merchandise Value: $1,000,000+
-                            Achievement and Record-breaking Brand Collaboration
-                            for Best Selling Spotless Whitening Package
-                            Achievement across all FMCG.
+                            {`Our company was established in 2019, and we have achieved several sensational successes, including receiving two recognitions from TikTok Shop: the Gross Merchandise Value Achievement of $1,000,000+ and the Record-breaking Brand Collaboration for Best Selling Spotless Whitening Package across all FMCG in 2023. We are also proud to have received the Kalodata Indonesia Social Commerce Conference 2024 Award for Fast-Growing TikTok Brand.`}
                         </p>
                     </div>
                     <div
@@ -484,7 +439,7 @@ const Home = () => {
                         </h1>
                     </div>
                     <h1 className="font-roboto text-white text-base mt-6 font-medium">
-                        PT Abil Mannaf Perkasa
+                        PT Shella Saukia Abadi
                     </h1>
                     <div className="flex gap-4 ">
                         <svg
@@ -536,9 +491,10 @@ const Home = () => {
                             </svg>
                         </div>
                         <h1 className="font-roboto text-white text-base font-light W-full md:w-80 lg:w-96">
-                            Jl. K.H. Wahid Hasyim No.161, RT.1/RW.5, Kb. Kacang,
-                            Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah
-                            Khusus Ibukota Jakarta 10240
+                            JL. K.H. WAHID HASYIM NO. 161 RT.001 RW.005,
+                            Desa/Kelurahan Kebon Kacang, Kec. Tanah Abang, Kota
+                            Adm. Jakarta Pusat, Provinsi DKI Jakarta, Kode Pos:
+                            10240
                         </h1>
                     </div>
                 </div>

@@ -126,28 +126,6 @@ const Footer = () => {
                                     <li
                                         className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
                                         onClick={() => {
-                                            navigate("/brand/level-up-beaute");
-                                            window.location.reload();
-                                            scrollToTop();
-                                        }}
-                                    >
-                                        Level Up Beaute
-                                    </li>
-                                    <li
-                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                        onClick={() => {
-                                            navigate("/brand/level-up-style");
-                                            window.location.reload();
-                                            scrollToTop();
-                                        }}
-                                    >
-                                        Level Up Style
-                                    </li>
-                                </ul>
-                                <ul className="">
-                                    <li
-                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                        onClick={() => {
                                             navigate("/brand/ss-your-make-up");
                                             window.location.reload();
                                             scrollToTop();
@@ -164,28 +142,6 @@ const Footer = () => {
                                         }}
                                     >
                                         SS Love Kids
-                                    </li>
-                                    <li
-                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                        onClick={() => {
-                                            navigate(
-                                                "/brand/ss-travel-indonesia"
-                                            );
-                                            window.location.reload();
-                                            scrollToTop();
-                                        }}
-                                    >
-                                        SS Travel Indonesia
-                                    </li>
-                                    <li
-                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                        onClick={() => {
-                                            navigate("/brand/x-fitz");
-                                            window.location.reload();
-                                            scrollToTop();
-                                        }}
-                                    >
-                                        X-Fitz
                                     </li>
                                 </ul>
                             </div>
@@ -319,8 +275,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <h1 className="font-roboto text-white text-center mt-8 text-xs">
-                        All Rights Reserved ©2023 SS GROUP | PT Abil Mannaf
-                        Perkasa.
+                        All Rights Reserved ©2023 SS GROUP | PT Shella Saukia
+                        Abadi.
                     </h1>
                 </div>
             </div>

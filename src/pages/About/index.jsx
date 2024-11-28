@@ -17,7 +17,7 @@ const About = () => {
     }, []);
 
     const title = "SS Group (Shella Saukia Group)";
-    const description = `SS Group is a company consisting of Indonesian brands (SS Shop, SS Skin, Level Up Beaute, and Level Up Style) engaged in beauty, fashion, and personal care products. Our company was established in 2019, and two of our most sensational successes were in 2023, when we received two recognitions from Tiktok Shop for Gross Merchandise Value: $1,000,000+ Achievement and Record-breaking Brand Collaboration for Best Selling Spotless Whitening Package Achievement across all FMCG. We are aiming to be the leading brand providing fashion, beauty, and personal care for all Indonesians. We will continuously discover the best high-quality products in all of our business units to bring the highest satisfaction to our loyal customers around the country.
+    const description = `SS Group is a company consisting of Indonesian brands (SS Shop, SS Skin, SS Your Make up, SS Love kids, and SS Travel) engaged in beauty, fashion, and personal care products. Our company was established in 2019, and two of our most sensational successes were in 2023, when we received two recognitions from Tiktok Shop for Gross Merchandise Value: $1,000,000+ Achievement and Record-breaking Brand Collaboration for Best Selling Spotless Whitening Package Achievement across all FMCG. We are aiming to be the leading brand providing fashion, beauty, and personal care for all Indonesians. We will continuously discover the best high-quality products in all of our business units to bring the highest satisfaction to our loyal customers around the country.
     This is the only place where the magic of beauty happens.`;
     const canonicalUrl = `/about`;
 
@@ -154,8 +154,7 @@ const About = () => {
                     />
                 </svg>
                 <p className="font-roboto text-[#A18E64] lg:w-[60rem] w-80 md:w-[40rem] text-center">
-                    SS Group is a company consisting of Indonesian brands (SS
-                    Shop, SS Skin, Level Up Beaute, and Level Up Style) engaged
+                    {` SS Group is a company consisting of Indonesian brands (Shellasaukia.co, SS Skin, SS Your Make Up, and SS Love Kids) engaged
                     in beauty, fashion, and personal care products. Our company
                     was established in 2019, and two of our most sensational
                     successes were in 2023, when we received two recognitions
@@ -167,7 +166,7 @@ const About = () => {
                     will continuously discover the best high-quality products in
                     all of our business units to bring the highest satisfaction
                     to our loyal customers around the country. <br /> This is
-                    the only place where the magic of beauty happens.
+                    the only place where the magic of beauty happens.`}
                 </p>
             </div>
             <div
@@ -208,11 +207,11 @@ const About = () => {
                     Our Brand
                 </h1>
                 <div
-                    className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 max-w-screen-2xl mx-auto md:px-10 lg:px-20 items-center"
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 max-w-screen-2xl mx-auto md:px-10 lg:px-20 items-center"
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 >
-                    <div className="w-20 h-20 flex items-center justify-center">
+                    <div className="w-20 h-20 lg:h-24 lg:w-24 flex items-center justify-center">
                         <img
                             src="/SSSKINLOGO.png"
                             alt="SSSKINLOGO"
@@ -220,7 +219,7 @@ const About = () => {
                             onClick={() => navigate("/brand/ss-skin")}
                         />
                     </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
+                    <div className="lg:w-28 lg:h-28 w-24 h-24 flex items-center justify-center">
                         <img
                             src="/SSSHOPLOGO.png"
                             alt="SSSHOP Logo"
@@ -228,7 +227,7 @@ const About = () => {
                             onClick={() => navigate("/brand/ss-shop")}
                         />
                     </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
+                    <div className="lg:w-32 lg:h-32 w-24 h-24 flex items-center justify-center">
                         <img
                             src="/SSYMULOGO.png"
                             alt="SS Your Make Up Logo"
@@ -236,46 +235,12 @@ const About = () => {
                             onClick={() => navigate("/brand/ss-your-make-up")}
                         />
                     </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
-                        <img
-                            src="/SSTravelLogo.png"
-                            alt="SS Travel Logo"
-                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
-                            onClick={() =>
-                                navigate("/brand/ss-travel-indonesia")
-                            }
-                        />
-                    </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
+                    <div className="lg:w-32 lg:h-32 w-24 h-24 flex items-center justify-center">
                         <img
                             src="/SSLoveKidsLogo.png"
                             alt="SS Love Kids Logo"
                             className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
                             onClick={() => navigate("/brand/ss-love-kids")}
-                        />
-                    </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
-                        <img
-                            src="/Levelupbeaute.png"
-                            alt="Level Up Beaute Logo"
-                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
-                            onClick={() => navigate("/brand/level-up-beaute")}
-                        />
-                    </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
-                        <img
-                            src="/Levelupstyle.png"
-                            alt="Level Up Style Logo"
-                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
-                            onClick={() => navigate("/brand/level-up-style")}
-                        />
-                    </div>
-                    <div className="w-24 h-24 flex items-center justify-center">
-                        <img
-                            src="/xfitz-logo.png"
-                            alt="XFitz Logo"
-                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
-                            onClick={() => navigate("/brand/x-fitz")}
                         />
                     </div>
                 </div>
@@ -316,9 +281,10 @@ const About = () => {
                             Shella Saukia Skin Office
                         </h1>
                         <p className="text-[#A18E64] font-roboto font-light w-72 md:w-[24rem] md:text-lg">
-                            Jl. K.H. Wahid Hasyim No.161, RT.1/RW.5, Kb. Kacang,
-                            Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah
-                            Khusus Ibukota Jakarta 10240
+                            JL. K.H. WAHID HASYIM NO. 161 RT.001 RW.005,
+                            Desa/Kelurahan Kebon Kacang, Kec. Tanah Abang, Kota
+                            Adm. Jakarta Pusat, Provinsi DKI Jakarta, Kode Pos:
+                            10240
                         </p>
                         <div className="flex flex-col gap-2">
                             <div className="flex items-center gap-4">
