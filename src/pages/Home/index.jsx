@@ -28,7 +28,6 @@ const Home = () => {
     const { isError, errorMessage, data, isLoading } = useSelector(
         (state) => state.contact
     );
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -284,7 +283,7 @@ const Home = () => {
                     Our Brand
                 </h1>
                 <div
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20 max-w-screen-2xl mx-auto md:px-10 lg:px-20 items-center"
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-20 max-w-screen-2xl mx-auto md:px-10 lg:px-20 items-center"
                     data-aos="fade-up"
                     data-aos-duration="1500"
                 >
@@ -322,6 +321,17 @@ const Home = () => {
                             loading="lazy"
                             className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
                             onClick={() => navigate("/brand/ss-love-kids")}
+                        />
+                    </div>
+                    <div className="lg:w-32 lg:h-32 w-24 h-24 flex items-center justify-center">
+                        <img
+                            src="/SSTravelLogo.png"
+                            alt="SS TravelLogo"
+                            loading="lazy"
+                            className="object-contain w-full h-full grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 ease-in-out cursor-pointer"
+                            onClick={() =>
+                                navigate("/brand/ss-travel-indonesia")
+                            }
                         />
                     </div>
                 </div>

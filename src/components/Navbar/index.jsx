@@ -431,6 +431,16 @@ const Navbar = () => {
                                     >
                                         SS Love Kids
                                     </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => {
+                                            navigate(
+                                                "/brand/ss-travel-indonesia"
+                                            );
+                                            window.location.reload();
+                                        }}
+                                    >
+                                        SS Travel
+                                    </Dropdown.Item>
                                 </Dropdown>
                             </li>
                         </ul>
@@ -550,6 +560,16 @@ const Navbar = () => {
                                             }}
                                         >
                                             SS Love Kids
+                                        </Dropdown.Item>
+                                        <Dropdown.Item
+                                            onClick={() => {
+                                                navigate(
+                                                    "/brand/ss-travel-indonesia"
+                                                );
+                                                window.location.reload();
+                                            }}
+                                        >
+                                            SS Travel
                                         </Dropdown.Item>
                                     </Dropdown>
                                 </li>
