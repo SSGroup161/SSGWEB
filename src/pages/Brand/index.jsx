@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import FAB from "../../components/FAB";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Card, Dropdown } from "flowbite-react";
 import { getBrand } from "../../store/action/brand";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,10 +10,24 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Brand = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const { isError, errorMessage, data, isLoading } = useSelector(
         (state) => state.brand
     );
+
+    const allowedIds = [
+        "ss-skin",
+        "ss-shop",
+        "ss-your-make-up",
+        "ss-love-kids",
+    ];
+
+    useEffect(() => {
+        if (!allowedIds.includes(id)) {
+            navigate("*");
+        }
+    }, [id, navigate]);
 
     const title = (data && data[0] && data[0].brand_product) || "SS Group";
     const description =
@@ -283,7 +297,7 @@ const Brand = () => {
                         alt="wait..."
                         width="full"
                         height="full"
-                        className="h-96 md:h-full w-full object-cover z-10"
+                        className="h-full w-full object-cover z-10"
                     />
                 )}
             </section>

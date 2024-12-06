@@ -119,26 +119,6 @@ const Navbar = () => {
             setActiveSSSkin(true);
             setActiveLevelupBeaute(false);
             setActiveLevelupStyle(false);
-        } else if (location.pathname === "/brand/level-up-style") {
-            setActiveHome(false);
-            setActiveAbout(false);
-            setActiveProduct(false);
-            setActiveNews(false);
-            setActiveBrand(true);
-            setActiveSSShop(false);
-            setActiveSSSkin(false);
-            setActiveLevelupBeaute(false);
-            setActiveLevelupStyle(true);
-        } else if (location.pathname === "/brand/level-up-beaute") {
-            setActiveHome(false);
-            setActiveAbout(false);
-            setActiveProduct(false);
-            setActiveNews(false);
-            setActiveBrand(true);
-            setActiveSSShop(false);
-            setActiveSSSkin(false);
-            setActiveLevelupBeaute(true);
-            setActiveLevelupStyle(false);
         }
     }, []);
 
@@ -195,11 +175,7 @@ const Navbar = () => {
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
                                     location.pathname.startsWith("/brand/") ||
-                                    location.pathname === "/brand/ss-skin" ||
-                                    location.pathname ===
-                                        "/brand/level-up-style" ||
-                                    location.pathname ===
-                                        "/brand/level-up-beaute")
+                                    location.pathname === "/brand/ss-skin")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -211,11 +187,7 @@ const Navbar = () => {
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
                                     location.pathname.startsWith("/brand/") ||
-                                    location.pathname === "/brand/ss-skin" ||
-                                    location.pathname ===
-                                        "/brand/level-up-style" ||
-                                    location.pathname ===
-                                        "/brand/level-up-beaute")
+                                    location.pathname === "/brand/ss-skin")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -227,11 +199,7 @@ const Navbar = () => {
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
                                     location.pathname.startsWith("/brand/") ||
-                                    location.pathname === "/brand/ss-skin" ||
-                                    location.pathname ===
-                                        "/brand/level-up-style" ||
-                                    location.pathname ===
-                                        "/brand/level-up-beaute")
+                                    location.pathname === "/brand/ss-skin")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -243,11 +211,7 @@ const Navbar = () => {
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
                                     location.pathname.startsWith("/brand/") ||
-                                    location.pathname === "/brand/ss-skin" ||
-                                    location.pathname ===
-                                        "/brand/level-up-style" ||
-                                    location.pathname ===
-                                        "/brand/level-up-beaute")
+                                    location.pathname === "/brand/ss-skin")
                                     ? "#FFFFFF"
                                     : "black"
                             }`}
@@ -259,11 +223,7 @@ const Navbar = () => {
                                 (location.pathname === "/product/search" ||
                                     location.pathname === "/news" ||
                                     location.pathname.startsWith("/brand/") ||
-                                    location.pathname === "/brand/ss-skin" ||
-                                    location.pathname ===
-                                        "/brand/level-up-style" ||
-                                    location.pathname ===
-                                        "/brand/level-up-beaute")
+                                    location.pathname === "/brand/ss-skin")
                                     ? "#FFFFFF"
                                     : "#D2AC47"
                             }`}
@@ -286,12 +246,7 @@ const Navbar = () => {
                                         location.pathname.startsWith(
                                             "/brand/"
                                         ) ||
-                                        location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute")
+                                        location.pathname === "/brand/ss-skin")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
@@ -301,11 +256,7 @@ const Navbar = () => {
                                             "/brand/"
                                         ) ||
                                         location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute") &&
+                                            "/brand/ss-skin") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -328,12 +279,7 @@ const Navbar = () => {
                                         location.pathname.startsWith(
                                             "/brand/"
                                         ) ||
-                                        location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute")
+                                        location.pathname === "/brand/ss-skin")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
@@ -343,11 +289,7 @@ const Navbar = () => {
                                             "/brand/"
                                         ) ||
                                         location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute") &&
+                                            "/brand/ss-skin") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -368,12 +310,7 @@ const Navbar = () => {
                                         location.pathname.startsWith(
                                             "/brand/"
                                         ) ||
-                                        location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute")
+                                        location.pathname === "/brand/ss-skin")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
@@ -383,11 +320,7 @@ const Navbar = () => {
                                             "/brand/"
                                         ) ||
                                         location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute") &&
+                                            "/brand/ss-skin") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -408,12 +341,7 @@ const Navbar = () => {
                                         location.pathname.startsWith(
                                             "/brand/"
                                         ) ||
-                                        location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute")
+                                        location.pathname === "/brand/ss-skin")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
@@ -423,11 +351,7 @@ const Navbar = () => {
                                             "/brand/"
                                         ) ||
                                         location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute") &&
+                                            "/brand/ss-skin") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -448,12 +372,7 @@ const Navbar = () => {
                                         location.pathname.startsWith(
                                             "/brand/"
                                         ) ||
-                                        location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute")
+                                        location.pathname === "/brand/ss-skin")
                                         ? "text-white"
                                         : "text-[#444341]"
                                 } ${
@@ -463,11 +382,7 @@ const Navbar = () => {
                                             "/brand/"
                                         ) ||
                                         location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute") &&
+                                            "/brand/ss-skin") &&
                                     !isScrolled
                                         ? "hover:text-[#444341]"
                                         : "hover:text-[#D2AC47]"
@@ -537,12 +452,7 @@ const Navbar = () => {
                                         location.pathname.startsWith(
                                             "/brand/"
                                         ) ||
-                                        location.pathname ===
-                                            "/brand/ss-skin" ||
-                                        location.pathname ===
-                                            "/brand/level-up-style" ||
-                                        location.pathname ===
-                                            "/brand/level-up-beaute")
+                                        location.pathname === "/brand/ss-skin")
                                         ? "#FFFFFF"
                                         : "#D2AC47"
                                 }`}
@@ -626,16 +536,6 @@ const Navbar = () => {
                                         <Dropdown.Item
                                             onClick={() => {
                                                 navigate(
-                                                    "/brand/ss-travel-indonesia"
-                                                );
-                                                window.location.reload();
-                                            }}
-                                        >
-                                            SS Travel Indonesia
-                                        </Dropdown.Item>
-                                        <Dropdown.Item
-                                            onClick={() => {
-                                                navigate(
                                                     "/brand/ss-your-make-up"
                                                 );
                                                 window.location.reload();
@@ -650,34 +550,6 @@ const Navbar = () => {
                                             }}
                                         >
                                             SS Love Kids
-                                        </Dropdown.Item>
-                                        <Dropdown.Item
-                                            onClick={() => {
-                                                navigate(
-                                                    "/brand/level-up-style"
-                                                );
-                                                window.location.reload();
-                                            }}
-                                        >
-                                            LevelUp Style
-                                        </Dropdown.Item>
-                                        <Dropdown.Item
-                                            onClick={() => {
-                                                navigate(
-                                                    "/brand/level-up-beaute"
-                                                );
-                                                window.location.reload();
-                                            }}
-                                        >
-                                            LevelUp Beaute
-                                        </Dropdown.Item>
-                                        <Dropdown.Item
-                                            onClick={() => {
-                                                navigate("/brand/x-fitz");
-                                                window.location.reload();
-                                            }}
-                                        >
-                                            X-Fitz
                                         </Dropdown.Item>
                                     </Dropdown>
                                 </li>
