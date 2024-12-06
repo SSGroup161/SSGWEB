@@ -34,7 +34,7 @@ const Home = () => {
 
     const title = "Official Website SS Group";
     const description =
-        "SS Group is a company consist of Indonesian brands (SS Shop, SS Skin, SS Travel, SS Your Make Up, X-Fitz, Level Up Beaute, and Level Up Style ) engaged in beauty, fashion, travel, and personal care products. Find the beauty and fashion you are looking for with us!";
+        "SS Group is a company consist of Indonesian brands (Shellasaukia.co, SS Skin, SS Your Make Up, SS Love Kids, and SS Travel Indonesia) engaged in beauty, fashion, and personal care products. Find the beauty and fashion you are looking for with us!";
     const canonicalUrl = `https://www.ssgroup.id`;
 
     useEffect(() => {
@@ -235,7 +235,7 @@ const Home = () => {
                             <div className="mt-8 font-roboto text-[#A18E64] font-light">
                                 <h1>
                                     {`SS Group is a company consist of Indonesian
-                                brands (Shellasaukia.co, SS Skin, SS Your Make Up, and SS Love Kids) engaged in beauty, fashion, and
+                                brands (Shellasaukia.co, SS Skin, SS Your Make Up, SS Love Kids, and SS Travel Indonesia) engaged in beauty, fashion, and
                                 personal care products. Find the beauty and
                                 fashion you are looking for with us!`}
                                 </h1>

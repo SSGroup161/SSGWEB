@@ -16,10 +16,10 @@ const About = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const title = "SS Group (Shella Saukia Group)";
-    const description = `SS Group is a company consisting of Indonesian brands (SS Shop, SS Skin, SS Your Make up, SS Love kids, and SS Travel) engaged in beauty, fashion, and personal care products. Our company was established in 2019, and two of our most sensational successes were in 2023, when we received two recognitions from Tiktok Shop for Gross Merchandise Value: $1,000,000+ Achievement and Record-breaking Brand Collaboration for Best Selling Spotless Whitening Package Achievement across all FMCG. We are aiming to be the leading brand providing fashion, beauty, and personal care for all Indonesians. We will continuously discover the best high-quality products in all of our business units to bring the highest satisfaction to our loyal customers around the country.
-    This is the only place where the magic of beauty happens.`;
-    const canonicalUrl = `/about`;
+    const title = "Official Website SS Group";
+    const description =
+        "SS Group is a company consist of Indonesian brands (Shellasaukia.co, SS Skin, SS Your Make Up, SS Love Kids, and SS Travel Indonesia) engaged in beauty, fashion, and personal care products. Find the beauty and fashion you are looking for with us!";
+    const canonicalUrl = `https://www.ssgroup.id/about`;
 
     useEffect(() => {
         document.title = title;
