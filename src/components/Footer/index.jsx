@@ -143,18 +143,6 @@ const Footer = () => {
                                     >
                                         SS Love Kids
                                     </li>
-                                    <li
-                                        className="font-roboto text-sm font-light text-white cursor-pointer hover:text-[#A18E64] mt-4"
-                                        onClick={() => {
-                                            navigate(
-                                                "/brand/ss-travel-indonesia"
-                                            );
-                                            window.location.reload();
-                                            scrollToTop();
-                                        }}
-                                    >
-                                        SS Travel
-                                    </li>
                                 </ul>
                             </div>
                         </div>

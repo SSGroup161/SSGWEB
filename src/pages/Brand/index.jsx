@@ -21,7 +21,6 @@ const Brand = () => {
         "ss-shop",
         "ss-your-make-up",
         "ss-love-kids",
-        "ss-travel-indonesia",
     ];
 
     useEffect(() => {
